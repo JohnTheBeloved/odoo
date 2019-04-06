@@ -33,13 +33,14 @@ class PosOrder(models.Model):
     @api.model
     def _order_fields(self, ui_order):
         process_line = partial(self.env['pos.order.line']._order_line_fields, session_id=ui_order['pos_session_id'])
+        print("ui_order - ", ui_order)
         return {
             'name':         ui_order['name'],
             'user_id':      ui_order['user_id'] or False,
             'session_id':   ui_order['pos_session_id'],
             'lines':        [process_line(l) for l in ui_order['lines']] if ui_order['lines'] else False,
             'pos_reference': ui_order['name'],
-            'partner_id':   ui_order['partner_id'] or False,
+            'partner_id':   ui_order['partner_id'] or 44,
             'date_order':   ui_order['creation_date'],
             'fiscal_position_id': ui_order['fiscal_position_id'],
             'pricelist_id': ui_order['pricelist_id'],
@@ -117,6 +118,7 @@ class PosOrder(models.Model):
         pos_session = self.env['pos.session'].browse(pos_order['pos_session_id'])
         if pos_session.state == 'closing_control' or pos_session.state == 'closed':
             pos_order['pos_session_id'] = self._get_valid_session(pos_order).id
+        print("ewe, -  ", self._order_fields(pos_order))
         order = self.create(self._order_fields(pos_order))
         prec_acc = order.pricelist_id.currency_id.decimal_places
         journal_ids = set()
@@ -918,7 +920,7 @@ class PosOrder(models.Model):
         company_cxt = dict(self.env.context, force_company=journal.company_id.id)
         account_def = self.env['ir.property'].with_context(company_cxt).get('property_account_receivable_id', 'res.partner')
         args['account_id'] = (self.partner_id.property_account_receivable_id.id) or (account_def and account_def.id) or False
-
+        print("Here...." + str(self.date_order)+ " - "  + str(self.id) + " - " + str(self.partner_id))
         if not args['account_id']:
             if not args['partner_id']:
                 msg = _('There is no receivable account defined to make payment.')
@@ -951,6 +953,7 @@ class PosOrder(models.Model):
     def add_payment(self, data):
         """Create a new payment for the order"""
         self.ensure_one()
+        print("add_payment " +  str(data))
         args = self._prepare_bank_statement_line_payment_values(data)
         context = dict(self.env.context)
         context.pop('pos_session_id', False)
@@ -1060,7 +1063,8 @@ class PosOrderLine(models.Model):
         if not values.get('name'):
             # fallback on any pos.order sequence
             values['name'] = self.env['ir.sequence'].next_by_code('pos.order.line')
-        return super(PosOrderLine, self).create(values)
+        posorder = super(PosOrderLine, self).create(values)
+        return posorder
 
     @api.onchange('price_unit', 'tax_ids', 'qty', 'discount', 'product_id')
     def _onchange_amount_line_all(self):

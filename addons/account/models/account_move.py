@@ -283,7 +283,9 @@ class AccountMove(models.Model):
 
     @api.multi
     def post(self, invoice=False):
+        print(" before trigger")
         self._post_validate()
+        print(" after trigger")
         # Create the analytic lines in batch is faster as it leads to less cache invalidation.
         self.mapped('line_ids').create_analytic_lines()
         for move in self:
@@ -323,6 +325,8 @@ class AccountMove(models.Model):
         if self.mapped('line_ids.payment_id'):
             if any(self.mapped('journal_id.post_at_bank_rec')):
                 raise UserError(_("A payment journal entry generated in a journal configured to post entries only when payments are reconciled with a bank statement cannot be manually posted. Those will be posted automatically after performing the bank reconciliation."))
+        
+        print("before2")
         return self.post()
 
     @api.multi
@@ -355,6 +359,9 @@ class AccountMove(models.Model):
     def _post_validate(self):
         for move in self:
             if move.line_ids:
+                for x in move.line_ids:
+                    #AbirexDebug
+                    print("here" + str(x) + " - " + str(x.id) + "-", move.id)
                 if not all([x.company_id.id == move.company_id.id for x in move.line_ids]):
                     raise UserError(_("Cannot create moves for different companies."))
         self.assert_balanced()
@@ -429,6 +436,7 @@ class AccountMove(models.Model):
                 #reconciliation will be full, so speed up the computation by using skip_full_reconcile_check in the context
                 to_rec.reconcile()
         if reversed_moves:
+            print("before3")
             reversed_moves._post_validate()
             reversed_moves.post()
             return [x.id for x in reversed_moves]
@@ -807,6 +815,7 @@ class AccountMoveLine(models.Model):
                         partial_rec_ids += rate_diff_partial_rec.ids
                     else:
                         aml_to_balance.reconcile()
+                print("before4")
                 exchange_move.post()
                 exchange_move_id = exchange_move.id
             #mark the reference of the full reconciliation on the exchange rate entries and on the entries
@@ -1041,6 +1050,7 @@ class AccountMoveLine(models.Model):
 
             line_to_reconcile += writeoff_move.line_ids.filtered(lambda r: r.account_id == self[0].account_id).sorted(key='id')[-1:]
         if writeoff_moves:
+            print("before5")
             writeoff_moves.post()
         # Return the writeoff move.line which is to be reconciled
         return line_to_reconcile
@@ -1207,6 +1217,8 @@ class AccountMoveLine(models.Model):
             for line in self:
                 if line.move_id.id not in move_ids:
                     move_ids.add(line.move_id.id)
+            
+            print("beforee3")
             self.env['account.move'].browse(list(move_ids))._post_validate()
         return result
 
@@ -1641,6 +1653,7 @@ class AccountPartialReconcile(models.Model):
                 # probably already sent to the estate.
                 newly_created_move.write({'date': move_date})
             # post move
+            print("before6")
             newly_created_move.post()
 
     def _create_tax_basis_move(self):

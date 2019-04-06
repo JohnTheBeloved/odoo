@@ -238,7 +238,9 @@ class AccountBankStatement(models.Model):
             for st_line in statement.line_ids:
                 #upon bank statement confirmation, look if some lines have the account_id set. It would trigger a journal entry
                 #creation towards that account, with the wanted side-effect to skip that line in the bank reconciliation widget.
+                print("Got Here-1")
                 st_line.fast_counterpart_creation()
+                print("Got Here")
                 if not st_line.account_id and not st_line.journal_entry_ids.ids and not st_line.statement_id.currency_id.is_zero(st_line.amount):
                     raise UserError(_('All the account entries lines must be processed in order to close the statement.'))
                 for aml in st_line.journal_entry_ids:
@@ -487,12 +489,15 @@ class AccountBankStatementLine(models.Model):
                     'credit': st_line.amount > 0 and st_line.amount or 0.0,
                     'account_id': st_line.account_id.id,
                 }
+                print("fast_counterpart_creation")
                 st_line.process_reconciliation(new_aml_dicts=[vals])
+                print("fast_counterpart_creation+1")
 
     def _get_communication(self, payment_method_id):
         return self.name or ''
 
     def process_reconciliation(self, counterpart_aml_dicts=None, payment_aml_rec=None, new_aml_dicts=None):
+        print("DIct" + str(new_aml_dicts))
         """ Match statement lines with existing payments (eg. checks) and/or payables/receivables (eg. invoices and credit notes) and/or new move lines (eg. write-offs).
             If any new journal item needs to be created (via new_aml_dicts or counterpart_aml_dicts), a new journal entry will be created and will contain those
             items, as well as a journal item for the bank statement line.

@@ -68,6 +68,11 @@ class ProductTemplate(models.Model):
         'Sales Price', default=1.0,
         digits=dp.get_precision('Product Price'),
         help="Price at which the product is sold to customers.")
+    # discount_price: catalog price, user defined
+    discount_price = fields.Float(
+        'Discount Price', default=1.0,
+        digits=dp.get_precision('Product Price'),
+        help="Lowest Price at which the product can be sold to customers.")
     # lst_price: catalog price for template, but including extra for variants
     lst_price = fields.Float(
         'Public Price', related='list_price', readonly=False,

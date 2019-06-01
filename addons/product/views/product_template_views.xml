@@ -9,6 +9,7 @@
                 <field name="default_code"/>
                 <field name="name"/>
                 <field name="list_price" string="Sales Price"/>
+                <field name="discount_price" string="Discount Price"/>
                 <field name="standard_price"/>
                 <field name="categ_id"/>
                 <field name="type"/>

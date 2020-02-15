@@ -34,6 +34,7 @@ import unicodedata
 
 import odoo
 import odoo.modules.registry
+import json
 from odoo.api import call_kw, Environment
 from odoo.modules import get_resource_path
 from odoo.tools import crop_image, topological_sort, html_escape, pycompat
@@ -83,7 +84,7 @@ def serialize_exception(f):
             se = _serialize_exception(e)
             error = {
                 'code': 200,
-                'message': "Odoo Server Error",
+                'message': "RxOne Server Error",
                 'data': se
             }
             return werkzeug.exceptions.InternalServerError(json.dumps(error))
@@ -950,6 +951,9 @@ class DataSet(http.Controller):
         return self._call_kw(model, method, args, {})
 
     def _call_kw(self, model, method, args, kwargs):
+        print(json.dumps(args, indent=4))
+        print(json.dumps(kwargs, indent=4))
+        print(model)
         check_method_name(method)
         return call_kw(request.env[model], method, args, kwargs)
 
@@ -1692,7 +1696,7 @@ class ReportController(http.Controller):
             se = _serialize_exception(e)
             error = {
                 'code': 200,
-                'message': "Odoo Server Error",
+                'message': "RxOne Server Error",
                 'data': se
             }
             return request.make_response(html_escape(json.dumps(error)))

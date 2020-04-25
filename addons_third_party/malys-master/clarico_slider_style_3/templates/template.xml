@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<template id="clarico_slider_style_3_left_bar_slider_position" inherit_id="clarico_snippets.clarico_slider_snippets" priority="3">
+	    <xpath expr="//div[@id='clarico_slider_structure']//div[@class='o_panel_body']" position="inside">
+	  	  	<t t-snippet="clarico_slider_style_3.clarico_slider_style_3_template" t-thumbnail="/clarico_slider_style_3/static/src/img/slider_3.jpg"/>
+		</xpath>
+	</template>
+	
+	<template id="clarico_slider_style_3_template" name="Style 3">
+		<div class="oe_structure" />
+		<section class="slider_section">
+			<div id="slider_wrapper_lc2" class="slider_wrapper_lc2">
+		        <div id="myCarousel" class="carousel slide clarico_slider_style_3_carousel carousel-fade" data-interval="5000">
+				
+					<!-- Indicators -->
+					<ol class="carousel-indicators hidden">
+					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					</ol>
+				
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+         				<div class="item active" style="background-image:url('/clarico_slider_style_3/static/src/img/banner-1.jpeg')">
+							<section class="">
+					            <section class="lc2_carousel_caption">
+					            <div class="animate_effect">
+									 <section><h2>Classic Collection</h2> </section>
+									 <section class="lc_caption_para"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> </section>
+									<section class="caption_btn_wrapper">
+										<a href="#" class="shop_now_button">Learn More</a>
+									</section>
+									</div>
+					            </section>
+							</section>
+						</div>
+						 <div class="carousel-control left hidden" data-target="#myCarousel" data-slide="prev">
+						     <i class="fa fa-chevron-left"/>
+						</div>
+						<div class="carousel-control right hidden" data-target="#myCarousel" data-slide="next">
+						     <i class="fa fa-chevron-right"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</template>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="category_description_template" inherit_id="clarico_shop.clarico_shop_products">
+        <xpath expr="//div[@id='sub_header_row']" position="before">
+            <section>
+                <div class="oe_structure"/>
+                <t t-foreach="category" t-as="pc_id">
+                    <img class="img img-responsive center" t-if="category.category_image" t-att-src="'data:image/png;base64,%s' %to_text(pc_id.category_image)"/>
+                </t>
+            </section>
+        </xpath>
+        <xpath expr="//div[@id='sub_header_row']" position="before">
+            <section>
+                <div class="shop_ctg_desc_main">
+                    <t t-foreach="category" t-as="pc_id">
+                        <div t-field="pc_id.content">
+                            <div class="oe_structure ctg_oe_structure"/>
+                        </div>
+                    </t>
+                </div>
+            </section>
+        </xpath>
+    </template>
+</odoo>

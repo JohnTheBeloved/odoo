@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="assets_frontend_js"
+		name="Customer carousel snippets JS frontend assets"
+		inherit_id="website.assets_frontend">
+		<xpath expr="//script[last()]" position="after">
+			<script type="text/javascript"
+				src="/clarico_customer_carousel/static/src/js/customer_carousel_snippet_frontend.js"></script>
+			
+			 <script type="text/javascript"
+				src="/clarico_customer_carousel/static/src/js/slider_custom.js"></script> 
+			<link href="/clarico_customer_carousel/static/src/less/customer.less" type="text/less"
+				rel="stylesheet" />
+		</xpath>
+	</template>
+		<template id="assets_editor_js"
+		name="E-commerce product carousel snippets JS frontend assets"
+		inherit_id="website.assets_editor">
+		
+		<xpath expr="//script[last()]" position="after">
+		
+		<script type="text/javascript"
+				src="/clarico_customer_carousel/static/src/js/customer_carousel_snippet_backendend.js"></script>
+		</xpath>
+	</template>
+</odoo>

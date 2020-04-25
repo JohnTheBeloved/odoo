@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="theme_murphy_73lines_footer_custom"
+              inherit_id="website.footer_custom"
+              name="Footer">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div class="oe_structure" id="footer">
+                <section class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-1 newsletter-set mt8">
+                                <h4>Newsletter Signup</h4>
+                            </div>
+                            <div class="col-md-4 mt16">
+                                <p style="font-size:14px;">Sign up for our
+                                    e-mail and be the first who
+                                    know our special offers! Furthermore, we
+                                    will give a 15% discount on the next order
+                                    after you sign up.
+                                </p>
+                            </div>
+                            <div class="col-md-4 mt16">
+                                <div class="block-subscribe">
+                                    <div class="input-group js_subscribe hidden"
+                                         data-list-id="1"
+                                         data-subscribe="off">
+                                        <input type="email" name="email"
+                                               class="js_subscribe_email form-control text-white"
+                                               placeholder="your email..." />
+                                        <span class="input-group-btn">
+                                            <a href="#"
+                                               class="btn btn-primary subscribe js_subscribe_btn o_default_snippet_text">
+                                                Subscribe
+                                            </a>
+                                            <a href="#"
+                                               class="btn btn-success js_subscribed_btn hidden o_default_snippet_text"
+                                               disabled="disabled">
+                                                Thanks
+                                            </a>
+                                        </span>
+                                        <div class="alert alert-success hidden o_default_snippet_text">
+                                            Thanks for your
+                                            subscription!
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="social">
+                                    <h2 class="set-social-icon">
+                                        <a t-att-href="website.social_facebook"
+                                           t-if="website.social_facebook">
+                                            <i class="fa fa-facebook"/>
+                                        </a>
+                                        <a t-att-href="website.social_twitter"
+                                           t-if="website.social_twitter">
+                                            <i class="fa fa-twitter"/>
+                                        </a>
+                                        <a t-att-href="website.social_linkedin"
+                                           t-if="website.social_linkedin">
+                                            <i class="fa fa-linkedin"/>
+                                        </a>
+                                        <a t-att-href="website.social_youtube"
+                                           t-if="website.social_youtube">
+                                            <i class="fa fa-youtube-play"/>
+                                        </a>
+                                        <a t-att-href="website.social_googleplus"
+                                           t-if="website.social_googleplus"
+                                           rel="publisher">
+                                            <i class="fa fa-google-plus"/>
+                                        </a>
+                                        <a t-att-href="website.social_github"
+                                           t-if="website.social_github">
+                                            <i class="fa fa-github"/>
+                                        </a>
+                                    </h2>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="custom-footer mt24">
+                    <div class="container">
+                        <div class="row">
+                            <div class="fourth-block mt32 col-md-6 col-sm-6">
+                                <div class="ul-block-footer col-md-4">
+                                    <h4 class="text-white">CATEGORIES</h4>
+                                    <div>
+                                        <ul id="menu-categories" class="menu">
+                                            <li id="menu-item-1133"
+                                                class="">
+                                                <a href="#">
+                                                    SKINCARE
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-1131"
+                                                class="">
+                                                <a href="#">
+                                                    Men’s
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-1132"
+                                                class="">
+                                                <a href="#">
+                                                    Women’s
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ul-block-footer col-md-4">
+                                    <h4 class="text-white">MY ACCOUNT</h4>
+                                    <div>
+                                        <ul id="menu-categories" class="menu">
+                                            <li id="menu-item-1133"
+                                                class="">
+                                                <a href="#">
+                                                    SKINCARE
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-1131"
+                                                class="">
+                                                <a href="#">
+                                                    Men’s
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-1132"
+                                                class="">
+                                                <a href="#">
+                                                    Women’s
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-1131"
+                                                class="">
+                                                <a href="#">
+                                                    Men’s
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-1132"
+                                                class="">
+                                                <a href="#">
+                                                    Women’s
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ul-block-footer col-md-4">
+                                    <h4 class="text-white">PAGES</h4>
+                                    <div>
+                                        <ul id="menu-categories" class="menu">
+                                            <li id="menu-item-1133"
+                                                class="">
+                                                <a href="#">
+                                                    About
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-1131"
+                                                class="">
+                                                <a href="#">
+                                                    Contacts
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fourth-block mt32 col-md-6 col-sm-6">
+                                <div class="wpb_wrapper">
+                                    <h4 class="text-white">ABOUT</h4>
+                                    <p>hermit is one of the best specialized
+                                        online stores for selling of
+                                        sportswear, footwear, accessories,
+                                        sports equipment and other goods for
+                                        sport and recreation. You can find
+                                        sports products from the world’s best
+                                        manufacturers on it. It’s possible to
+                                        deliver them on the whole territory of
+                                        world. All brands presented in our
+                                        online store, are registered
+                                        trademarks. Copying or placement of the
+                                        provided information on other sites is
+                                        prohibited. If you have any questions,
+                                        please get in touch with the site
+                                        administrator.
+                                    </p>
+                                    <t t-call="website.language_selector"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <div id="back-top">
+                    <a class="img-square" href="#wrap">
+                        <i class="fa fa-arrow-up"/>
+                    </a>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+
+    <template id="website.footer_default"
+              inherit_id="theme_murphy_73lines.theme_murphy_73lines_footer_custom"
+              customize_show="True" active="False" name="Automatic Footer">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="container hidden-print">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3">
+                        <h4>Our products &amp; Services</h4>
+                        <ul class="list-unstyled" id="products">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4  col-lg-3" id="info">
+                        <h4>Connect with us</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/page/website.contactus">Contact us
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li t-ignore="true">
+                                <i class="fa fa-phone"/>
+                                <span t-field="res_company.phone"></span>
+                            </li>
+                            <li t-ignore="true">
+                                <i class="fa fa-envelope"/>
+                                <span t-field="res_company.email"></span>
+                            </li>
+                        </ul>
+                        <h2>
+                            <a t-att-href="website.social_facebook"
+                               t-if="website.social_facebook">
+                                <i class="fa fa-facebook-square"/>
+                            </a>
+                            <a t-att-href="website.social_twitter"
+                               t-if="website.social_twitter">
+                                <i class="fa fa-twitter"/>
+                            </a>
+                            <a t-att-href="website.social_linkedin"
+                               t-if="website.social_linkedin">
+                                <i class="fa fa-linkedin"/>
+                            </a>
+                            <a t-att-href="website.social_youtube"
+                               t-if="website.social_youtube">
+                                <i class="fa fa-youtube-play"/>
+                            </a>
+                            <a t-att-href="website.social_googleplus"
+                               t-if="website.social_googleplus"
+                               rel="publisher">
+                                <i class="fa fa-google-plus-square"/>
+                            </a>
+                            <a t-att-href="website.social_github"
+                               t-if="website.social_github">
+                                <i class="fa fa-github"/>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="col-md-4 col-lg-5 col-lg-offset-1">
+                        <h4>
+                            <span t-field="res_company.name"/>
+                            <small>
+                                -
+                                <a href="/page/website.aboutus">About us</a>
+                            </small>
+                        </h4>
+                        <div>
+                            <p>
+                                We are a team of passionate people whose goal
+                                is to improve
+                                everyone's
+                                life through disruptive products. We build
+                                great
+                                products to solve
+                                your
+                                business problems.
+                            </p>
+                            <p>
+                                Our products are designed for small to medium
+                                size companies
+                                willing to optimize
+                                their performance.
+                            </p>
+                            <t t-call="website.language_selector"/>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="website.layout_footer_copyright" inherit_id="website.layout"
+              name="Footer Copyright">
+       <xpath expr="//footer" position="inside">
+            <section class="bg-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="mt16 mb16 col-md-6" t-ignore="true"
+                             t-if="not editable" style="color: #333333; font-size:13px;">
+                            Design by
+                            <a class="" href="http://www.73lines.com"
+                               target="_blank">
+                                <span style="color: #333333;">&lt;</span>
+                                <span
+                                        style="color:#7F1637; font-family: 'Dosis', sans-serif; font-weight: 800;">
+                                    73
+                                </span>
+                                <span
+                                        style="color: #333333; font-family: 'Dosis', sans-serif; font-weight: 500;">
+                                    Lines /&gt;
+                                </span>
+                            </a>
+                        </div>
+                        <div class="payment text-right col-md-6">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="/theme_murphy_73lines/static/imgs/payment-1.png"
+                                             class="img img-responsive"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="/theme_murphy_73lines/static/imgs/payment-2.png"
+                                             class="img img-responsive"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="/theme_murphy_73lines/static/imgs/payment-3.png"
+                                             class="img img-responsive"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="/theme_murphy_73lines/static/imgs/payment-4.png"
+                                             class="img img-responsive"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+</odoo>

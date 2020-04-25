@@ -1,0 +1,163 @@
+.div_whole_about_us,.about_us_image_div
+{
+	display:block;
+	width:50%;
+	float:left;
+}
+.abt_h1_margin
+{
+	.mt(3%);
+	.mb(15px);
+}
+.about_content_sub
+{
+	.common-div;
+	text-align:left;
+	
+	.sep_span_hr
+	{
+		float:left;
+		.mt(10px);
+	}
+	.chs_para
+	{
+		.common-div;
+		font-size: 15px;
+		line-height: 180%;
+		margin-bottom: 41px !important;
+		color: #898383;
+		.muli-light();
+		margin-top: 25px;
+		max-width: 500px;
+	}
+}
+.abt_us_subheading
+{
+	.muli-regular();
+}
+.skills
+{
+	padding:0;
+}
+.sonny_progressbar {
+	.mb(20px);
+}
+.sup_class_about_us
+{
+.size(19px);
+top: -2.5em;
+}
+.sonny_progressbar p.title {
+	.size(16px);
+	line-height: 20px;
+	margin: 0;
+	padding: 5px 0;
+}
+.sonny_progressbar .bar-container {
+	position: relative;
+	height: 40px;
+}
+
+.sonny_progressbar .backgroundBar {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.sonny_progressbar .bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.sonny_progressbar .targetBar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	-webkit-animation: Animation 2s infinite ease-in-out;
+	-moz-animation: Animation 2s infinite ease-in-out;
+	animation: Animation 2s infinite ease-in-out;
+}
+.sonny_progressbar .targetBar.loader {
+	-webkit-animation: AnimationB 4s infinite ease-in-out;
+	-moz-animation: AnimationB 4s infinite ease-in-out;
+	animation: AnimationB 4s infinite ease-in-out;
+	background-image: url('animated-overlay.gif');
+}
+.sonny_progressbar .bar-container.border .bar, .sonny_progressbar .bar-container.border .targetBar, .sonny_progressbar .bar-container.border .backgroundBar {
+	border-bottom: 3px solid rgba(0,0,0,.2);
+}
+.sonny_progressbar .progress-percent {
+	font-size: 16px;
+	position: absolute;
+	right: 15px;
+	top:-14px;
+}
+
+@keyframes Animation {
+  0%   { opacity:.4; }
+  50%   { opacity:1; }
+  100% { opacity:.4; }
+}
+@-moz-keyframes Animation{
+  0%   { opacity:.4; }
+  50%   { opacity:1; }
+  100% { opacity:.4; }
+}
+@-webkit-keyframes Animation{
+  0%   { opacity:.4; }
+  50%   { opacity:1; }
+  100% { opacity:.4; }
+}
+@keyframes AnimationB {
+  0%   { opacity:.01; }
+  50%   { opacity:.1; }
+  100% { opacity:.01; }
+}
+@-moz-keyframes AnimationB {
+  0%   { opacity:.01; }
+  50%   { opacity:.1; }
+  100% { opacity:.01; }
+}
+@-webkit-keyframes AnimationB {
+  0%   { opacity:.01; }
+  50%   { opacity:.1; }
+  100% { opacity:.01; }
+}
+
+
+@media(max-width:800px)
+{
+	.div_whole_about_us, .about_us_image_div
+	{
+		width:100%;
+	}
+	.about_content_sub
+	{
+		text-align:center;
+	
+		.ch_h1_class
+		{
+			text-align:center;
+		}
+		.chs_para
+		{
+			text-align:center;
+			display:block;
+		}
+	}
+	.div_whole_about_us
+	{
+		.mt(10%);
+		
+		.left_side_snapshot_div
+		{
+			width: 100%;
+			margin: 0px auto;
+		}
+	}
+}
+
+

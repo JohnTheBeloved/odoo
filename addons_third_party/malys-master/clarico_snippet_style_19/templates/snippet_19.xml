@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="clarico_style_19" inherit_id="clarico_snippets.clarico_other_snippets" name="clarico Snippet" priority="3">
+		<xpath expr="//div[@id='clarico_other_snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+			<t t-snippet="clarico_snippet_style_19.clarico_snippet_style_19_template" t-thumbnail="/clarico_snippet_style_19/static/src/img/style.jpg"  /> 
+		</xpath>
+	</template>
+	<template id="clarico_snippet_style_19_template" name="Button">
+		<div class="oe_structure" />
+		<section class="common-div">
+			<div class="block">
+				<a href="#" class="shop_now_button">Learn More</a>
+			</div>
+		</section>
+	</template>
+</odoo>

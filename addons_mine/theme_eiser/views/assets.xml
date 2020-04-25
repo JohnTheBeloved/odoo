@@ -1,0 +1,38 @@
+<odoo>
+  <template id="mystyle" name="My style" inherit_id="website.assets_frontend">
+      <xpath expr="link[last()]" position="after">
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/scss/style.scss"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/animate.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/flaticon.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/font-awesome.min.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/jquery-ui.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/linericon.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/nice-select.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/owl.carousel.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/responsive.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/simpleLightbox.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/style.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/themify-icons.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/override.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/into_odoo.css"/>
+      </xpath>
+  </template>
+
+  <template id="my_js" inherit_id="website.assets_editor" name="My Js">
+  <xpath expr="script[last()]" position="after">
+    <script type="text/javascript" src="/theme_eiser/static/js/eiser_editor.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/imagesloaded.pkgd.min.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/isotope-min.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/jquery.ajaxchimp.min.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/jquery.counterup.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/jquery.nice-select.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/jquery.waypoints.min.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/mail-script.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/owl.carousel.min.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/popper.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/stellar.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/theme.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/main.js" />
+  </xpath>
+</template>
+</odoo>

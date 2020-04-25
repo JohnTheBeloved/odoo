@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_view_limit,access_product_view_limit,model_product_view_limit,,1,0,0,0
+access_product_tags,product_tags,model_product_tags,,1,0,0,0
+access_product_brand,access_product_brand,model_product_brand,,1,0,0,0
+access_product_ribbon,product_ribbon,model_product_ribbon,,1,0,0,0

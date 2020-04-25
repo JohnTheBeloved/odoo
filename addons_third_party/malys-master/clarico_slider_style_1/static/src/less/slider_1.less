@@ -1,0 +1,140 @@
+.slider_section{
+	.common-div();
+}
+.slider_wrapper_ic{
+	.common-div();	
+	& .layer_caption {
+	    top: 0;
+		color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+	}
+	
+	.carousel-inner
+	{
+		.item
+		{
+			padding: 20%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+	
+	& .carousel-indicators 
+	{
+		.mb(0);
+	
+		li{
+			border-radius:0;
+		    transform: rotate(45deg);
+		    margin: 0 3px;
+		    border:1px solid black;
+		    box-shadow:none !important;
+		    width: 10px !important;
+	    	height: 10px !important;
+	    	vertical-align:middle;
+	    	
+		    &.active{
+		    	border:2px solid black !important;
+		    	.bg(#2b2b2b) !important;
+		    }
+		}
+	}
+	& .ic_carousel_caption{
+		left: 3%;
+		padding: 35px;
+		border: none;
+		position: absolute;
+		width: 50%;
+		max-width: 100%;
+		text-align: left;
+		margin: 0;
+
+		& h2{
+			margin:0;
+			padding:20px 0px;
+			.size(50px);
+		}
+		& p{
+			margin:0;
+			padding:10px 0px;
+			.size(16px);
+		}
+		& .caption_btn_wrapper{
+			.pt(40px);
+		}
+		
+		& .btn_read_more{
+			height: 50px;
+			border: 2px solid transparent;
+			padding: 0 25px;
+			font-size: 14px;
+			text-transform: uppercase;
+			display: inline-block;
+			.bg(#2196F3);
+			&:hover{
+				.bg(transparent);
+				color:#2196F3;
+				border: 1px solid #2196F3;
+			}
+		}
+	}
+	.carousel-control{
+		height: 50px;
+		width: 50px !important;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: #000;
+		opacity:1 !important;
+		&.right{
+			.right(20px);
+		}
+		&.left{
+			.left(20px);
+		}
+		& i{
+			.top(8px) !important;
+			.left(20px) !important;
+			.size(30px);
+		}
+	}
+}
+
+
+@media (max-width:1000px)
+{
+	.slider_wrapper_ic .carousel-control 
+	{
+  	  	height: 40px;
+  	  	width: 40px !important;
+    
+   		 i
+	   	 {
+    		top: 6px !important;
+   		 	left: 14px !important;
+    	 	.size(26px);
+  	  	}
+    }
+	
+}
+
+@media (max-width:600px)
+{
+	.slider_wrapper_ic .carousel-control 
+	{
+   		 height: 25px;
+   	 	 width: 25px !important;
+   	 	 
+   	 	 i
+   	 	 {
+   	 	 	top: 3px !important;
+			left: 8px !important;
+			.size(18px);
+   	 	 }
+	}
+	
+}
+

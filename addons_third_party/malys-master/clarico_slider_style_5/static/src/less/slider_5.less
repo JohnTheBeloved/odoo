@@ -1,0 +1,233 @@
+.slider_section
+{
+	.style_1_carousel
+	{
+		display:inline-block;
+		width:100% !important;
+		.pt(0) !important;
+	}
+
+}
+
+.slider_section{
+	.common-div();
+}
+.slider_wrapper_mtb{
+	.common-div();	
+	& .layer_caption {
+	    top: 0;
+		color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(37,139,223, 0.7);
+	}
+	& .carousel-indicators li{
+		border-radius:0;
+	    transform: rotate(45deg);
+	    margin: 0 3px;
+	    width: 10px !important;
+    	height: 10px !important;
+    	vertical-align: middle;
+	}
+	.carousel-inner
+	{
+		.item
+		{
+			padding: 20%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+	& .mtb_carousel_caption{
+		text-align: center;
+		margin: 0 auto;
+		position: absolute;
+		top: 25%;
+		left: 5%;
+		width: 90%;
+		& h2{
+			margin:0;
+			padding:20px 0px;
+			.size(50px);
+			.muli-semibold();
+			animation: fadeIn_left 1s ease-in both;
+		}
+		& p{
+			margin:0;
+			padding:10px 0px;
+			.size(15px);
+			color:#666;
+			animation: fadeIn_right 1s ease-in both;
+			max-width: 650px;
+			margin: 0px auto;
+			line-height: 170%;
+		}
+	}
+	.carousel-control{
+		height: 90px;
+		width: 65px !important;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: #ffffff;
+		color: #2196F3;
+		text-shadow: none;
+		line-height: 90px;
+		font-size: 38px;
+		opacity: 1;
+		& i{
+			.top(25px) !important;
+			.left(25px) !important;
+		}
+	}
+}
+.caption_btn_wrapper
+{
+	.mt(2%);
+	animation: fadeIn 1s ease-in both;
+	animation-delay: 1s;
+}
+.double_btns
+{
+	display:inline-block;
+}
+
+ @keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -30%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+ @keyframes fadeIn_left {
+	from {
+		opacity: 0;
+		transform: translate3d(-30%, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeIn_right {
+	from {
+		opacity: 0;
+		transform: translate3d(30%, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+
+
+
+
+
+
+@media (max-width:1100px)
+{
+	.slider_wrapper_mtb .mtb_carousel_caption h2
+	{
+		.size(40px);
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption p
+	{
+		.size(14px);
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption
+	{
+		top: 20%;
+	}
+}
+@media (max-width:1000px)
+{
+	.slider_wrapper_mtb .mtb_carousel_caption h2
+	{
+		.size(35px);
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption
+	{
+		top: 15%;
+	}
+
+}
+@media (max-width:800px)
+{
+	.slider_wrapper_mtb .mtb_carousel_caption h2
+	{
+		.size(30px);
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption p
+	{
+		max-width:500px;
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption
+	{
+		top: 5%;
+	}
+	.slider_wrapper_mtb .carousel-control
+	{
+		height: 70px;
+		width: 40px !important;
+		line-height: 70px;
+		.size(30px);
+		
+		i
+		{
+			top: 20px !important;
+			left: 15px !important;
+		}
+	}
+}
+@media (max-width:600px)
+{
+	.slider_wrapper_mtb .mtb_carousel_caption
+	{
+		top: 15%;
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption p
+	{
+		display:none;
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption h2
+	{
+		padding:15px 0;
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption h2
+	{
+		.size(25px);
+	}
+	.slider_wrapper_mtb .carousel-control {
+    	height: 60px;
+    	width: 35px !important;
+    	line-height: 60px;
+   		 font-size: 25px;
+    
+    	i
+    	{
+    		top: 18px !important;
+			left: 14px !important;
+    	}
+	}
+}
+@media (max-width:400px)
+{
+	.slider_wrapper_mtb .mtb_carousel_caption h2
+	{
+		.size(18px);
+	}
+	.slider_wrapper_mtb .mtb_carousel_caption h2
+	{
+		padding:10px 0;
+	}
+	
+}
+
+

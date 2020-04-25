@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Inherit View - Product Template -->
+    <record model="ir.ui.view" id="product_ribbon_from_view">
+        <field name="name">product.template.product.ribbon.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="website_sale.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='accessory_product_ids']" position="after">
+                <field name="ribbon_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Product Ribbon Form View -->
+    <record id="product_ribbon_form_view" model="ir.ui.view">
+        <field name="name">Product Ribbon Form View</field>
+        <field name="model">product.ribbon</field>
+        <field name="arch" type="xml">
+            <form string="Product Ribbon">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="ribbon_color_back"/>
+                        <field name="ribbon_color_text"/>
+                    </group>
+                    <div class="alert alert-danger mt16" style="font-size:15px;">
+                        You can add Color Name | Hex Code in Ribbon's Background | Font color field.
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

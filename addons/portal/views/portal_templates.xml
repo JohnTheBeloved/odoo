@@ -502,7 +502,7 @@
             t-att-data-access-token="accessToken"/>
     </template>
 
-    <template id="portal_sidebar" name="Sidebar">
+    <template id="portal_sidebar" inherit_id="website_sale.categories_recursive" name="Sidebar">
         <t t-call="portal.portal_layout">
             <body data-spy="scroll" data-target=".navspy" data-offset="50">
                 <div class="container o_portal_sidebar"></div>

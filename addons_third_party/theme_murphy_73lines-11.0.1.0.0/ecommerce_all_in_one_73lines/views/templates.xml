@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo Module Developed by 73lines See LICENSE file for full copyright
+	and licensing details. -->
+<odoo>
+
+    <!-- Proper Block Structure of Bottom Pager Block -->
+
+    <template id="products_top_pager_inherit" inherit_id="website_sale.products"
+              name="Products View Options">
+        <xpath expr="//div[hasclass('products_pager')][1]" position="attributes">
+            <attribute name="id">product_pager_top</attribute>
+        </xpath>
+    </template>
+
+    <template id="products_bottom_pager_inherit" inherit_id="website_sale.products"
+              name="Products View Options">
+        <xpath expr="//div[hasclass('products_pager')][2]" position="replace">
+            <div class="products_pager mt16" id="product_pager_bottom">
+                <div class="row" style="width: 100%;">
+                    <t t-call="website.pager"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- View Limit Template -->
+    <template id="product_limit" name="Product View Limit">
+        <div t-if="limits" class="product_limit dropdown btn-group">
+            <button class="btn btn-default dropdown-toggle active_limit"
+                    type="button" data-toggle="dropdown">
+                <b>
+                    <t t-esc="PPG"/>
+                </b>
+                <span class="perPage">per Page</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu limit_list">
+                <li t-foreach="limits" t-as="limit">
+                    <a class="product_limit_link" t-att-value="limit['name']">
+                        <t t-esc="limit['name']"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </template>
+
+    <!-- View Limit @top Template -->
+    <template id="product_limit_top" inherit_id="website_sale.products"
+              name="Show View Limit @Top" active="True" customize_show="True">
+        <xpath expr="//div[hasclass('products_pager')][1]/div" position="inside">
+            <t t-call="ecommerce_all_in_one_73lines.product_limit"/>
+        </xpath>
+    </template>
+
+    <!-- View Limit @bottom Template -->
+    <template id="product_limit_bottom"
+              inherit_id="ecommerce_all_in_one_73lines.products_bottom_pager_inherit"
+              name="Show View Limit @Bottom" active="True" customize_show="True">
+        <xpath expr="//div[@id='product_pager_bottom']/div" position="inside">
+            <t t-call="ecommerce_all_in_one_73lines.product_limit"/>
+        </xpath>
+    </template>
+
+    <!-- Shop page Template for View Switcher -->
+    <template id="products_grid_list" inherit_id="website_sale.products">
+        <xpath expr="//table" position="replace">
+            <table></table>
+            <t t-foreach="products" t-as="product">
+                <div id="grid_list"
+                     class="col-md-4 oe_product oe_grid oe_product_cart oe-height-4"
+                     t-att-data-publish="product.website_published and 'on' or 'off'">
+                    <t t-call="website_sale.products_item">
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Remove Existing Feature of List View from Customize Menu -->
+    <template id="website_sale.products_list_view" inherit_id="website_sale.products"
+              active="False" customize_show="False" name="List View">
+        <xpath expr="//div[@id='products_grid']//table" position="replace">
+            <t t-foreach="products" t-as="product">
+                <div class="oe_product oe_list oe_product_cart"
+                     t-att-data-publish="product.website_published and 'on' or 'off'">
+                    <t t-call="website_sale.products_item">
+                        <t t-set="show_publish" t-value="True"/>
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- View Switcher Icons Template -->
+    <template id="product_view_switcher" name="Product View Switcher">
+        <div class="btn-group switch-grp">
+            <button class="btn btn-default view-switcher grid_view"
+                    data-toggle="tooltip" title="Grid View">
+                <span class="fa fa-th-large"/>
+            </button>
+            <button class="btn btn-default view-switcher list_view"
+                    data-toggle="tooltip" title="List View">
+                <span class="fa fa-bars"/>
+            </button>
+        </div>
+    </template>
+
+    <!-- View Switcher @top Template -->
+    <template id="product_switcher_top_inherit" inherit_id="website_sale.products"
+              name="Show View Switcher @Top" active="True" customize_show="True">
+        <xpath expr="//div[hasclass('products_pager')][1]/div" position="inside">
+            <t t-call="ecommerce_all_in_one_73lines.product_view_switcher"/>
+        </xpath>
+    </template>
+
+    <!-- View Switcher @bottom Template -->
+    <template id="product_switcher_bottom_inherit"
+              inherit_id="ecommerce_all_in_one_73lines.products_bottom_pager_inherit"
+              name="Show View Switcher @Bottom" active="True" customize_show="True">
+        <xpath expr="//div[@id='product_pager_bottom']/div" position="inside">
+            <t t-call="ecommerce_all_in_one_73lines.product_view_switcher"/>
+        </xpath>
+    </template>
+
+    <!-- Product Tags Filter -->
+    <template id="website_product_tags" inherit_id="website_sale.products_attributes"
+              active="False" customize_show="True" name="Product Tags's Filter">
+        <xpath expr="//form[hasclass('js_attributes')]" position="inside">
+            <t t-if="tags">
+                <div id="tags_div">
+                    <div class="filter_title mt24 mb24">
+                        <strong>Tags</strong>
+                    </div>
+                    <t t-foreach="tags" t-as="tag">
+                        <label class="product-tag btn  btn-xs mb8 btn-primary">
+                            <input type="checkbox" name="tags" class="hidden product_tags"
+                                   t-att-title="tag.name" t-att-value="'%s-%s' % (tag.name,tag.id)"
+                                   t-att-checked="'checked' if tag.id in tag_set else None"/>
+                            <span style="font-weight: normal" t-field="tag.name"/>
+                        </label>
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Product Brands Filter -->
+    <template id="website_product_brands" inherit_id="website_sale.products_attributes"
+              active="False" customize_show="True" name="Product Brand's Filter">
+        <xpath expr="//form[hasclass('js_attributes')]" position="inside">
+            <t t-if="brands">
+                <div id="brands_div">
+                    <div class="filter_title mt24 mb24">
+                        <strong>Brands</strong>
+                    </div>
+                    <ul class="nav nav-pills nav-stacked">
+                        <t t-foreach="brands" t-as="brand">
+                            <li class="brand_list">
+                                <label style="margin: 0 40px;">
+                                    <input type="checkbox" name="brands"
+                                           t-att-value="'%s-%s' % (brand.name,brand.id)"
+                                           t-att-checked="'checked' if brand.id in brand_set else None"/>
+                                    <span style="font-weight: normal" t-field="brand.name"/>
+                                </label>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Sort By extended Features -->
+    <template id="product_sorting_extended" inherit_id="website_sale.sort">
+        <xpath expr="//t[@t-set='website_sale_sortable']" position="replace">
+            <t t-set="website_sale_sortable"
+               t-value="[
+                ('New Arrivals &lt;i class=\'fa fa-paper-plane\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'id desc'),
+                ('Price &lt;i class=\'fa fa-arrow-up\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'list_price desc'),
+                ('Price &lt;i class=\'fa fa-arrow-down\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'list_price asc'),
+                ('Name &lt;i class=\'fa fa-sort-alpha-asc\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'name asc'),
+                ('Name &lt;i class=\'fa fa-sort-alpha-desc\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'name desc'),
+            ]"/>
+        </xpath>
+    </template>
+
+    <!-- Search Template Extended for Filters -->
+    <template id="search_extended" inherit_id="website_sale.search"
+              name="Search Box Extended">
+        <xpath expr="//form/t[@t-if='attrib_values']" position="after">
+            <t t-if="tag_values">
+                <t t-foreach="tag_values" t-as="t">
+                    <input type="hidden" name="tags" t-att-value="'%s-%s' % (t[0], t[1])"/>
+                </t>
+            </t>
+            <t t-if="brand_values">
+                <t t-foreach="brand_values" t-as="b">
+                    <input type="hidden" name="brands" t-att-value="'%s-%s' % (b[0], b[1])"/>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Product Quick View-->
+    <template id="quick_view_products_item" inherit_id="website_sale.products_item" active="True" customize_show="True"
+              name="Product Quick View">
+        <xpath expr="//div[hasclass('oe_product_image')]/a[1]" position="after">
+            <div class="quick" t-if="product.website_published">
+                <div class="quick-view-bgr">
+                    <a class="quick-view btn btn-primary" t-attf-href="##{ product.id }" role="button"
+                       data-toggle="modal" title="Quick view">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div t-att-id="product.id" class="modal fade in" aria-hidden="true"
+                 role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">X
+                            </button>
+                            <h1 id="myModalLabel">
+                                <strong t-field="product.display_name"/>
+                            </h1>
+                        </div>
+                        <div class="modal-body col-md-12">
+                            <div class="col-md-6">
+                                <span itemprop="image" t-field="product.image"
+                                      t-options='{"widget": "image", "class": "quick-view-product"}'
+                                      t-att-alt="product.name"/>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-12 mt16 text-left">
+                                    <h2>
+                                        <strong t-field="product.display_name" class="mt16 mb16"/>
+                                    </h2>
+                                    <div class="text-muted">
+                                        <div t-field="product.description_sale" class="mt16 mb16"/>
+                                        <div class="js_attributes"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt16 mb16">
+                                    <div class="css_quantity input-group oe_website_spinner"
+                                         contenteditable="false">
+                                        <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json">
+                                            <i class="fa fa-minus"></i>
+                                        </a>
+                                        <input type="text" class="form-control" data-min="1"
+                                               name="add_qty" value="1"/>
+                                        <a t-attf-href="#"
+                                           class="mb8 input-group-addon float_left js_add_cart_json">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 text-left">
+                                    <form action="/shop/cart/update" class="js_add_cart_variants"
+                                          t-att-data-attribute_value_ids="product.product_variant_ids.ids"
+                                          method="POST">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <div class="js_product" t-if="product.product_variant_ids">
+                                            <div itemprop="offers" itemscope="itemscope"
+                                                 itemtype="http://schema.org/Offer" class="product_price"
+                                                 t-if="product.product_variant_ids">
+                                                <b>
+                                                    <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+                                                        <del class="text-danger mr8" style="white-space: nowrap;"
+                                                             t-esc="compute_currency(product.website_public_price)"
+                                                             t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>
+                                                    </t>
+
+                                                    <span t-esc="product.website_price"
+                                                          t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                                                    <span itemprop="price" style="display:none;"
+                                                          t-esc="product.website_price"/>
+                                                    <span itemprop="priceCurrency" style="display:none;"
+                                                          t-esc="website.currency_id.name"/>
+                                                </b>
+                                            </div>
+                                            <p t-if="len(product.product_variant_ids) &gt; 1"
+                                               class="css_not_available_msg bg-danger"
+                                               style="padding: 15px;">Product not available
+                                            </p>
+                                            <a id="add_to_cart" class="btn btn-primary btn-md mt8 a-submit" href="#">Add
+                                                to Cart
+                                            </a>
+                                            <a class="btn btn-success btn-md mt8"
+                                               t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))">
+                                                More Details
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Show product ribbon in website -->
+    <template id="product_ribbon_style" inherit_id="website_sale.products_item"
+              name="Product Ribbon Style">
+        <xpath expr="//div[hasclass('ribbon-wrapper')]" position="replace">
+            <div class="ribbon-wrap">
+                <div class="ribbon"
+                     t-attf-style="background-color:#{product.ribbon_id.ribbon_color_back or product.ribbon_id.ribbon_color_back};color:#{product.ribbon_id.ribbon_color_text or product.ribbon_id.ribbon_color_text};">
+                    <span t-esc="product.ribbon_id.name"></span>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- @todo Check with Odoo's by-default Styles Option -->
+    <!-- Remove Customize Options Styles -->
+    <template id="product_style_drop" inherit_id="website_sale.website_sale">
+        <xpath expr="//li[2]" position="replace">
+        </xpath>
+    </template>
+
+    <!-- Give Space besides Add to Cart button -->
+    <template id="product_side_block" inherit_id="website_sale.product"
+              name="Product Side Block" active="False" customize_show="True">
+        <xpath expr="//div[hasclass('col-sm-7')]" position="attributes">
+            <attribute name="class">col-sm-5</attribute>
+        </xpath>
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="class">col-sm-5 col-lg-3 col-lg-offset-1
+            </attribute>
+        </xpath>
+        <xpath expr="//section[@id='product_detail']/div[2]" position="inside">
+            <div class="col-sm-2 col-lg-3 oe_structure">
+                <h4>Put Your Content Here Like Images,Carousel,Ecommerce Terms
+                    etc...
+                </h4>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Remove Default Product Description & Added again with Some Style :D -->
+    <template id="product_description_new_style" inherit_id="website_sale.product"
+              name="Product Info Tabs">
+        <xpath expr="//div[@t-field='product.website_description']"
+               position="replace"></xpath>
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="data-name">product_details</attribute>
+        </xpath>
+        <xpath expr="//section[@id='product_detail']" position="inside">
+            <div id="product_description_reviews" class="mt8">
+                <ul class="nav nav-tabs">
+                    <li class="active" id="li-full-desc">
+                        <a href="#full-desc" data-toggle="tab">
+                            <strong>Description</strong>
+                        </a>
+                    </li>
+                    <t t-if="product.attribute_line_ids">
+                        <li role="presentation" class="" id="product_specification_tab">
+                            <a href="#product-additional-info" aria-controls="full" role="tab"
+                               data-toggle="tab" aria-expanded="true">
+                                <strong>Specifications</strong>
+                            </a>
+                        </li>
+                    </t>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="full-desc">
+                        <div itemprop="description" t-field="product.website_description"
+                             class="oe_structure mt16" id="product_full_description"/>
+                    </div>
+                    <div class="tab-pane fade" id="product-additional-info">
+                        <div t-if="product.attribute_line_ids">
+                            <div id="product_attribute_details" class="mt32 mb32">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr t-foreach="product.attribute_line_ids" t-as="pfl">
+                                            <td class="col-md-4">
+                                                <strong>
+                                                    <p t-esc="pfl.attribute_id.name" style="margin: 0 0 0px;"/>
+                                                </strong>
+                                            </td>
+                                            <td>
+                                                <p style="margin: 0 0 0px;">
+                                                    <t t-set="i" t-value="0"/>
+                                                    <t t-foreach="pfl.value_ids" t-as="pfv">
+                                                        <t t-esc="pfv.name"/>
+                                                        <span t-if="i != len(pfl.value_ids)-1">
+                                                            ,
+                                                        </span>
+                                                        <t t-set="i" t-value="i+1"/>
+                                                    </t>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Remove Default Product Discussion & Rating -->
+    <template id="website_sale.product_comment" inherit_id="website_sale.product"
+              active="False" customize_show="False" name="Discussion and Rating">
+    </template>
+
+    <!-- Added Discussion & Rating Option in Customize & Display it in Tabs
+        Style -->
+    <template id="product_comment_new"
+              inherit_id="ecommerce_all_in_one_73lines.product_description_new_style"
+              active="False" customize_show="True" name="Discussion and Rating">
+        <xpath expr="//div[@data-name='product_details']" position="inside">
+            <t t-call="rating.rating_card">
+                <t t-set="rating_stat" t-value="rating_product"/>
+                <t t-set="max_rate" t-value="5"/>
+                <t t-set="min_rate" t-value="1"/>
+            </t>
+        </xpath>
+        <xpath expr="//li[@id='li-full-desc']" position="after">
+            <li id="li-comment">
+                <a href="#full-comment" data-toggle="tab">
+                    <strong>Discussion and Rating</strong>
+                </a>
+            </li>
+        </xpath>
+        <xpath expr="//div[@id='full-desc']" position="after">
+            <div class="tab-pane fade" id="full-comment">
+                <div class="row col-md-10 col-md-offset-1">
+                    <div class="text-muted">
+                        <h3 class="fa fa-comment-o">
+                            <a id="comments">
+                                <t t-if="len(product.website_message_ids) &lt;= 1">
+                                    <t t-esc="len(product.website_message_ids)"/>
+                                    comment
+                                </t>
+                                <t t-if="len(product.website_message_ids) > 1">
+                                    <t t-esc="len(product.website_message_ids)"/>
+                                    comments
+                                </t>
+                            </a>
+                        </h3>
+                    </div>
+                    <t t-call="website_mail.message_thread">
+                        <t t-set="object" t-value="product"/>
+                        <t t-set="chatter_mode" t-value="'json'"/>
+                        <t t-set="rating_enable" t-value="True"/>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

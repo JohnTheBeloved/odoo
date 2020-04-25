@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="snippet_style_fifteen" inherit_id="clarico_snippets.clarico_slider_snippets"
+		name="clarico snippet" priority="9">
+		<xpath
+			expr="//div[@id='clarico_slider_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="website.s_banner" t-thumbnail="/clarico_snippet_style_9/static/src/img/snippet_9.jpg" />
+		</xpath>
+	</template>
+
+	<template id="website.s_banner" name="Style 7">
+	<section class="slider_section">
+		 <div id="myCarousel" class="carousel slide s_banner ts_banner" data-interval="5000">
+    <div class="carousel-inner">
+      <div class="item bg-gray-lighter active">
+        <div class="container block">
+          <div>
+            <div class="s_banner_img_text_fade_container">
+              <section class="text_area_div" style="opacity: 1; transform: translate(-3em, 0px);">
+                <h1 class="img_text_fade_text_heading">big sale</h1>
+                <h3 class="img_text_fade_text_heading_small">
+Lorem ipsum dolor sit amet</h3>
+                <h1 class="discount_title">50% off</h1>
+                <p>
+                  <a href="/page/website.contactus" class="shop_now_button btn-large">Shop Now</a>
+                </p>
+              </section>
+              <section class="carousel-img fade_img_container">
+                <div class="slide1_img1_div" style="opacity: 1; transform: translate(0px, -3em);">
+                  <a href="#">
+                    <img class="img-responsive s_image_common" src="/clarico_snippet_style_9/static/src/img/style_15_img_1.png" alt="Emipro Banner"/>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item bg-gray-lighter">
+        <div class="container block">
+          <div>
+            <div class="s_banner_img_text_fade_container">
+              <section class="text_area_div" style="opacity: 1; transform: translate(-3em, 0px);">
+                <h1 class="img_text_fade_text_heading">big sale</h1>
+                <h3 class="img_text_fade_text_heading_small">
+Lorem ipsum dolor sit amet</h3>
+                <h1 class="discount_title">50% off</h1>
+                <p>
+                  <a href="/page/website.contactus" class="shop_now_button btn-large">Shop Now</a>
+                </p>
+              </section>
+              <section class="carousel-img fade_img_container">
+                <div class="slide1_img1_div" style="opacity: 1; transform: translate(0px, -3em);">
+                  <a href="#">
+                    <img class="img-responsive s_image_common" src="/clarico_snippet_style_9/static/src/img/style_15_img_2.png" alt="Emipro Banner" data-original-title="" title=""/>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-control left" data-target="#myCarousel" data-slide="prev" style="width: 10%">
+      <i class="fa fa-chevron-left"/>
+    </div>
+    <div class="carousel-control right" data-target="#myCarousel" data-slide="next" style="width: 10%">
+      <i class="fa fa-chevron-right"/>
+    </div>
+  </div>
+  </section>
+	</template>
+</odoo>

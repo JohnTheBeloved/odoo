@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="snippet_style_fourteen" inherit_id="clarico_snippets.clarico_2_img_snippets"
+		name="clarico snippet" priority="1">
+		<xpath
+			expr="//div[@id='clarico_2_img_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="clarico_snippet_style_10.snippet_style_14_template"
+			t-thumbnail="/clarico_snippet_style_10/static/src/img/snippet_10.jpg" />
+		</xpath>
+	</template>
+	
+		<template id="snippet_style_14_template" name="Style 1">
+		<div class="oe_structure" />
+			<section class="b_ic_slider_design">
+				<div class="clarico_comman_class">
+					<div class="clarico_sub_comman_class">
+						<section class="b_comman_wrapper_class" style="background-image:url('/clarico_snippet_style_10/static/src/img/style_14_bg.jpg');">
+							<div class="b_slider_wrapper_div_left">
+								<div class="b_wrapper_full_class">
+									<section class="style6_left_bottom_content_container">
+										<div class="s6_left_bottom_left_img">
+											<a href="#">
+												<section>
+													<img class="s_image_common"
+														src="/clarico_snippet_style_10/static/src/img/style_14_img_2.png"></img>
+												</section>
+											</a>
+										</div>
+										<div class="s6_left_botton_right_content">
+											<div class="b_text-block">
+												<p class="chs_heading">clarico - Your Online Furniture Store</p>
+												<p class="b_fashion_subheading">Duis euismod eu nibh at pharetra. Vivamus placerat ac metus et placerat.
+												</p>
+												<p class="style_6_btn_div">
+												<a href="#" class="shop_now_button">shop now</a>
+												</p>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+							<div class="b_slider_wrapper_div_right">
+								<div class="b_wrapper_full_class">
+									<div class="clarico_style_6_img_div">
+										<a href="#">
+											<section>
+												<img class="s_image_common" src="/clarico_snippet_style_10/static/src/img/style_14_img_1.png"></img>
+											</section>
+										</a>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+		</template>
+</odoo>

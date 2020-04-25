@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="snippet_style_4_heading" inherit_id="clarico_snippets.clarico_3_block_snippets"
+		name="Heading Snippet" priority="4">
+		<xpath
+			expr="//div[@id='clarico_3_block_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="clarico_snippet_style_4.snippet_style_4_heading_template"
+				t-thumbnail="/clarico_snippet_style_4/static/src/img/snippet_4.jpg" />
+		</xpath>
+	</template>
+	<template id="snippet_style_4_heading_template" name="6 Blocks">
+	<div class="oe_structure" />
+		<section class="s_clarico_3_content_block">
+			<div class="block s_clarico_3_content_sub">
+				<div class="row">
+					<section class="s_clarico_section">
+						<section class="s_icon">
+							<span class="s_licon">
+							<i class="fa fa-bicycle" aria-hidden="true"></i>
+
+							</span>
+						</section>
+						<section class="s_content_right">
+							<section class="s_content_r_heading">
+								<h3 class="s_clarico_h">
+									Easy to Customize
+								</h3>
+							</section>
+							<section>
+								<p class="s_content_p">
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation
+									ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+									consequat.
+								</p>
+							</section>
+						</section>
+					</section>
+					<section class="s_clarico_section">
+						<section class="s_icon">
+							<span class="s_licon">
+								<i class="fa fa-clone" aria-hidden="true"></i>
+							</span>
+						</section>
+						<section class="s_content_right">
+							<section class="s_content_r_heading">
+								<h3 class="s_clarico_h">
+								Translation Ready
+								</h3>
+							</section>
+							<section>
+								<p class="s_content_p">
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation
+									ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+									consequat.
+								</p>
+							</section>
+						</section>
+					</section>
+					<section class="s_clarico_section">
+						<section class="s_icon">
+							<span class="s_licon">
+								<i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+
+							</span>
+						</section>
+						<section class="s_content_right">
+							<section class="s_content_r_heading">
+								<h3 class="s_clarico_h">
+									Unmatched Power 
+								</h3>
+							</section>
+							<section>
+								<p class="s_content_p">
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation
+									ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+									consequat.
+								</p>
+							</section>
+						</section>
+					</section>
+					<section class="s_clarico_section">
+						<section class="s_icon">
+							<span class="s_licon">
+							<i class="fa fa-line-chart" aria-hidden="true"></i>
+
+							</span>
+						</section>
+						<section class="s_content_right">
+							<section class="s_content_r_heading">
+								<h3 class="s_clarico_h">
+									Inventive Elements
+								</h3>
+							</section>
+							<section>
+								<p class="s_content_p">
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation
+									ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+									consequat.
+								</p>
+							</section>
+						</section>
+					</section>
+					<section class="s_clarico_section">
+						<section class="s_icon">
+							<span class="s_licon">
+								<i class="fa fa-plane" aria-hidden="true"></i>
+							</span>
+						</section>
+						<section class="s_content_right">
+							<section class="s_content_r_heading">
+								<h3 class="s_clarico_h">
+									Luxurious Layouts 
+								</h3>
+							</section>
+							<section>
+								<p class="s_content_p">
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation
+									ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+									consequat.
+								</p>
+							</section>
+						</section>
+					</section>
+					<section class="s_clarico_section">
+						<section class="s_icon">
+							<span class="s_licon">
+								<i class="fa fa-upload" aria-hidden="true"></i>
+							</span>
+						</section>
+						<section class="s_content_right">
+							<section class="s_content_r_heading">
+								<h3 class="s_clarico_h">
+									Supreme Blogging 
+								</h3>
+							</section>
+							<section>
+								<p class="s_content_p">
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation
+									ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+									consequat.
+								</p>
+							</section>
+						</section>
+					</section>
+					
+				</div>
+			</div>
+		</section>
+	</template>
+</odoo>

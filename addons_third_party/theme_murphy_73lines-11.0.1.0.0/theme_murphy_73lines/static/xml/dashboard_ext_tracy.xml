@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+      <t t-extend="DashboardMain">
+        <t t-jquery=".o_web_settings_dashboard_apps" t-operation="after">
+            <div class="text-center o_web_settings_dashboard_73lines_theme"></div>
+        </t>
+    </t>
+
+    <t t-name="ThemeMurphy">
+        <div class="text-center o_web_settings_dashboard_73lines_theme mt8" style="display: inline-block;width: 100%;">
+            <a class="text-center inside_a_org_uuid" href="https://www.73Lines.com" target="_blank">
+                <img class="img img-responsive org_logo_with_uuid_name text-center"
+                     data-app-name="73lines_theme_73lines"
+                     style="margin:  auto;"
+                     src="https://www.73lines.com/73lines_web/static/src/img/logo/73lines_logo.png"/>
+            </a>
+            <div class="col-md-6 col-xs-12 mt32" style="padding-left: 0;">
+                <a href="https://www.73lines.com/shop"
+                   target="_blank"
+                   class="btn btn-primary btn-block mt8 mb8">
+                    <i class="fa fa-shopping-cart"/> Store
+                </a>
+            </div>
+            <div class="col-md-6 col-xs-12 mt32" style="padding-right: 0;">
+                <a href="https://www.73lines.com/page/contactus"
+                   target="_blank"
+                   class="btn btn-primary btn-block mt8 mb8">
+                    <i class="fa fa-envelope"/> Contact us
+                </a>
+            </div>
+        </div>
+    </t>
+</templates>

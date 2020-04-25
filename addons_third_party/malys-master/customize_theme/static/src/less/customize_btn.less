@@ -1,0 +1,249 @@
+.btn.no_btn_style
+{
+	color: #444 !important;
+	transition:unset !important;
+	
+	&:hover
+	{
+		.bg(transparent) !important;
+		color: #444 !important;
+		
+	}
+}
+
+/*---------- demo buttons ---------------*/
+
+.btn.shop_now_button1
+{
+	display: inline-block;
+	.size(14px) !important;
+	line-height: 40px !important;
+	height: 40px !important;
+	letter-spacing: 1px;
+	padding: 0 30px !important;
+	text-align:center;
+	.uppercase !important;
+	background: @theme-color !important;
+	border-radius: 25px !important;
+	border: none !important;
+	color: #fff !important; 
+	transition: all 300ms;
+	text-decoration: none;
+	.oswald-regular !important;
+	float: none !important;
+	
+	&:hover
+	{
+		background:black !important;
+		color:#fff !important;
+	}
+
+
+}
+
+.btn.shop_now_button2
+{
+	color:@theme-color !important;
+	border: 2px solid @theme-color !important;
+	z-index: 1;
+	.oswald-regular() !important;
+	 background: transparent !important;
+	  outline: none !important;
+	  cursor: pointer;
+	  transition: all 0.3s ease;
+	  position: relative;
+	  display: inline-block;
+	  border-radius:0 !important;
+	  line-height: 35px !important;
+	  .capitalize() !important;
+	  letter-spacing:0 !important;
+	  .size(16px) !important;
+	  text-decoration: none;
+	  font-weight: normal;
+	  height: 40px;
+	  
+	  &:hover
+	{
+		 color: #fff !important;
+		 border: 2px solid @theme-color !important;
+	}
+	&:hover:after
+	{
+ 	 top: 0;
+ 	 height: 100% !important;
+	}
+	&:active
+	{
+		top: 2px;
+	}
+}
+.btn.shop_now_button2:after
+{
+  position: absolute;
+  content: "" !important;
+  width: 100% !important;
+  height: 0 !important;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: @theme-color;
+  transition: all 0.3s ease;
+}
+
+
+.btn.shop_now_button3
+{
+	.bg(@theme-color) !important;
+	display: inline-block;
+	.size(13px) !important;
+	line-height: 39px;
+	height: 40px !important;
+	color:#fff !important;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	position: relative;
+	text-decoration: none;
+	border-radius:0 !important;
+	border: 1px solid transparent !important;
+	float:none !important;
+	.uppercase() !important;
+	
+	&:hover::before
+	{
+		opacity: 0 ;
+		-webkit-transform: scale(0.5,0.5);
+		transform: scale(0.5,0.5);
+	}
+	
+	&:hover::after
+	{
+		opacity: 1;
+		-webkit-transform: scale(1,1);
+		transform: scale(1,1);
+	}
+	&:hover
+	{
+		.bg(transparent) !important;
+		color:@theme-color !important;
+		border: 1px solid @theme-color !important;
+	}
+}
+.btn.shop_now_button3::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(255,255,255,0.25);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+
+}
+
+.btn.shop_now_button3:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	border: 1px solid rgba(255,255,255,0.5);
+	-webkit-transform: scale(1.2,1.2);
+	transform: scale(1.2,1.2);
+}
+
+
+
+
+.btn.shop_now_button4
+{
+	border-color: transparent !important;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0.8 !important;
+	color: #fff !important;
+	.bg(@theme-color) !important;
+	.uppercase() !important;
+	.size(13px) !important;
+	.muli-semibold() !important;
+	border-radius: 4px !important;
+	vertical-align: middle;
+	padding: 0 !important;
+	display: inline-block;
+	height:40px;
+	line-height: 40px !important;
+	letter-spacing: 0 !important;
+	float: none !important;
+	//margin: 3% 1% auto !important;
+	
+	
+	&:hover
+	{
+		opacity: 1.0 !important;
+		color:#fff !important;
+		.bg(@theme-color) !important;
+		border-color: transparent !important;
+	}
+	
+}
+.btn.shop_now_button5
+{
+	border:2px solid @theme-color !important;
+	color: @theme-color !important ;
+	.bg(transparent) !important;
+	.uppercase() !important;
+	.size(13px) !important;
+	.muli-semibold() !important;
+	border-radius: 4px !important;
+	vertical-align: middle;
+	//padding: 12px 19px;
+	display: inline-block;
+	height:40px !important;
+	line-height: 38px !important;
+	letter-spacing: 0 !important;
+	float: none !important;
+	//margin: 3% 1% auto !important;
+	
+	
+	&:hover
+	{
+		color:#000 !important;
+		.bg(transparent) !important;
+		border:2px solid #000 !important;
+	}
+	
+}
+.btn.shop_now_button6
+{
+	transition: all 0.3s ease-in-out;
+    color: @theme-color !important;
+    .bg(transparent);
+    border:2px solid @theme-color !important;
+    .oswald-regular;
+    .uppercase();
+    letter-spacing: 1px;
+    border-radius: 25px !important;
+    .size(14px);
+    height: 40px;
+	line-height: 35px;
+    
+     &:hover{
+	     .bg(@theme-color) !important;
+		color:#fff !important;
+		border:2px solid @theme-color !important;
+    }
+
+}

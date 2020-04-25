@@ -1,0 +1,168 @@
+.slider_section{
+	.common-div();
+	
+}
+.slider_wrapper_wo{
+	.common-div();
+	
+	
+		
+	& .carousel-inner{
+		background-color:#8fb7d7;
+		.lc_caption_para
+		{
+			.mb(5%);
+		}
+		
+		& img{
+			max-width:50%;
+			padding:50px;
+			.right();
+			max-height:600px;
+		}
+	}
+	& .carousel-indicators li{
+		border-radius:0;
+	    transform: rotate(45deg);
+	    margin: 0 3px;
+	    width: 10px !important;
+    	height: 10px !important;
+	}
+	& .wo_carousel_caption{
+		left:auto;
+		padding: 35px;
+		border: none;
+		position: absolute;
+		width: 50%;
+		max-width: 100%;
+		text-align: left;
+		margin: 0;
+		top:100px;
+		color:#fff;
+
+		& h2{
+			margin:0;
+			padding:20px 0px;
+			.size(50px);
+			.muli-bold();
+		}
+		& p{
+			margin:0;
+			padding:10px 0px;
+			.size(16px);
+			max-width: 480px;
+			line-height: 165%;
+		}
+	}
+	.carousel-control{
+		height: 90px;
+		width: 65px !important;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: #ffffff;
+		color: #2196F3;
+		text-shadow: none;
+		line-height: 90px;
+		font-size: 38px;
+		opacity: 1;
+		& i{
+			.top(25px) !important;
+			.left(25px) !important;
+		}
+	}
+}
+
+
+
+
+@media (max-width:1100px)
+{
+	.slider_wrapper_wo .wo_carousel_caption
+	{
+		top: 60px;
+	}
+	.slider_wrapper_wo .wo_carousel_caption h2
+	{
+		.size(45px);
+	}
+
+}
+@media (max-width:1000px)
+{
+	.slider_wrapper_wo .wo_carousel_caption h2 {
+    .size(35px);
+    line-height: 140%;
+	padding: 10px 0;
+	}
+	.slider_wrapper_wo .wo_carousel_caption {
+    top: 15px;
+	}
+	.slider_wrapper_wo .carousel-control
+	{
+		width: 50px !important;
+		.size(30px);
+		
+		i
+		{
+			top: 30px !important;
+			left: 20px !important;
+		}
+	}
+}
+@media (max-width:800px)
+{
+	.slider_wrapper_wo .wo_carousel_caption h2 {
+	
+		.size(20px);
+		padding: 5px 0;
+	}
+	.slider_wrapper_wo .wo_carousel_caption p
+	{
+		.size(14px);
+	}
+	.slider_wrapper_wo .wo_carousel_caption {
+    top: 0;
+    padding:25px;
+	}
+	.slider_wrapper_wo .carousel-control
+	{
+		width: 35px !important;
+		.size(25px);
+		height: 60px;
+		line-height: 60px;
+		
+		i
+		{
+			top: 15px !important;
+			left: 14px !important;
+		}
+	}
+}
+@media (max-width:600px)
+{
+	.slider_wrapper_wo .wo_carousel_caption p
+	{
+		display:none;
+	}
+	.slider_wrapper_wo .wo_carousel_caption
+	{
+		padding: 10px;
+	}
+	.slider_wrapper_wo .carousel-inner img
+	{
+		padding:10px;
+	}
+
+}
+@media (max-width:400px)
+{
+	.slider_wrapper_wo .wo_carousel_caption h2
+	{
+		.size(15px);
+	}
+	
+}	
+
+
+

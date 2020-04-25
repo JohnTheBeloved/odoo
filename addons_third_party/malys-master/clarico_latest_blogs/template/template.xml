@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="blog_snippets" inherit_id="clarico_snippets.clarico_carousel_snippets">
+			<xpath expr="//div[@id='clarico_carousel_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="clarico_latest_blogs.blog_snippet_body"
+               t-thumbnail="/clarico_latest_blogs/static/src/img/blog.jpg" />
+        </xpath>
+    </template>
+
+    <!-- E-Commerce Product Carousel Snippet's Body -->
+    <template id="blog_snippet_body" name="Blog">
+        <section class="blog_container">
+            <div class="blog_container_sub">
+                <div class="js_get_blog"  data-isemipro='true' data-loading="true" data-style="1"
+                     data-template="clarico_latest_blogs.blog_showcase" />
+            </div>
+        </section>
+    </template>
+    <template id="blog_showcase">
+        <div class="blog_carousel" t-if="object">
+            <div class="blog_sub_carousel">
+                <!--  <div class="read_more">
+                    <p class="ch_h1_class">Latest Blogs Posts</p>
+                </div> -->
+                <t t-foreach="object" t-as="blog">
+                    <div id="latest_post_img_div">
+                        <a t-attf-href="/blog/#{ slug(blog.blog_id) }/post/#{ slug(blog) }">
+
+                            <div t-attf-style="background-image: #{json.loads(blog.cover_properties).get('background-image', 'none')}"
+                                 class="image_blog_homepage">
+                            </div>
+                        </a>
+                        <div class="col-md-4 l_Blog_detail">
+                            <h4 class="l-blog-name">
+                                <a t-field="blog.name"
+                                   t-attf-href="/blog/#{ slug(blog.blog_id) }/post/#{ slug(blog) }"></a>
+                                <span t-if="not blog.website_published" class="text-warning">
+                                    <span class="fa fa-exclamation-triangle ml8" title="Unpublished" />
+                                </span>
+                            </h4>
+                            <div class="text-muted">
+                                <span t-field="blog.post_date" t-options='{"format": "MMMM dd, yyyy"}'
+                                      class="l-blog-date"></span>
+                                <p class="l_before_hr"></p>
+                            </div>
+                            <a class="readmore_arrow" t-attf-href="/blog/#{ slug(blog.blog_id) }/post/#{ slug(blog) }">
+                                <h6 id="l_blog_readmore">
+                                    Read More
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </template>
+    <template id="blog_showcase_slider">
+
+        <div class="blog_carousel" t-if="object">
+            <div class="blog_sub_carousel block">
+                <!-- <div class="read_more">
+					<p class="ch_h1_class mb48">Latest Blogs Posts</p>
+				</div> -->
+                <div class="blogs_subdiv">
+                    <div class="owl-carousel">
+                        <t t-foreach="object" t-as="blog">
+                            <div id="latest_post_img_div_style_2">
+                                <div class="latest_blog_2_sub_main">
+                                    <a t-attf-href="/blog/#{ slug(blog.blog_id) }/post/#{ slug(blog) }">
+
+                                        <div
+                                                t-attf-style="background-image: #{json.loads(blog.cover_properties).get('background-image', 'none')}"
+                                                class="image_blog_homepage">
+                                        </div>
+                                    </a>
+                                    <div class="l_Blog_detail">
+                                        <h4 class="l-blog-name">
+                                            <a t-field="blog.name"
+                                               t-attf-href="/blog/#{ slug(blog.blog_id) }/post/#{ slug(blog) }" class="octra_product_name"></a>
+                                            <span t-if="not blog.website_published" class="text-warning">
+                                                <span class="fa fa-exclamation-triangle ml8" title="Unpublished" />
+                                            </span>
+                                        </h4>
+                                        <div class="lb_subtitle text-muted" t-field="blog.subtitle">
+									
+                                        </div>
+                                        <div class="text-muted">
+                                            <span t-field="blog.post_date" t-options='{"format": "MMMM dd, yyyy"}'
+                                                  class="l-blog-date"></span>
+									
+                                        </div>
+                                        <a class="readmore_arrow" t-attf-href="/blog/#{ slug(blog.blog_id) }/post/#{ slug(blog) }">
+                                            <h6 id="l_blog_readmore">
+                                                Read More
+                                            </h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- For Snippent Option its mandatory -->
+    <template id="blog_snippets_option" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='background']" position="after">
+            <div data-js="js_get_blog" data-selector=".js_get_blog" />
+            <div data-js="js_get_blog_style" data-selector=".js_get_blog">
+                <li class="dropdown-submenu">
+                    <a class="snippets_option_font_style" tabindex="-1" href="#">
+                        Select Style
+                    </a>
+                    <ul class="snippets_option_font_style dropdown-menu">
+                        <li data-style="1">
+                            <a>Style 1</a>
+                        </li>
+                        <li data-style="2">
+                            <a>Style 2</a>
+                        </li>
+                    </ul>
+                </li>
+				
+            </div>
+        </xpath>
+    </template>
+</odoo>

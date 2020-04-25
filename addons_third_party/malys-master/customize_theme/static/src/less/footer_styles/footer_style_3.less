@@ -1,0 +1,376 @@
+footer #footer
+{
+	.pt(0);
+}
+.endfooter_list
+{
+	display:none;	
+}
+.copyright_endftr
+{
+	display:none;
+}
+.ftr_main
+{
+	.bg(#363A42);
+}
+.sign_up_newsletter
+{
+	.common-div;
+	text-align:center;
+	padding:2% 0;
+	
+	.newsltr_lbl
+	{
+		display: inline-block;
+		width: auto;
+		.size(20px);
+		.muli-semibold();
+		padding:0 2%;
+		color:#fff;
+	}
+	.js_subscribe
+	{
+		display: inline-flex;
+	}
+}	
+.footer_company_logo_left
+{
+	display:inline-block;
+	width:35%;
+	vertical-align:top;
+	.bg(#31353D);
+	padding: 5%;
+	
+	.ftr_logo_span
+	{
+		.common-div;
+		
+		img
+		{
+			float:left;
+			max-height:55px;
+		}
+	}
+	.lbl_div_container
+	{
+		.common-div;
+		margin:5% 0;
+		
+		.js_subscribe
+		{
+			.mt(15px);
+			.mb(15px);
+			
+			input.js_subscribe_email
+			{
+				border-radius: 0;
+				min-height: 40px;
+			}
+			a.js_subscribe_btn
+			{
+				padding: 9.3px;
+			}
+		}
+	}
+	.company_tagline
+	{
+		color: #ddd;
+		margin: 5% 0;
+		line-height: 165%;
+	}
+	.ftr_language_main
+	{
+		.js_language_selector
+		{
+			.mt(0) !important;
+		
+			>li >a
+			{
+				color: #999;
+				line-height: 185%;
+			}
+		}
+	}
+	.ftr_social_icons_main
+	{
+	.common-div;
+	.mt(8%);
+	
+	.footer-social-icon
+	{
+		display:inline-block;
+		width:100%;
+		text-align: left;
+	
+		a {
+		    display: block;
+		    line-height: 29px;
+		    text-align: center;
+		    float: left;
+		    color:#fff;
+		    .bg(#535353);
+			width: 30px;
+			height: 30px;
+		    border-radius:50%;
+		    margin-right: 10px;
+		    font-size: 14px;
+		    -webkit-transform: scale(1);
+		    -webkit-transition: all 0.25s ease-out 0s;
+		    
+		    &:hover
+		    {
+		    	color:@theme-color;
+		    }
+		}
+	}
+}
+	
+}
+.footer_menu_and_contact_right
+{
+	display:inline-block;
+	width:64%;
+	vertical-align:top;
+	padding: 5% 3%;
+	
+	.ftr_menu_list
+	{
+		display:inline-block;
+		width:64%;
+		vertical-align:top;
+		
+		
+		
+		.footer-heading .customer-service-ul li a
+		{
+			color:#888;
+		}
+		.footer-heading .security-ul li a
+		{
+			color:#888;
+		}
+		
+		.col-md-4.col-lg-6 {
+    		padding: 0;
+		}
+	}
+	.ftr_contact_company
+	{
+		display:inline-block;
+		width:35%;
+		vertical-align:top;
+		
+		.customer-contact-ul
+		{
+			padding:0;
+			.mt(10%);
+			
+			li
+			{
+				list-style: none;
+			}
+		}
+	
+		.contact_detail_para
+		{
+			margin: 15px 0;
+			
+			span
+			{
+				display: inline-block;
+				width: 10%;
+				vertical-align: top;
+				color:#888;
+			}
+			p
+			{
+				color:#888;
+				display: inline-block;
+				width: 88%;
+				line-height: 165%;
+			}
+		}
+	}
+}
+.ftr_list_title
+		{
+			color:#fff;
+			.uppercase();
+			.muli-bold();
+			letter-spacing: 1px;
+			.size(14px);
+			line-height: 170%;
+		}
+
+.copyright_payment_section
+{
+	.common-div;
+	
+	.ef_copyright_left
+	{
+		display:inline-block;
+		width:49%;
+		text-align:left;
+	}
+	.ef_payment_right
+	{
+		display:inline-block;
+		width:49%;
+		text-align:right;
+		
+		
+		img
+		{
+			float:right;
+		}
+		.payment_method_list
+		{
+			.mb(0);
+			display:block;
+		
+			li img
+			{
+				max-width: 39px;
+			}
+		}
+	}
+}
+.ef_sub_div
+{
+	padding:10px 0;
+}
+
+
+
+
+
+@media (max-width:1200px)
+{
+	.footer_company_logo_left
+	{
+		width:100%;
+		padding:5% 3%;
+	}
+	.clarico_logo_footer
+	{
+		display: inline-block;
+		width: 25%;
+	}
+	.footer_company_logo_left .lbl_div_container {
+	    display: inline-block;
+	    width: 74%;
+	    margin: 0;
+	    
+	    .ftr_list_title
+		{
+		display: block;
+		float: left;
+		padding: 0 2%;
+		}
+	}
+	
+	.footer_company_logo_left .lbl_div_container .js_subscribe {
+   		.mt(0);
+	}
+	.ftr_language_main
+	{
+		margin: 2% 0;
+	}
+	.footer_company_logo_left .ftr_social_icons_main
+	{
+		.mt(0);
+	}
+	.footer_menu_and_contact_right
+	{
+		width:100%;
+		padding:3%;
+	}
+	
+}
+
+@media (max-width:1000px)
+{
+	.footer_menu_and_contact_right .ftr_menu_list {
+		width:40%;
+	}
+	.footer_menu_and_contact_right .ftr_contact_company 
+	{
+		width: 59%;
+	}
+	.footer_menu_and_contact_right .ftr_contact_company .customer-contact-ul
+	{
+		.mt(5%);
+	}
+	.clarico_logo_footer
+	{
+		width:20%;
+	}
+	.footer_company_logo_left .lbl_div_container
+	{
+		width:79%;
+	}
+}
+@media (max-width:800px)
+{
+	.clarico_logo_footer
+	{
+		vertical-align: top;
+		.pt(3%);
+	}
+	.footer_company_logo_left .lbl_div_container .ftr_list_title
+	{
+		float: none;
+		padding: 0;
+	}
+	.clarico_logo_footer
+	{
+		width: 25%;
+		padding: 3% 0;
+	}
+	.footer_company_logo_left .lbl_div_container {
+    width: 74%;
+	}
+}
+@media (max-width:600px)
+{
+	.clarico_logo_footer
+	{
+		width:100%;
+	}
+	.footer_company_logo_left .lbl_div_container {
+    width: 100%;
+	}
+	.footer_menu_and_contact_right .ftr_menu_list {
+    width: 100%;
+	}
+	.footer_menu_and_contact_right .ftr_contact_company {
+    width: 100%;
+	}
+	.copyright_payment_section .ef_copyright_left {
+    width: 100%;
+	}
+	.copyright_payment_section .ef_payment_right {
+    width: 100%;
+    .mt(3%);
+	}
+	.copyright_payment_section .ef_payment_right img {
+    float: left;
+	}
+	.footer_company_logo_left .lbl_div_container .js_subscribe a.js_subscribe_btn {
+    padding: 10.3px;
+	}
+	.footer_company_logo_left .ftr_social_icons_main .footer-social-icon a
+	{
+		.mr(8px);
+	}
+	.footer_company_logo_left .ftr_logo_span img {
+    max-height: 45px;
+	}
+}
+
+
+
+
+
+

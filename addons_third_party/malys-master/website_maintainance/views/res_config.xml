@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_website_config_settings_inherit_maintainance" model="ir.ui.view">
+            <field name="name">Website settings Maintainance</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+            <field name="arch" type="xml">                
+
+                  <xpath expr="//div[hasclass('settings')]" position="inside">
+                      <div class="col-xs-12 col-md-6 o_setting_box">
+                          <div class="o_setting_right_pane">                              
+                              <div class="content-group">
+			                      <group name="maintenance" string="Maintenance">
+				                      <field name="is_maintainance" />   
+				                      <field name="sh_titile" attrs="{'invisible': [('is_maintainance','=',False)],'required': [('is_maintainance', '=', True)] }"/>
+				                      <field name="sh_message" attrs="{'invisible': [('is_maintainance','=',False)]}"/>
+				                      <field name="sh_email" widget="email" attrs="{'invisible': [('is_maintainance','=',False)]}"/>   
+			                      </group>   
+                              </div>                              
+
+                          </div>
+                      </div>
+        
+                  </xpath>
+                              
+            </field>
+        </record>
+
+    </data>
+</openerp>

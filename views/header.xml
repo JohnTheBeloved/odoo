@@ -1,0 +1,199 @@
+<odoo>
+
+  <template id="eiser_fake_submenu" name="Fake submenu" inherit_id="website.submenu">
+    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item submenu dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Shop</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="category.html">Shop Category</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="single-product.html">Product Details</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="checkout.html">Product Checkout</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="cart.html">Shopping Cart</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item submenu dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Blog</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="single-blog.html">Blog Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item submenu dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Pages</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="tracking.html">Tracking</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="elements.html">Elements</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+  </template>
+
+  <template priority="100" id="eiser_header" inherit_id="portal.frontend_layout" name="Eiser Header">
+    <!-- Add an element after the top menu  -->
+    <xpath expr="//*[@id='wrapwrap']/header[1]" position="replace">
+       <header class="header_area">
+      <div class="main_menu">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="index.html">
+              <img src="/theme_eiser/static/src/img/logo.png" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
+              <div class="row w-100 mr-0">
+                <div class="col-lg-7 pr-0">
+                  <ul class="nav navbar-nav center_nav pull-right"  id="top_menu">
+                     <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                         <li t-if="submenu.is_visible and not has_visible_submenu" class="nav-item active submenu dropdown" >
+                           <a t-att-href="submenu.clean_url()"
+                              class="nav-link dropdown-toggle"
+                              role="menuitem"
+                              t-ignore="true"
+                              t-att-target="'_blank' if submenu.new_window else None"
+                              t-field="submenu.name">
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                              <t t-foreach="submenu.child_id" t-as="submenu">
+                                <li t-if="submenu.is_visible and not has_visible_submenu" t-attf-class="#{item_class or ''}">
+                                  <a t-att-href="submenu.clean_url()"
+                                      role="menuitem"
+                                      t-ignore="true"
+                                      t-att-target="'_blank' if submenu.new_window else None"
+                                      t-field="submenu.name">
+                                  </a>
+                                </li>
+                              </t>
+                            </ul>
+                                    <!-- <t t-call="theme_eiser.eiser_submenu">
+                                        <t t-set="item_class" t-value="None"/>
+                                        <t t-set="link_class" t-value="'dropdown-item'"/>
+                                    </t> -->
+                          <!-- <t t-call="theme_eiser.eiser_submenu">
+                              <t t-set="item_class" t-value="'nav-item'"/>
+                              <t t-set="link_class" t-value="'nav-link'"/>
+                          </t> -->        
+                        </li>
+                        <!-- <li t-if="has_visible_submenu" t-attf-class="#{item_class or ''} dropdown #{
+                            (submenu.clean_url() and submenu.clean_url() != '/' and any([request.httprequest.path == child.url for child in submenu.child_id if child.url]) or
+                            (submenu.clean_url() and request.httprequest.path == submenu.clean_url())) and 'active'
+                            }">
+                            <a t-attf-class="#{link_class or ''} dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span t-field="submenu.name"/>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <t t-foreach="submenu.child_id" t-as="submenu">
+                                    <li t-if="submenu.is_visible and not has_visible_submenu" t-attf-class="#{item_class or ''}">
+                                      <a t-att-href="submenu.clean_url()"
+                                          t-attf-class="#{link_class or ''} #{'active' if submenu.clean_url() and unslug_url(request.httprequest.path) == unslug_url(submenu.clean_url()) else ''}"
+                                          role="menuitem"
+                                          t-ignore="true"
+                                          t-att-target="'_blank' if submenu.new_window else None">
+                                          <span t-field="submenu.name"/>
+                                      </a>
+                                    </li>
+                                   <t t-call="theme_eiser.eiser_submenu">
+                                        <t t-set="item_class" t-value="None"/>
+                                        <t t-set="link_class" t-value="'dropdown-item'"/>
+                                    </t> 
+                                </t>
+                            </ul> -->
+                      </t>
+                  </ul>
+                </div>
+
+                <div class="col-lg-5 pr-0">
+                  <ul class="nav navbar-nav navbar-right right_nav pull-right">
+                    <li class="nav-item">
+                      <a href="#" class="icons">
+                        <i class="ti-search" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#" class="icons">
+                        <i class="ti-shopping-cart"></i>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#" class="icons">
+                        <i class="ti-user" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#" class="icons">
+                        <i class="ti-heart" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      </header>
+    </xpath>
+  </template>
+
+
+  <template id="eiser_submenu" name="Submenu" inherit_id="website.submenu">
+    <!-- <t t-set="has_visible_submenu" t-value="submenu.child_id.filtered(lambda menu: menu.is_visible)"/> -->
+    <li t-if="submenu.is_visible and not has_visible_submenu" t-attf-class="#{item_class or ''}">
+        <a t-att-href="submenu.clean_url()"
+            t-attf-class="#{link_class or ''} #{'active' if submenu.clean_url() and unslug_url(request.httprequest.path) == unslug_url(submenu.clean_url()) else ''}"
+            role="menuitem"
+            t-ignore="true"
+            t-att-target="'_blank' if submenu.new_window else None">
+            <span t-field="submenu.name"/>
+        </a>
+    </li>
+    <li t-if="has_visible_submenu" t-attf-class="#{item_class or ''} dropdown #{
+        (submenu.clean_url() and submenu.clean_url() != '/' and any([request.httprequest.path == child.url for child in submenu.child_id if child.url]) or
+         (submenu.clean_url() and request.httprequest.path == submenu.clean_url())) and 'active'
+        }">
+        <a t-attf-class="#{link_class or ''} dropdown-toggle" data-toggle="dropdown" href="#">
+            <span t-field="submenu.name"/>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <t t-foreach="submenu.child_id" t-as="submenu">
+                <t t-call="theme_eiser.eiser_submenu">
+                    <t t-set="item_class" t-value="None"/>
+                    <t t-set="link_class" t-value="'dropdown-item'"/>
+                </t>
+            </t>
+        </ul>
+    </li>
+  </template>
+</odoo>

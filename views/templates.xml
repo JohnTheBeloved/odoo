@@ -79,12 +79,106 @@
         </xpath>
     </template>
 
+<!--Replace all contents of parent-->
    <template id="eiser_pager_replace" inherit_id="website.pager">
          <xpath expr="//ul" position="replace">
            <span/>
          </xpath>
    </template>
+<!-- 
+   <template id="eiser_pager_replace" inherit_id="website.pager">
+         <xpath expr="//form" position="replace">
+           <span/>
+         </xpath>
+   </template>
 
+   <template id="eiser_pager_replace" inherit_id="website.pager">
+         <xpath expr="//div[1]" position="replace">
+           <span/>
+         </xpath>
+   </template>
+
+    <template id="eiser_sort" inherit_id="website_sale.products" name="Show Sort by">
+        <xpath expr="//div[hasclass('dropdown_sorty_by')]" position="replace">
+           <span/>
+        </xpath>
+   </template> -->
+
+<template id="eiser_banner" inherit_id="website_sale.products">
+<xpath expr="//div[@id='wrap']" position="before">
+ <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+          <div class="banner_content d-md-flex justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0">
+              <h2>Shop Category</h2>
+              <p>Very us move be blessed multiply night</p>
+            </div>
+            <div class="page_link">
+              <a href="index.html">Home</a>
+              <a href="category.html">Shop</a>
+              <a href="category.html">Women Fashion</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</xpath>
+
+</template>
+   <template id="eiser_paginate" inherit_id="website_sale.products">
+        <xpath expr="//div[@id='products_grid']/table" position="before">
+        <t t-set="list_price_desc_label">Catalog price: High to Low</t>
+      <t t-set="list_price_asc_label">Catalog price: Low to High</t>
+      <t t-set="name_asc_label">Name - A to Z</t>
+      <t t-set="name_desc_label">Name - Z to A</t>
+         <t t-set="website_sale_sortable" t-value="[
+          (list_price_desc_label, 'list_price desc'),
+          (list_price_asc_label, 'list_price asc'),
+          (name_asc_label, 'name asc'),
+          (name_desc_label, 'name desc')
+      ]"/>
+          <t t-set="website_sale_sortable_current" t-value="[sort for sort in website_sale_sortable if sort[1]==request.params.get('order', '')]"/>
+          
+             <div class="col-md-12 product_top_bar">
+              <div class="left_dorp col-">
+                <div class="dropdown sorting " data-toggle="dropdown">
+                     <t t-if='len(website_sale_sortable_current)'>
+                        <span class="current">Sorting by : <t t-raw='website_sale_sortable_current[0][0]'/></span>
+                    </t>
+                    <t t-else='1'>
+                        <span class="current">Sort by</span>
+                    </t>
+                    <ul class="list dropdown-menu">
+                        <t t-foreach="website_sale_sortable" t-as="sortby">
+                            <li class="option">
+                                <a t-raw="sortby[0]" role="menuitem" t-att-href="keep('/shop', order=sortby[1])" class="dropdown-item">
+                                
+                                </a>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+              </div>
+               <div style="display: flex;]" >
+                    <span t-attf-class="page-item #{'disabled' if pager['page']['num'] == 1 else ''}">
+                        <a t-att-href=" pager['page_previous']['url'] if pager['page']['num'] != 1 else None" class="page-link">Prev</a>
+                    </span>
+                    <t t-foreach="pager['pages']" t-as="page">
+                        <span t-attf-class="page-item #{'active' if page['num'] == pager['page']['num'] else ''}"> <a t-att-href="page['url']" class="page-link" t-raw="page['num']"></a></span>
+                    </t>
+                    <span t-attf-class="page-item #{'disabled' if pager['page']['num'] == pager['page_count'] else ''}">
+                        <a t-att-href="pager['page_next']['url'] if pager['page']['num'] != pager['page_count'] else None" class="page-link">Next</a>
+                    </span>
+                </div>
+                <t t-call="website_sale.pricelist_list">
+                    <t t-set="_classes">ml-2</t>
+                </t>
+            </div>
+        </xpath>
+   </template>
+
+    
    <!-- <template id="eiser_pager" inherit_id="website_sale.products">
          <xpath expr="//div[hasclass('product_top_bar')]" position="inside">
             <div style="display: flex;">
@@ -101,36 +195,6 @@
          </xpath>
    </template> -->
 
-    <template id="eiser_sort" inherit_id="website_sale.products" name="Show Sort by">
-        <xpath expr="//div[hasclass('dropdown_sorty_by')]" position="replace">
-           <span/>
-        </xpath>
-   </template>
-
-   <!-- <template id="eiser_paginate" inherit_id="website_sale.products">
-        <xpath expr="//*[@id='products_grid']/div/div[1]" position="before">
-             <div class="col-md-12 product_top_bar">
-              <div class="left_dorp">
-                <div class="dropdown sorting" data-toggle="dropdown">
-                     <t t-if='len(website_sale_sortable_current)'>
-                        <span class="current">Sorting by : <t t-raw='website_sale_sortable_current[0][0]'/></span>
-                    </t>
-                    <t t-else='1'>
-                        <span class="current">Sort by</span>
-                    </t>
-                    <ul class="list dropdown-menu">
-                        <t t-foreach="website_sale_sortable" t-as="sortby">
-                            <li class="option">
-                                <a t-raw="sortby[0]" role="menuitem" t-att-href="keep('/shop', order=sortby[1])" class="dropdown-item">
-                                </a>
-                            </li>
-                        </t>
-                    </ul>
-                </div>
-              </div>
-            </div>
-        </xpath>
-   </template> -->
 
    <template id="compare" inherit_id="website_sale_comparison.add_to_compare">
         <xpath expr="//button[hasclass('o_add_compare')]" position="replace">

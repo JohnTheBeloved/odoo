@@ -15,6 +15,7 @@
           <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/themify-icons.css"/>
           <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/override.css"/>
           <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/into_odoo.css"/>
+          <link rel="stylesheet" type="text/css" href="/theme_eiser/static/css/search_bar.css"/>
       </xpath>
   </template>
 
@@ -30,9 +31,11 @@
     <script type="text/javascript" src="/theme_eiser/static/js/mail-script.js" />
     <script type="text/javascript" src="/theme_eiser/static/js/owl.carousel.min.js" />
     <script type="text/javascript" src="/theme_eiser/static/js/popper.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/choices.js" />
     <script type="text/javascript" src="/theme_eiser/static/js/stellar.js" />
     <script type="text/javascript" src="/theme_eiser/static/js/theme.js" />
-    <script type="text/javascript" src="/theme_eiser/static/js/main.js" />
+    <script type="text/javascript" src="/theme_eiser/static/js/main.js" />>
+    <script type="text/javascript" src="/theme_eiser/static/js/eiser.js" />
   </xpath>
 </template>
 </odoo>

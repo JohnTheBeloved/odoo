@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>   	
+    <template id="style_1_left_bar_slider_position" inherit_id="clarico_snippets.clarico_slider_snippets" priority="6">
+        <xpath expr="//div[@id='clarico_slider_structure']/div[hasclass('o_panel_body')]"
+               position="inside">
+             <t t-snippet="snippet_style_14.style_1_template" t-thumbnail="/snippet_style_14/static/src/img/snippet_icon.jpg"/>
+        </xpath>
+    </template>
+	
+    <template id="style_1_custom_snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='carousel']" position="replace">
+            <div data-js='style_1_carousel' data-selector=":not(.o_gallery > .container) > .carousel">
+                <li class="divider"></li>
+                <li class="dropdown-header o_main_header">Custome Slider Options</li>
+                <li data-fade="true" data-no-preview="true"><a href="#">Fade</a></li>
+                <li data-sliding="true" data-no-preview="true"><a href="#">Slide</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-2" href="#"><i class="fa fa-clock-o"/>Slideshow speed</a>
+                    <ul class="dropdown-menu">
+                        <li data-interval="1000"><a href="#">1s</a></li>
+                        <li data-interval="2000"><a href="#">2s</a></li>
+                        <li data-interval="3000"><a href="#">3s</a></li>
+                        <li data-interval="5000"><a href="#">5s</a></li>
+                        <li data-interval="10000"><a href="#">10s</a></li>
+                        <li data-interval="0"><a href="#">Disable autoplay</a></li>
+                    </ul>
+                </li>
+                <li data-add-slide="true" data-no-preview="true"><a href="#"><i class="fa fa-plus-circle"/>Add Slide</a></li>
+                <li data-remove-slide="true" data-no-preview="true"><a href="#" ><i class="fa fa-trash-o"/>Remove Slide</a></li>
+                <li class="divider"></li>
+            </div>
+        </xpath>
+    </template>
+	
+    <template id="style_1_template" name="Style 6">
+        <div class="oe_structure" />
+        <section>
+            <div class="style_1_comman_class common-div">
+                <div class="block">
+                <section class="slider_wrapper_div_left">
+                    <div class="wrapper_full_class">
+                        <section class="slider_left_bg_content">
+                            <span class="left_content">
+                                <h1 class="chs_heading">Modern Collection</h1>
+                                <p class="left_content_pera_new">Clarico owns beautiful homepage with modern design.
+                                    Each page has different style and layout. So, you can feel
+                                    free to turn up your personality and build an awesome
+                                    website. Enjoy it now!</p>
+                                <p class="clarico_new_btn">
+                                    <a class="fade_shop_now_button shop_now_button" href="#">Shop Now</a>
+                                </p>
+                            </span>
+                        </section>
+                    </div>
+                </section>
+						
+						
+                <div id="style_1_myCarousel" class="carousel slide style_1_carousel" data-interval="2000">
+                    <ol class="carousel-indicators hidden">
+                        <li data-target="" data-slide-to="0" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+									
+                            <div class="slider_wrapper_div_right_new">
+                                <section class="div_img_new">
+                                    <a href="#">
+                                        <img class="product_image_new" src="/snippet_style_14/static/src/img/slider_1.png" />
+                                    </a>
+                                </section>
+                            </div>
+                            <div class="slider_wrapper_div_right_new">
+                                <section class="div_img_new">
+                                    <a href="#">
+                                        <img class="product_image_new" src="/snippet_style_14/static/src/img/slider_2.png" />
+                                    </a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control left hidden" data-slide="prev" data-target="#style_1_myCarousel0" href="#style_1_myCarousel0" style="width: 10%">
+                        <i class="fa fa-chevron-left"/>
+                    </div>
+                    <div class="carousel-control right hidden" data-slide="next" data-target="#style_1_myCarousel0" href="#style_1_myCarousel0" style="width: 10%">
+                        <i class="fa fa-chevron-right"/>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="clarico_snippets" inherit_id="website.snippets">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="clarico_snippet_structure" class="o_panel">
+				<div class="o_panel_header">
+					<i class="fa fa-th-large" />
+					Clarico Snippets
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+		<xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]/t[@t-snippet='website.s_banner']" position="replace">
+		
+		</xpath>
+	</template>
+	<template id="clarico_other_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="1">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_other_snippet_structure" class="o_panel">
+				<div class="o_panel_header">
+					General
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+	<template id="clarico_image_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="2">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_image_structure" class="o_panel">
+				<div class="o_panel_header">
+					Image
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+	<template id="clarico_3_block_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="3">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_3_block_structure" class="o_panel">
+				<div class="o_panel_header">
+					Content
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+	<template id="clarico_slider_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="4">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_slider_structure" class="o_panel">
+				<div class="o_panel_header">
+					Sliders
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+	
+	
+	<template id="clarico_pricing_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="5">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_pricing_structure" class="o_panel">
+				<div class="o_panel_header">
+					Pricing Tables
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+	<template id="clarico_offer_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="6">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_offer_structure" class="o_panel">
+				<div class="o_panel_header">
+					Offer Styles
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+	
+		<template id="clarico_2_img_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="7">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_2_img_structure" class="o_panel">
+				<div class="o_panel_header">
+					Product Showcase
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+	<template id="clarico_carousel_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="8">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_carousel_structure" class="o_panel">
+				<div class="o_panel_header">
+					Carousels
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+	
+	<template id="clarico_menu_snippets" inherit_id="clarico_snippets.clarico_snippets" priority="9">
+		<xpath expr="//div[@id='clarico_snippet_structure']" position="inside">
+			<div id="clarico_menu_structure" class="o_panel">
+				<div class="o_panel_header">
+					Menu Styles
+				</div>
+				<div class="o_panel_body">
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+</odoo>

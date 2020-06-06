@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="clarico_similar_product_shop_products_item" inherit_id="clarico_shop.clarico_shop_products_item">
+		<xpath expr="//div[@id='quick_view_shop']" position="after">
+			<t t-if="product">
+				<t t-if="len(product.alternative_product_ids) >= 1">
+					<hr class="product-hover-hr"></hr>
+                    <div id="see_similar_product" class="c_icon_common">
+						<a class="similar_product" t-att-data-id="'%s' % product.id" title="View Similar Product">
+							<i class="fa fa-gg similar_product_icon" aria-hidden="true"></i>
+						</a>
+					</div>
+				</t>
+			</t>
+		</xpath>
+	</template>
+	
+	<template id="clarico_similar_product" inherit_id="website.layout">
+		<xpath expr="//div[@id='wrapwrap']" position="inside">
+			<div class="similar_product_popover" style="display:none">
+				<div class="filter-div-maxW">
+	        		<a class="common-close-btn">X</a>
+					<div class="similar_product_main-div">
+					</div>
+				</div>
+			</div>
+		</xpath>
+	</template>
+	
+	<template id="clarico_similar_product_record">
+		<div class="similar_product_main">
+			<t t-if="product">
+				<div class="similar_main">
+					<div t-field="product.image_small" class="similar_main_product_img_div" t-options="{'widget': 'image'}" />
+					<h4>
+						<a class="similar_main_product_name" t-field="product.name"></a>
+					</h4>
+					<span class="similar_product_found"> 
+						<span class="similar_total_product" style="display:none;" t-esc="len(product.alternative_product_ids)"></span>
+					</span>
+				</div>
+				<hr></hr>
+				<t t-foreach="product.alternative_product_ids" t-as="alt_product">
+					<div class="similar_product_div">
+                        <a t-attf-href="/shop/product/#{ slug(alt_product) }">
+                            <div t-field="alt_product.image_medium" class="similar_product_img" t-options="{'widget': 'image'}" />
+                        </a>
+                        <div class="similar_product_details">
+                            <div class="similar_product_name">
+                                <a t-attf-href="/shop/product/#{ slug(alt_product) }"
+									style="display: block" t-field="alt_product.name" >
+								</a>
+							</div>
+<!--
+							<div class="similar_product_rating">
+								<t t-set="rating_stat" t-value="rating_product" />
+								<t t-call="rating.rating_star_card">
+									<t t-set="rating_default_value"
+										t-value="'%.2f' % (rating_stat[alt_product.id].get('avg', 0.0),)" />
+									<t t-set="rating_disabled" t-value="True" />
+								</t>
+							</div>
+-->
+							<div class="similar_product_price">
+								<p>
+									<span class="text-danger oe_default_price" style="text-decoration: line-through; white-space: nowrap;"
+									t-esc="compute_currency(alt_product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" t-att-style="'text-decoration: line-through; white-space: nowrap; ' + '' if (compute_currency(alt_product.lst_price) - alt_product.website_price) &gt; 0.01 and website.get_current_pricelist().discount_policy == 'without_discount' else 'display: none;'" />
+									
+									<p class="oe_price " style="white-space: nowrap;" t-esc="alt_product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+									<span itemprop="price" style="display:none;" t-esc="alt_product.website_price" />
+									<span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+								</p>
+							</div>
+						</div>
+					</div>
+				</t>
+			</t>
+			<t t-if="not product">
+				<div class="no-similar-product-found">No Similar product found</div>
+			</t>
+		</div>
+	</template>
+</odoo>

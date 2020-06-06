@@ -1,0 +1,52 @@
+.shop_now_button,.offer_detail_div_btn{
+    
+    transition: all 0.3s ease-in-out;
+    color: @theme-color !important;
+    .bg(transparent);
+    border:2px solid @theme-color !important;
+    .oswald-regular;
+    .uppercase();
+    letter-spacing: 1px;
+    border-radius: 25px;
+    .size(14px);
+    padding:10px 25px;
+    height: auto;
+	line-height: normal;
+    
+    &:hover{
+	     .bg(@theme-color) !important;
+		color:#fff !important;
+		border:2px solid @theme-color !important;
+    }
+}
+/*button.btn,a.btn
+{
+	 color: @theme-color !important;
+    .bg(transparent);
+    border:2px solid @theme-color !important;
+    .oswald-regular;
+    .uppercase();
+    letter-spacing: 1px;
+    border-radius: 25px;
+    .size(14px);
+
+	  &:hover{
+	     .bg(@theme-color) !important;
+		color:#fff !important;
+		border:2px solid @theme-color !important;
+    }
+}
+*/
+@media (max-width: 600px) {
+
+	.shop_now_button,.offer_detail_div_btn,shop_view_popup_link_btn
+	{
+		.size(12px);
+		padding: 10px 20px;
+	}
+	/*button.btn,a.btn
+	{
+		.size(12px);
+	}*/
+}
+

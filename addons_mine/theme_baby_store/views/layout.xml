@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<!-- Customize header  -->
+<template id="custom_header" inherit_id="website.layout" name="Custom Header">
+
+  <!-- Assign an id  -->
+  <xpath expr="//header" position="attributes">
+    <attribute name="id">my_header</attribute>
+  </xpath>
+
+  <!-- Add an element after the top menu  -->
+  <xpath expr="//*[@id="wrapwrap"]/header[1]" position="after">
+    <div class="container">
+      <div class="alert alert-info mt16" role="alert">
+        <strong>Welcome</strong> in our website!
+      </div>
+    </div>
+  </xpath>
+</template>
+
+    <!-- Shop page Template for View Switcher -->
+    <template id="products_grid_list" inherit_id="website_sale.products">
+        <xpath expr="//table" position="replace">
+            <table></table>
+            <t t-foreach="products" t-as="product">
+                <div id="grid_list"
+                     class="col-md-4 oe_product oe_grid oe_product_cart oe-height-4"
+                     t-att-data-publish="product.website_published and 'on' or 'off'">
+                    <t t-call="website_sale.products_item">
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

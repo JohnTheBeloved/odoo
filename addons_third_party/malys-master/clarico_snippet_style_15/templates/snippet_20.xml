@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="snippet_style_tewnty" inherit_id="clarico_snippets.clarico_3_block_snippets"
+		name="clarico snippet" priority="2">
+		 <xpath
+			expr="//div[@id='clarico_3_block_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="clarico_snippet_style_15.snippet_style_20_template"
+			t-thumbnail="/clarico_snippet_style_15/static/src/img/snippet_15.jpg" />
+		</xpath>
+	</template>
+	
+	<template id="snippet_style_20_template" name="3 Column">
+	<div class="oe_structure" />
+		<section class="clarico_fashion_snippet_wrap">
+				<div class="clarico_fasion_snippet_container">
+					<div class="b_fashion_part_one">
+						<div class="b_fashion_part_img_div part_one_bg">
+							<section>
+								<a href="#">
+									<img class="s_image_common" src="/clarico_snippet_style_15/static/src/img/style_20_img_1.png"></img>
+								</a>
+							</section>
+						</div>
+						<div class="b_fashion_catg_info">
+					<div class="bf_text-row">
+								<p class="b_s20_heading">new collection</p>
+							</div>
+							<div class="bf_text-row">
+								<span class="b_fashion_para">
+									Lorem Ipsum is simply dummy
+									<br/>
+										text of the printing and typesetting industry.
+									<br/>
+									Lorem Ipsum has
+								</span>
+							</div>
+							<div class="bf_text-row mt16 mb16">
+								
+									<a href="#" class="shop_now_button">shop now</a>
+							</div>
+						</div>
+					</div>
+					<div class="b_fashion_part_two">
+						<div class="b_fashion_part_img_div part_two_bg">
+							<section>
+								<a href="#">
+									<img class="s_image_common" src="/clarico_snippet_style_15/static/src/img/style_20_img_2.png"></img>
+								</a>
+							</section>
+						</div>
+						<div class="b_fashion_catg_info">
+							<div class="bf_text-row">
+								<p class="b_s20_heading">exclusive product</p>
+							</div>
+							<div class="bf_text-row">
+								<span class="b_fashion_para">
+									Lorem Ipsum is simply dummy
+									<br/>
+										text of the printing and typesetting industry.
+									<br/>
+									Lorem Ipsum has
+								</span>
+							</div>
+							<div class="bf_text-row mt16 mb16">
+								<a href="#" class="shop_now_button">
+											shop now
+									</a>
+							</div>
+						</div>
+					</div>
+					<div class="b_fashion_part_three">
+						<div class="b_fashion_part_img_div part_three_bg">
+							<section>
+								<a href="#">
+									<img class="s_image_common" src="/clarico_snippet_style_15/static/src/img/style_20_img_3.png"></img>
+								</a>
+							</section>
+						</div>
+						<div class="b_fashion_catg_info">
+							<div class="bf_text-row">
+								<p class="b_s20_heading">new collection</p>
+							</div>
+							<div class="bf_text-row">
+								<span class="b_fashion_para">
+									Lorem Ipsum is simply dummy
+									<br/>
+										text of the printing and typesetting industry.
+									<br/>
+									Lorem Ipsum has
+								</span>
+							</div>
+							<div class="bf_text-row mt16 mb16">
+							
+									<a href="#" class="shop_now_button">shop now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>	
+	</template>
+</odoo>

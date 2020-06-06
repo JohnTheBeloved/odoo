@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template id="clarico_style_10" inherit_id="clarico_snippets.clarico_3_block_snippets" name="clarico Snippet" priority="3">
+			<xpath
+			expr="//div[@id='clarico_3_block_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+				<t t-snippet="clarico_snippet_style_11.clarico_snippet_style_11_template" t-thumbnail="/clarico_snippet_style_11/static/src/img/snippet_11.jpg"  />
+			</xpath>
+		</template>
+		<template id="clarico_snippet_style_11_template" name="4 Blocks">
+		<div class="oe_structure" />
+			<section class="ts10_wrap common-div">
+					<div class="ts10_ind_div ts_10_bg_1">
+						<div class="ts10_sub_div">
+							<div class="ts10_inside_div">
+								<div class="ts10_img_icon">
+									<section>
+										<a href="#">
+											<img class="s_image_common ts10_img_icon"
+												src="/clarico_snippet_style_11/static/src/img/style_10_img_1.png"></img>
+										</a>
+									</section>
+								</div>
+								<div class="ts10_text_div">
+									<p class="p-text">Happy customers</p>
+								</div>
+								<div class="ts10_numb_div">
+									<p class="p-text">2169</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ts10_ind_div m_float_swap">
+						<div class="ts10_sub_div">
+							<div class="ts10_inside_div">
+								<div class="ts10_img_icon">
+									<section>
+										<a href="#">
+											<img class="s_image_common ts10_img_icon"
+												src="/clarico_snippet_style_11/static/src/img/style_10_img_2.png"></img>
+										</a>
+									</section>
+								</div>
+								<div class="ts10_text_div">
+									<p class="p-text">Awards winned</p>
+								</div>
+								<div class="ts10_numb_div">
+									<p class="p-text">30</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="ts10_ind_div ts_10_bg_1 m_float_swap">
+						<div class="ts10_sub_div">
+							<div class="ts10_inside_div">
+								<div class="ts10_img_icon">
+									<section>
+										<a href="#">
+											<img class="s_image_common ts10_img_icon"
+												src="/clarico_snippet_style_11/static/src/img/style_10_img_3.png"></img>
+										</a>
+									</section>
+								</div>
+								<div class="ts10_text_div">
+									<p class="p-text">hours worked</p>
+								</div>
+								<div class="ts10_numb_div">
+									<p class="p-text">2590</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ts10_ind_div">
+						<div class="ts10_sub_div">
+							<div class="ts10_inside_div">
+								<div class="ts10_img_icon">
+									<section>
+										<a href="#">
+											<img class="s_image_common ts10_img_icon"
+												src="/clarico_snippet_style_11/static/src/img/style_10_img_4.png"></img>
+										</a>
+									</section>
+								</div>
+								<div class="ts10_text_div">
+									<p class="p-text">Complete projects</p>
+								</div>
+								<div class="ts10_numb_div">
+									<p class="p-text">900</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+		</template>
+</odoo>

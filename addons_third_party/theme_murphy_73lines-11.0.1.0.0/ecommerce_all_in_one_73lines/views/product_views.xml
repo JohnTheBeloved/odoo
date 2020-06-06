@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Inherit Product Template View & Add Tag Ids field -->
+    <record model="ir.ui.view" id="view_product_template_form_tags">
+        <field name="name">Product Template Form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="after">
+                <field name="tag_ids" widget="many2many_tags" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Product Tags Tree View -->
+    <record id="product_tag_tree_view" model="ir.ui.view">
+        <field name="name">Product Tags Tree</field>
+        <field name="model">product.tags</field>
+        <field name="field_parent" eval="False" />
+        <field name="arch" type="xml">
+            <tree string="Product Tags" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Inherit Product Template View & Add Brand Id field -->
+    <record model="ir.ui.view" id="view_product_template_form_brand">
+        <field name="name">product.template.product.brand.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="website_sale.product_template_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="after">
+                <field name="brand_id" options="{'no_create': True}" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Product Brand From View -->
+    <record id="product_by_brand_form_view" model="ir.ui.view">
+        <field name="name">product.brand.form</field>
+        <field name="model">product.brand</field>
+        <field name="arch" type="xml">
+            <form string="Product Brands">
+                <sheet>
+                    <field name="brand_image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label class="oe_edit_only" for="name" string="Brand Name"/>
+                        <h1><field name="name" placeholder="Brand Name"/></h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Product Brand Tree View -->
+    <record id="product_by_brand_tree_view" model="ir.ui.view">
+        <field name="name">product.brand.tree</field>
+        <field name="model">product.brand</field>
+        <field name="field_parent" eval="False" />
+        <field name="arch" type="xml">
+            <tree string="Product Brands">
+                <field name="sequence" widget="handle"/>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="product_by_brand_kanban_view" model="ir.ui.view">
+            <field name="name">Product By Brand</field>
+            <field name="model">product.brand</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="brand_image"/>
+                    <field name="name"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('product.brand', 'brand_image', record.id.value)"/>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong><field name="name"/></strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+    <!-- Product Brand Action -->
+    <record id="product_by_brand_action" model="ir.actions.act_window">
+        <field name="name">Brands</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.brand</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to define a new product brand.
+            </p>
+        </field>
+    </record>
+
+    <!-- Product Tags Action -->
+    <record id="product_tags_action" model="ir.actions.act_window">
+        <field name="name">Tags</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.tags</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to define a new product tag.
+            </p>
+        </field>
+    </record>
+
+    <!-- Product Brands Menu -->
+    <menuitem action="product_by_brand_action" id="menu_product_by_brand"
+              parent="website_sale.menu_catalog"/>
+
+    <!-- Product Tags Menu -->
+    <menuitem action="product_tags_action" id="menu_product_tags" name="Tags"
+              parent="website_sale.menu_catalog"/>
+
+</odoo>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="clarico_employee_carousel_in_snippets" inherit_id="clarico_snippets.clarico_carousel_snippets" priority="18">
+		<xpath expr="//div[@id='clarico_carousel_structure']/div[hasclass('o_panel_body')]" position="inside">
+			<t t-snippet="clarico_employee_carousel.employee_carousel_snippet_body"
+				t-thumbnail="/clarico_employee_carousel/static/src/img/Style.jpg" />
+		</xpath>
+	</template>
+
+	<template id="employee_carousel_snippet_body" name="Team">
+		<section class="section_employee_carousel">
+			<div class="container">
+				<div class="js_get_employee" data-isemipro='true' data-style="1" />
+			</div>
+		</section>
+	</template>
+
+	<template id="employee_carousel_snippet_data_style_1" name="Employee Carousel Snippent">
+		<section>
+			<div class="emp1_main_div">
+				<t t-if="objects">
+					<t t-foreach="objects" t-as="obj">
+						<t t-foreach="obj" t-as="employee">
+							<div class="employee_ind">
+								<div class="t_div_image">
+									<img t-att-src="website.image_url(employee, 'image')"
+										class="t_image s_image_common" />
+								</div>
+								<div class="emp_style_1_detail">
+									<div class="t_div_name">
+										<p t-esc="employee.name" class="t_name"></p>
+									</div>
+									<div class="t_div_job_pos">
+										<p t-esc="employee.job_id.name" class="t_job_pos"></p>
+									</div>
+								</div>
+							</div>
+						</t>
+					</t>
+				</t>
+			</div>
+		</section>
+	</template>
+	<template id="employee_carousel_snippet_data_style_2" name="Employee Carousel Snippent">
+				<section class="common-div">
+			<div class="emp2_main_div">
+				<div class="owl-carousel">
+					<t t-if="objects">
+						<t t-foreach="objects" t-as="obj">
+							<div class="">
+								<t t-foreach="obj" t-as="employee">
+									<div class="employeetwo_ind">
+										<div class="t2_div_image">
+											<img t-att-src="website.image_url(employee, 'image')"
+												class="t_image s_image_common" />
+										</div>
+										<div class="emp_style_1_detail">
+											<div class="t_div_name">
+												<p t-esc="employee.name" class="t_name"></p>
+											</div>
+											<div class="t2_div_job_pos">
+												<p t-esc="employee.job_id.name" class="t_job_pos"></p>
+											</div>
+											<div class="common-div">
+													<div class="block text-center">
+														<a t-if="employee.emp_facebook" t-att-href="employee.emp_facebook"
+															class="e2_social_common emp2_fb_link" target="_blank">
+															<i class="fa fa-facebook"></i>
+														</a>
+														<a t-if="employee.emp_twitter" t-att-href="employee.emp_twitter"
+															class="e2_social_common emp2_twitter_link" target="_blank">
+															<i class="fa fa-twitter"></i>
+														</a>
+														<a t-if="employee.emp_google" t-att-href="employee.emp_google"
+															class="e2_social_common emp2_google_link" target="_blank">
+															<i class="fa fa-google-plus"></i>
+														</a>
+														<a t-if="employee.emp_linkedin" t-att-href="employee.emp_linkedin"
+															class="e2_social_common emp2_linkedin_link" target="_blank">
+															<i class="fa fa-linkedin"></i>
+														</a>
+													</div>
+												</div>
+										</div>
+									</div>
+								</t>
+							</div>
+						</t>
+					</t>
+				</div>
+			</div>
+		</section>
+	</template>
+
+	<template id="employee_carousel_snippet_data_style_3" name="Employee Carousel Snippent">
+			<section class="common-div">
+			<div class="emp3_main_div">
+				<div class="owl-carousel">
+					<t t-if="objects">
+						<t t-foreach="objects" t-as="obj">
+							<div class="">
+								<t t-foreach="obj" t-as="employee">
+									<div class="employee3_ind">
+										<div class="emp3_t_div_image">
+											<div class="emp_img_overlay">
+												<div class="emp_t_div_social_acc common-div">
+													<div class="emp_social_sub">
+														<a t-if="employee.emp_facebook" t-att-href="employee.emp_facebook"
+															class="e_social_common emp_fb_link" target="_blank">
+															<i class="fa fa-facebook"></i>
+														</a>
+														<a t-if="employee.emp_twitter" t-att-href="employee.emp_twitter"
+															class="e_social_common emp_twitter_link" target="_blank">
+															<i class="fa fa-twitter"></i>
+														</a>
+														<a t-if="employee.emp_google" t-att-href="employee.emp_google"
+															class="e_social_common emp_google_link" target="_blank">
+															<i class="fa fa-google-plus"></i>
+														</a>
+														<a t-if="employee.emp_linkedin" t-att-href="employee.emp_linkedin"
+															class="e_social_common emp_linkedin_link" target="_blank">
+															<i class="fa fa-linkedin"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<img t-att-src="website.image_url(employee, 'image')"
+												class="t3_image s_image_common" />
+										</div>
+										<div class="emp_style_3_detail">
+											<div class="t_div_name">
+												<p t-esc="employee.name" class="t_name"></p>
+											</div>
+											<div class="t_div_job_pos">
+												<p t-field="employee.job_id.name" class="t_job_pos"></p>
+											</div>
+
+										</div>
+									</div>
+								</t>
+							</div>
+						</t>
+					</t>
+				</div>
+			</div>
+		</section>
+	</template>
+	<template id="employee_carousel_snippet_data_style_4" name="Employee Carousel Snippent">
+		<section class="common-div">
+			<div class="emp4_main_div">
+				<div class="owl-carousel">
+					<t t-if="objects">
+						<t t-foreach="objects" t-as="obj">
+							<div class="">
+								<t t-foreach="obj" t-as="employee">
+									<div class="employee4_ind">
+										<div class="t_div_image">
+											<img t-att-src="website.image_url(employee, 'image')"
+												class="t_image s_image_common" />
+										</div>
+										<div class="emp_style_4_detail">
+											<div class="t_div_name">
+												<p t-esc="employee.name" class="t_name"></p>
+											</div>
+											<div class="t_div_job_pos">
+												<p t-esc="employee.job_id.name" class="t_job_pos"></p>
+											</div>
+										</div>
+									</div>
+								</t>
+							</div>
+						</t>
+					</t>
+				</div>
+			</div>
+		</section>
+	</template>
+</odoo>

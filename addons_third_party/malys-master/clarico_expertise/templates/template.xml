@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- ===================== ABOUT US ========================== -->
+	<template id="expertise" name="Expertise" inherit_id="website.aboutus">
+<!--
+		<xpath expr="//h1" position="attributes">
+			<attribute name="class">ch_h1_class text-center abt_h1_margin</attribute>
+		</xpath>
+		<xpath expr="//h3" position="attributes">
+			<attribute name="class">text-muted text-center para_pricing_content abt_us_subheading</attribute>
+		</xpath>
+		<xpath expr="//div[hasclass('container')]" position="inside"> 
+		<div class="oe_structure" />
+		<section class="common-div mt64">
+		<section class="about_us_image_div">
+			<div class="block">
+				<section class="about_content_sub">
+						<h3 class="ch_h1_class">Business Experience</h3>
+						<p class="sep_span_hr" />
+						<p class="chs_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						</p>
+						<a href="#" class="shop_now_button">
+							
+									Buy Theme
+							
+						</a>
+					</section>
+			</div>
+		</section>
+		<section class="div_whole_about_us">	
+				<div class="about_us_div_class_main_snapshot_div block">
+					<section class="left_side_snapshot_div">
+				        <ul class='skills'>
+							<t t-foreach="res_company.expertise_ids" t-as="expertise_data">
+				            <li class='progressbar2 lato-regular font-black'   t-att-data-width='expertise_data.expertise' ><t t-esc="expertise_data.name"></t></li>
+				           </t>
+				        </ul>
+					</section>
+					<div id="jquery-script-menu">
+				       
+					</div>
+				</div>
+		
+			<div class="oe_structure" />
+			<section>
+			
+		</section>
+		</section>
+		</section>
+		</xpath>
+		<xpath expr="//section[2]/div[hasclass('container')]" position="attributes">
+			<attribute name="class">container hidden</attribute>
+		</xpath>
+-->
+	</template>
+ <template id="clarico_expertise_about_us" inherit_id="website_hr.aboutus">
+		<xpath expr="//img[hasclass('img-rounded')]" position="attributes">
+			<attribute name="class">img shadow img-rounded img-responsive</attribute>
+		</xpath>
+	</template>
+</odoo>
+						

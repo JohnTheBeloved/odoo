@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="clarico_customer_carousel_in_snippets"
+		inherit_id="clarico_snippets.clarico_carousel_snippets">
+	<xpath expr="//div[@id='clarico_carousel_structure']/div[hasclass('o_panel_body')]" position="inside">
+			<t t-snippet="clarico_customer_carousel.customer_carousel_snippet_body"
+				t-thumbnail="/clarico_customer_carousel/static/src/img/snippet.jpg" />
+		</xpath>
+	</template>
+
+	<!-- ======== E-Commerce Product Carousel Snippets ======== -->
+	<!--E-Commerce Product Carousel Snippet's Body -->
+	<template id="customer_carousel_snippet_body" name="Customers">
+		<section class="section_customer_carousel common-div">
+				<div class="js_get_customer" data-isemipro="true" data-style="1" />
+		</section>
+	</template>
+
+	<template id="customer_carousel_snippet_data_style_1" name="Customer Carousel Snippent1">
+		<div class="customer_1_main_div">
+			<div class="block customer_1_subdiv">
+			
+				<div class="owl-carousel">
+				<t t-foreach="objects" t-as="obj">
+					<t t-foreach="obj" t-as="customer">
+				<t t-if="customer">
+			
+			<div class="c_review_ind">
+				<div t-field="customer.image" class="customer_img_div common-div mb5pc"
+					t-field-options='{"widget": "image", "class": "media-object s_image_common customer_img"}'></div>
+				<div class="customer_name common-div mb5pc">
+					<span class="" t-esc="customer.name" />
+				</div>
+				<div class="customer_review common-div mb5pc">
+					<span class="s1_para_detail" t-esc="customer.review"></span>
+				</div>
+				<div class="customer_job_profile common-div mb5pc">
+					- <t t-esc="customer.function"></t>
+				</div>
+				<div class="company_data common-div mb5pc">
+					 <div t-field="customer.parent_id.image" class="company_img" t-field-options='{"widget": 
+						"image", "class": "media-object"}'></div> 
+					<div class="company_name" t-if="customer.parent_id.name">
+						,
+						<span t-esc="customer.parent_id.name"></span>
+					</div>
+					<div class="company_city" t-if="customer.parent_id.city">
+						,
+						<span t-esc="customer.parent_id.city"></span>
+					</div>
+				</div>
+			</div>
+			</t>
+		</t>
+				</t>
+			</div>
+			</div>
+		
+		</div>
+	</template>
+
+	<template id="customer_carousel_snippet_data_style_2" name="Customer Carousel Snippent 2 ">
+		<section class="common-div">
+			<div class="customer_2_main_div">
+				<div class="block customer_2_sub">
+					<div class="owl-carousel">
+						<t t-foreach="objects" t-as="customer">
+							<t t-if="customer">
+								<div class="customer_2_review_block_main">
+									<div class="block">
+										<div class="customer_detail_left">
+											<div class="customer_2_img_div">
+												<div t-field="customer.image" class=""
+													t-field-options='{"widget": "image", "class": "media-object s_image_common customer_img"}'></div>
+											</div>
+											<div class="customer_2_name_job_div">
+												<div class="c2_name" t-esc="customer.name" />
+												<div class="c2_job" t-esc="customer.function"></div>
+											</div>
+										</div>	
+										<div class="customer_review_text_right">
+											<div class="c2_quote_icon">
+										<i class="fa fa-quote-left" aria-hidden="true" />
+									</div>
+												<span class="cust2_review_span" t-esc="customer.review"></span>
+										</div>
+									</div>
+								</div>
+							</t>
+						</t>
+					</div>
+				</div>
+			</div>
+		</section>
+	</template>
+
+	<template id="customer_carousel_snippet_data_style_3" name="Customer Carousel Snippent 3 ">
+		<section class="common-div">
+			<div class="customer_3_main_div">
+				
+							<div class="customer3_max_width">
+							<div class="owl-carousel">
+					<t t-foreach="objects" t-as="customer">
+						<t t-if="customer">
+								<section class="block">
+									<div class="quote_left">
+										<i class="fa fa-quote-left" aria-hidden="true" />
+									</div>
+									<div class="customer_review_2">
+										<span class="cust_review_span" t-esc="customer.review"></span>
+									</div>
+
+									<div class="customer_name_ts2">
+										-
+										<span class="" t-esc="customer.name" />
+										
+									</div>
+								</section>
+								
+						</t>
+					</t>
+							</div>
+				</div>
+			</div>
+		</section>
+	</template>
+
+	<template id="customer_carousel_snippet_data_style_4" name="Customer Carousel Snippent 4 ">
+		<section class="common-div">
+			<div class="customer_4_main_div block">
+				<div class="owl-carousel">
+				<t t-foreach="objects" t-as="customer">
+					<t t-if="customer">
+						<div class="customer_4_review_block_main">
+							<div class="c4_sub_main">
+								<div class="customer_review_4">
+										<span class="cust_review_span" t-esc="customer.review"></span>
+								</div>
+								<div class="c4_customer_info_main">
+									<div class="c4_img_div">
+											<div t-field="customer.image" class="customer_img_div"
+										t-field-options='{"widget": "image", "class": "media-object s_image_common customer_img"}'></div>
+									</div>
+									<div class="c4_info_div">
+										<span class="c4_name" t-esc="customer.name" />
+										<div class="c4_job" t-esc="customer.function"></div>
+									</div>
+								</div>
+							</div>
+							<div class="border_style top left">
+								<span></span>
+							</div>
+							<div class="border_style top right">
+								<span></span>
+							</div>
+							<div class="border_style bottom left">
+								<span></span>
+							</div>
+							<div class="border_style bottom right">
+								<span></span>
+							</div>
+						</div>
+					</t>
+				</t>
+				</div>
+			</div>
+		</section>
+	</template>
+
+	<template id="customer_carousel_snippet_data_style_5" name="Customer Carousel Snippent 5 ">
+		<section class="common-div">
+			<div class="customer_5_main_div">
+				
+						
+							<div class="ts5_review_ind">
+								<!-- <div class="ts5_review_img_left">
+									<div t-field="customer.image" class="customer_img_div common-div mb5pc"
+										t-field-options='{"widget": "image", "class": "media-object s_image_common"}'></div>
+								</div> -->
+								<div class="owl-carousel">
+									<t t-foreach="objects" t-as="customer">
+									<t t-if="customer">
+								<div class="ts5_review_text_right block">
+									
+									<div class="">
+										
+										<section>
+											<h3 class="ts4_comment_heading mb16" t-esc="customer.comment"></h3>
+										</section>
+										<div class="quote_left ts5_quote_left">
+											<i class="fa fa-quote-left" aria-hidden="true" />
+										</div>
+										<div class="customer_review review_main_right mb16">
+											<span class="s4_para_detail mb0" t-esc="customer.review"></span>
+										</div>
+										<div class="ts5_customer_detail_section common-div">
+											<div class="ts5_customer_img">
+												<div t-field="customer.image" class="customer_img_div common-div mb5pc"
+										t-field-options='{"widget": "image", "class": "media-object s_image_common customer_img"}'></div>
+											</div>
+										
+											<div class="ts5_name_n_company">
+											<div class="customer_name_ts4 common-div">
+												<div class="block">
+												-
+												<span class="" t-esc="customer.name" />
+											
+											<div class="customer_company_ts4 common-div">
+												<strong>
+													<p class="" t-esc="customer.parent_id.name"></p>
+												</strong>
+											</div>
+											</div>
+											</div>
+											</div>
+										</div>
+									</div>
+						
+								</div>
+						</t>
+							</t>
+							</div>
+						
+					
+				</div>
+			
+			</div>
+		</section>
+	</template>
+</odoo>

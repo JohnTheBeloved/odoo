@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+<template id="snippet_style_timer" inherit_id="clarico_snippets.clarico_offer_snippets"
+		name="Dispay Timer" >
+		<xpath
+			expr="//div[@id='clarico_offer_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="snippet_style_2.time_type" t-thumbnail="/snippet_style_2/static/src/img/timer.jpg" />
+		</xpath>
+</template>
+
+<template id="time_type"  name="Inner Timer Snippet">   
+
+            <div class="js_timer oe_snippet_body" data-date="nan"  ></div>
+	
+</template>
+
+<template id="snippet_style_2_snippet_options" inherit_id="website.snippet_options">
+		<xpath expr="//div" position="after">
+			<div data-js='js_timer' data-selector=".js_timer" data-drop-in=".js_timer_div" >
+				<li data-date_configure="" data-no-preview="true"  class="dropdown-submenu">
+					<a class="js_products_slider">Modify Time</a>
+				</li>
+			</div>
+		</xpath>
+	</template>
+</odoo>

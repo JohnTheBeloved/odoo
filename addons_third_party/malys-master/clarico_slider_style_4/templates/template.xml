@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<template id="clarico_slider_style_4_left_bar_slider_position" inherit_id="clarico_snippets.clarico_slider_snippets" priority="4">
+	    <xpath expr="//div[@id='clarico_slider_structure']//div[@class='o_panel_body']" position="inside">
+	  	  	<t t-snippet="clarico_slider_style_4.clarico_slider_style_4_template" t-thumbnail="/clarico_slider_style_4/static/src/img/slider_4.jpg"/>
+		</xpath>
+	</template>
+	
+	<template id="clarico_slider_style_4_template" name="Style 4">
+		<div class="oe_structure" />
+		<section>
+		<div class="slider_section">
+			<div id="slider_wrapper_wo" class="slider_wrapper_wo">
+		        <div id="myCarousel" class="carousel slide clarico_slider_style_4_carousel ts_banner" data-interval="4000" data-ride="carousel">
+				
+					<!-- Indicators -->
+					<ol class="carousel-indicators hidden">
+					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					</ol>
+				
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+         				<div class="item active">
+         				<section class="block">
+         					<img class="img-responsive"  src="/clarico_slider_style_4/static/src/img/slider_4_img_1.png" alt="Slide_1"/>
+							<div class="">
+					            <section class="wo_carousel_caption">
+									<section><h2>SUMMER &amp; SPRING 2018</h2></section>
+									 <section class="lc_caption_para"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></section>
+									<section class="caption_btn_wrapper">
+										<a href="#" class="shop_now_button">Learn More</a>
+									</section>
+					            </section>
+							</div>
+							</section>
+						</div>
+					</div>
+					
+					<!-- Controls -->
+					<div class="carousel-control left hidden" data-slide="prev" role="button" data-target="#myCarousel" href="#myCarousel" style="width: 10%">
+					  <i class="fa fa-angle-left"/>
+					</div>
+					<div class="carousel-control right hidden" data-slide="next" role="button" data-target="#myCarousel" href="#myCarousel" style="width: 10%">
+					  <i class="fa fa-angle-right"/>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+	</template>
+</odoo>

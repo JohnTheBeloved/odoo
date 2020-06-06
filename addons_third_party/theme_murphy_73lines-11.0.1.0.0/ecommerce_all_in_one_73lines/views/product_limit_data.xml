@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo Module Developed by 73lines See LICENSE file for full copyright 
+	and licensing details. -->
+<odoo>
+	<data noupdate="0">
+		<record id="product_limit_20" model="product.view.limit">
+			<field name="name">20</field>
+		</record>
+		<record id="product_limit_40" model="product.view.limit">
+			<field name="name">40</field>
+		</record>
+		<record id="product_limit_60" model="product.view.limit">
+			<field name="name">60</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="snippet_style_fourteen" inherit_id="clarico_snippets.clarico_offer_snippets"
+		name="clarico snippet" priority="15">
+		<xpath
+			expr="//div[@id='clarico_offer_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="clarico_snippet_style_16.snippet_style_15_template"
+              t-thumbnail="/clarico_snippet_style_16/static/src/img/style_16.jpg" />
+		</xpath>
+	</template>
+	
+	<template id="snippet_style_15_template" name="With Price">
+		<section class="clarico_big_catg_snippet_wrap">
+				<div class="clarico_big_catg_container">
+					<div class="big_catg_top">
+						<div class="center_big_price">
+							<p class="big_price">$615</p>
+						</div>
+						<div class="big_img_one_container">
+							<div class="big_catg_img_one">
+								<section>
+									<a href="#">
+										<img class="s_image_common" src="/clarico_snippet_style_16/static/src/img/style_15_img_1.png"></img>
+									</a>
+								</section>
+							</div>
+						</div>
+						<div>
+						</div>
+						<div class="product_info">
+							<a href="#" class="product_title">chair</a>
+							<p class="product_sub-title">lethear desert boots Kimstad black</p>
+							<a class="shop_now_button left_content_btn_extra" href="#">Shop
+													Now</a>
+						</div>
+					</div>
+					<div class="big_catg_bottom">
+						<div class="big_catg_bottom_left">
+							<div class="big_price_left">
+								<p class="big_price">$68</p>
+							</div>
+							<div class="big_catg_img_two">
+								<section>
+									<a href="#">
+										<img class="s_image_common" src="/clarico_snippet_style_16/static/src/img/style_15_img_2.png"></img>
+									</a>
+								</section>
+							</div>
+							<div class="product_info">
+								<a href="#" class="product_title">Lorem</a>
+								<p class="product_sub-title">lethear desert boots Kimstad black</p>
+								<a class="shop_now_button left_content_btn_extra" href="#">Shop
+													Now</a>
+							</div>
+						</div>
+						<div class="big_catg_bottom_right">
+								<div class="big_price_right">
+									<p class="big_price">$28</p>
+								</div>
+							<div class="big_catg_img_three">
+								<section>
+									<a href="#">
+										<img class="s_image_common" src="/clarico_snippet_style_16/static/src/img/style_15_img_3.png"></img>
+									</a>
+								</section>
+							</div>
+							<div class="product_info">
+								<a href="#" class="product_title">Duis euismod</a>
+								<p class="product_sub-title">lethear desert boots Kimstad black</p>
+								<a class="shop_now_button left_content_btn_extra" href="#">Shop
+													Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+	</template>
+</odoo>

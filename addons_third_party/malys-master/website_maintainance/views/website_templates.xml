@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+<template inherit_id="portal.frontend_layout" id="sh_website_maintainance" name="Main layout">    
+    
+    <xpath expr="//div[@id='wrapwrap']" position="attributes">
+    	<attribute name="t-if">
+    		not website.is_maintainance or request.httprequest.path=='/web/login'    		
+    	</attribute>
+    
+    </xpath>
+    
+    
+    <xpath expr="//div[@id='wrapwrap']" position="before">
+	    <t t-if="website.is_maintainance==True and request.httprequest.path!='/web/login'">
+	    <html>
+	    <head>	    
+	    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold"/>
+	  <meta charset="utf-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		        
+	  <style>
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400);
+body {
+	color:#FFF; 
+	font-family:'Open Sans', sans-serif;
+	min-width:960px;
+	top:0;
+	left:0;
+	position:absolute;
+	height:100%;
+	width:100%;
+	margin:0; 
+	color:#000;
+	background-size:cover;
+	background:url('../images/swirl_pattern.png') top left repeat;
+}
+.ie body {
+	filter: dropshadow(color=#000000, offx=0, offy=1);	
+}
+h1 {
+	font-size:50px;
+	letter-spacing:-2px;	
+	line-height:40px; 
+	text-align:center;  
+}
+.ie h1 {
+	filter: dropshadow(color=#000000, offx=0, offy=3);
+	padding-bottom:12px;	
+}
+h2 { 
+}
+.ie h2 {
+	filter: dropshadow(color=#000000, offx=0, offy=3);
+}
+h3 {
+font-size: 30px;
+margin: 0.2em 0;
+text-align: center;
+color: #888;
+padding: 0 0 29px;
+}
+.ie h3 {
+	filter: dropshadow(color=#000000, offx=0, offy=3);
+}
+h4 {
+	margin-bottom:5px;	
+}
+p, pre {
+	margin:0 0 10px 0; 
+}
+code {
+	text-transform:uppercase !important;
+	color:#EEE;	
+	border-bottom:1px dotted #666;
+}
+small {
+	background:url(../images/alpha.png);
+	background:rgba(0, 0, 0, 0.8) url();	
+	border:1px solid #111;
+	font-size:15px;
+	padding:0 5px;
+}
+strong{
+text-align: center;
+display: block; 
+font-size: 28px;
+font-weight: normal;
+color:#646464;
+}
+a {
+	color:gray;
+	text-decoration:none;	
+}
+a:hover {
+	color:#BBB;	
+} 
+.topSection{ 
+}
+.spacing{
+padding:60px 0;
+}
+#Header { 
+position: relative;
+width: 100%; 
+z-index: 1;
+padding-top: 50px
+}
+.logo{
+width: auto; 
+margin: 0 auto;
+padding: 16px;  
+border-radius: 180px;
+padding-bottom:50px;
+}
+.logo h1{
+color:#0f66b1;
+font-weight:600;
+
+}
+.logo img {
+width: 80px;
+height: 108px;
+text-align: center;
+display: block;
+margin: 0 auto; 
+}
+.wrapper {
+margin: 0 auto;
+position: relative;
+width: 100%;
+z-index: 1;
+}
+
+
+
+
+#Content h2 {
+margin: 0px;
+padding: 0px;
+text-align: center;
+font-size: 42px;
+font-weight: 300;
+color:#676767;
+margin-bottom:40px;
+}
+#WindowSlide {
+margin: 0 auto;
+position: relative;
+width: 634px;
+height: 170px;
+display: block;
+overflow: hidden;
+}
+#Mail {
+position: absolute;
+width: 634px;
+top: 0px;
+left: 0px;
+}
+#Content h3 {
+text-align: center;
+font-size: 24px;
+font-weight: normal;
+display: block;
+clear: both;
+}
+
+
+
+
+
+
+
+.countdown {
+text-align: center;
+margin-top: 30px;
+background: #5381E4;
+padding: 60px 0;
+} 
+.styled div {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 70px;
+  font-weight: normal; 
+  text-align: center;
+  margin:0 15px; 
+  padding:0 30px;   
+  color:#fff;  
+  text-shadow:none;
+  vertical-align: middle;  
+}
+
+#overlay{
+background: rgba(0, 0, 0, 0.56) url(../images/overlays/01.png) top left repeat;
+position: fixed;
+top: 0px;
+width: 100%;
+bottom: 0px;
+opacity:0.8;
+}
+/* IE7 inline-block hack */
+*+html .styled div{
+  display: inline;
+  zoom: 1;
+}
+.styled div:first-child {
+  margin-left: 0;
+}
+.styled div span {
+  display: block;
+  padding-top: 3px;
+  font-size: 19px;
+  font-weight: normal; 
+  text-align: center;
+}
+
+
+@media(max-width:768px){
+	body {
+	min-width: initial !important;
+	}
+	.wrapper{width:100%;}
+	.styled div {
+	  margin-bottom:10px; 
+	}
+}
+@media(max-width:420px){
+	h1{
+	float:initial;
+	text-align: center;
+	margin-left:0px;
+	margin-bottom:0px;
+	}
+	.styled div {
+	  margin-bottom:10px;
+	  font-size: 40px;
+	  font-weight: normal; 
+	  text-align: center;
+	  width:50px;  
+	  height:70px;  
+	}
+	#Content h2 {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 29px;
+	font-weight: 300;
+	}
+	.styled {
+	margin-bottom: 30px;
+	}
+	#subscribe input[type="button"]{
+	margin-top:10px;
+	}
+	#subscribe input{
+	width:80%;
+	}
+	.featuresPro img {
+width: 100%;
+}
+	footer{
+	position:relative !important;
+	}
+}
+
+
+#sh_a{
+color:#fff;
+font-weight:bold;
+}
+
+  </style>
+	    </head>
+	    
+
+
+
+	    
+<body id="home">
+
+
+<div class="">
+
+
+
+
+<section class="main">
+<div id="Content" class="wrapper topSection">
+	<div id="Header">
+		<div class="wrapper">
+		<center><img t-att-src="request.httprequest.url_root+'logo.png'"/></center> 
+		</div>
+	</div>
+	<h2><span t-if="website.sh_titile" t-field="website.sh_titile"/></h2> 	
+	<div class="countdown styled">
+		
+		<div t-if="website.sh_message">
+			<span  t-field="website.sh_message"/>
+		</div>
+		 		<br/><br/>
+		<div>
+
+			<span t-if="website.sh_email">Please email
+				  <a id="sh_a" t-if="website.sh_email" t-attf-href="mailto:#{website.sh_email}">
+					  <t t-esc="website.sh_email" /> 
+				  </a>
+			for any query
+			</span>
+						
+		</div>
+	</div>
+</div>
+</section>
+
+
+</div>
+
+</body>	    
+    
+	    </html>
+	    </t>
+     </xpath>
+
+</template>
+
+     </data>
+</openerp>

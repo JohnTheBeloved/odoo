@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<template id="customer_carousel_snippets_option"
+		inherit_id="website.snippet_options">
+		<xpath expr="//div[@data-js='background']" position="after">
+			<div data-js='js_get_customer' data-selector=".js_get_customer" />
+			<div data-js='js_get_style' data-selector=".js_get_customer">
+				<li class="dropdown-submenu">
+					<a class="snippets_option_font_style" tabindex="-1" href="#">
+						Select Style
+					</a>
+					<ul class="snippets_option_font_style dropdown-menu">
+						<li data-style="1">
+							<a>Style 1</a>
+						</li>
+						<li data-style="2">
+							<a>Style 2</a>
+						</li>
+						<li data-style="3">
+							<a>Style 3</a>
+						</li>
+						<li data-style="4">
+							<a>Style 4</a>
+						</li>
+						<li data-style="5">
+							<a>Style 5</a>
+						</li>
+					</ul>
+				</li>
+			</div>
+		</xpath>
+	</template>
+</odoo>

@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="Homepage" id="website.homepage">
+        <t t-call="website.layout">
+
+            <section class="mt32 mb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb16 img-hover">
+                                <img class="img-responsive"
+                                     src="/theme_murphy_73lines/static/imgs/banner01-460x275.jpg"
+                                     alt=""/>
+                            </div>
+                            <div class="img-hover">
+                                <img class="img-responsive"
+                                     src="/theme_murphy_73lines/static/imgs/banner02-460x275.jpg"
+                                     alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-hover">
+                                <img class="img-responsive"
+                                     src="/theme_murphy_73lines/static/imgs/banner03-460x570.jpg"
+                                     alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb16 img-hover">
+                                <img class="img-responsive"
+                                     src="/theme_murphy_73lines/static/imgs/banner04-460x275.jpg"
+                                     alt=""/>
+                            </div>
+                            <div class="img-hover">
+                                <img class="img-responsive"
+                                     src="/theme_murphy_73lines/static/imgs/banner05-460x275.jpg"
+                                     alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mt64 mb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="img-hover">
+                                <img class="img-responsive"
+                                     src="/theme_murphy_73lines/static/imgs/banner06-460x275.jpg"
+                                     alt=""/>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-hover">
+                                <img class="img-responsive"
+                                     src="/theme_murphy_73lines/static/imgs/banner07-460x275.jpg"
+                                     alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-hover">
+                                <img class="img-responsive"
+                                     src="/theme_murphy_73lines/static/imgs/banner08-460x275.jpg"
+                                     alt=""/>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mt64 mb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="img-hover">
+                            <img class="img-responsive"
+                                 src="/theme_murphy_73lines/static/imgs/banner09-1420x275.jpg"
+                                 alt=""/>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="mt64 mb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="content-heading mb24" style="">Automotive &amp; Industrial</h3>
+                            <div class="col-md-7 pad0">
+                                <div class="img-hover">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner11-392x356.jpg"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="img-hover mb16">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner12-231x165.jpg"
+                                         alt=""/>
+                                </div>
+                                <div class="img-hover">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner13-231x165.jpg"
+                                         alt=""/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="content-heading mb24" style="">Beauty &amp; Health</h3>
+                            <div class="col-md-7 pad0">
+                                <div class="img-hover">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner14-392x356.jpg"
+                                         alt=""/>
+                                </div>
+
+                            </div>
+                            <div class="col-md-5">
+                                <div class="img-hover">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner15-231x356.jpg"
+                                         alt=""/>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mt64 mb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="content-heading mb24" style="">Sports &amp; Outdoors</h3>
+                            <div class="col-md-7 pad0">
+                                <div class="img-hover">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner16-392x356.jpg"
+                                         alt=""/>
+                                </div>
+
+                            </div>
+                            <div class="col-md-5">
+                                <div class="img-hover">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner17-231x356.jpg"
+                                         alt=""/>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="content-heading mb24" style="">Toys, Kids &amp; Baby</h3>
+                            <div class="col-md-7 pad0">
+                                <div class="img-hover">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner18-392x356.jpg"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="img-hover mb16">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner19-231x165.jpg"
+                                         alt=""/>
+                                </div>
+                                <div class="img-hover">
+                                    <img class="img-responsive"
+                                         src="/theme_murphy_73lines/static/imgs/banner20-231x165.jpg"
+                                         alt=""/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!--
+                        <section class="mt64 mb64">
+                            <div class="container" style="border:1px solid #e1e1e1;">
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-3"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="container mt64">
+                                <div class="row">
+                                    <div class="section-head text-center">
+                                        <h2 class="text-uppercase">TOP CATEGORIES</h2>
+                                        <div class="wt-separator-outer">
+                                            <div class="wt-separator bg-primary"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container ">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 pad10">
+                                        <div class="img-banner zoom-image">
+                                            <a class="banner-img" title="em-sample-title" href="#">
+                                                <img class="img-responsive img-banner-lazyloaded margin-0-auto" alt="em_ads_01"
+                                                     src="http://theme-urban-10.s4.73lines.com/theme_urban/static/src/img/box_img_1.jpg"/>
+                                            </a>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 pad10 mt16 mb16 ">
+                                                <div class=" img-banner-small zoom-image">
+                                                    <a class="banner-img" title="em-sample-title" href="#">
+                                                        <img class="img-responsive img-banner-lazyloaded margin-0-auto"
+                                                             alt="em_ads_02"
+                                                             src="http://theme-urban-10.s4.73lines.com/theme_urban/static/src/img/box_img_2.jpg"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 pad10 mt16 mb16">
+                                                <div class=" img-banner-small  zoom-image">
+                                                    <a class="banner-img" title="em-sample-title" href="#">
+                                                        <img class="img-responsive img-banner-lazyloaded margin-0-auto"
+                                                             alt="em_ads_03"
+                                                             src="http://theme-urban-10.s4.73lines.com/theme_urban/static/src/img/box_img_3.jpg"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-6 text-center ">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 pad10">
+                                                <div class=" img-banner-small zoom-image">
+                                                    <a class="banner-img" title="em-sample-title" href="#">
+                                                        <img class="img-responsive img-banner-lazyloaded margin-0-auto"
+                                                             alt="em_ads_02"
+                                                             src="http://theme-urban-10.s4.73lines.com/theme_urban/static/src/img/box_img_4.jpg"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 pad10">
+                                                <div class=" img-banner-small  zoom-image">
+                                                    <a class="banner-img" title="em-sample-title" href="#">
+                                                        <img class="img-responsive img-banner-lazyloaded margin-0-auto"
+                                                             alt="em_ads_03"
+                                                             src="http://theme-urban-10.s4.73lines.com/theme_urban/static/src/img/box_img_5.jpg"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 pad10">
+                                                <div class="img-banner zoom-image">
+                                                    <a class="banner-img" title="em-sample-title" href="#">
+                                                        <img class="img-responsive img-banner-lazyloaded margin-0-auto"
+                                                             alt="em_ads_04"
+                                                             src="http://theme-urban-10.s4.73lines.com/theme_urban/static/src/img/box_img_6.jpg"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mt16 mb16 four-image">
+                            <div class="container ">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="mb16 pad0 s_img_1">
+                                            <a href="#">
+                                                <img src="http://theme-homestore-9.s3.73lines.com/theme_homestore/static/src/image/image1.jpg"
+                                                     class="img img-responsive"/>
+                                            </a>
+                                        </div>
+                                        <div class="mb16 pad0">
+                                            <a href="#">
+                                                <img src="http://theme-homestore-9.s3.73lines.com/theme_homestore/static/src/image/image2.jpg"
+                                                     class="img img-responsive"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 mb16">
+                                        <a href="#">
+                                            <img src="http://theme-homestore-9.s3.73lines.com/theme_homestore/static/src/image/image3.jpg"
+                                                 class="img img-responsive"/>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <a href="#">
+                                            <img src="http://theme-homestore-9.s3.73lines.com/theme_homestore/static/src/image/image4.jpg"
+                                                 class="img img-responsive"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mt64 mb48">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="otsubbanner2 otbanner col-xs-6 col-sm-6">
+                                        <div class="otsubbanner-img">
+                                            <a href="#">
+                                                <img class="img-responsive"
+                                                     src="https://demo.onthemes.net/Opencart/OTP02/OTP042_mega-cell/OTP01/image/catalog/demo/banners/subbanner-01.jpg"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="otsubbanner3 otbanner col-xs-6 col-sm-6">
+                                        <div class="otsubbanner-img">
+                                            <a href="#">
+                                                <img class="img-responsive"
+                                                     src="https://demo.onthemes.net/Opencart/OTP02/OTP042_mega-cell/OTP01/image/catalog/demo/banners/subbanner-02.jpg"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt32">
+                                    <div class="otsubbanner-img">
+                                        <a href="#">
+                                            <img class="img-responsive"
+                                                 src="https://demo.onthemes.net/Opencart/OTP02/OTP042_mega-cell/OTP01/image/catalog/demo/banners/subbanner-03.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        &lt;!&ndash;
+                                    <section class="mt48 mb32">
+                                        <div class="container">
+                                            <div class="row text-center">
+                                                <div class="section-head text-center">
+                                                    <h2 class="text-uppercase">Our Services</h2>
+                                                    <div class="wt-separator-outer">
+                                                        <div class="wt-separator bg-primary"></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-3 col-sm-6">
+                                                    <div class="serviceBox">
+                                                        <div class="service-icon">
+                                                            <i class="fa fa-globe"></i>
+                                                        </div>
+                                                        <h3 class="title">Web Design</h3>
+                                                        <p class="description">
+                                                            Lorem ipsum dolor sit amet, consecte adipisicing elit. A alias aspernatur autem
+                                                            blanditiis. Lorem ipsum dolor sit amet.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3 col-sm-6">
+                                                    <div class="serviceBox blue">
+                                                        <div class="service-icon">
+                                                            <i class="fa fa-rocket"></i>
+                                                        </div>
+                                                        <h3 class="title">Web Development</h3>
+                                                        <p class="description">
+                                                            Lorem ipsum dolor sit amet, consecte adipisicing elit. A alias aspernatur autem
+                                                            blanditiis. Lorem ipsum dolor sit amet.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3 col-sm-6">
+                                                    <div class="serviceBox darkblue">
+                                                        <div class="service-icon">
+                                                            <i class="fa fa-briefcase"></i>
+                                                        </div>
+                                                        <h3 class="title">Brand Building</h3>
+                                                        <p class="description">
+                                                            Lorem ipsum dolor sit amet, consecte adipisicing elit. A alias aspernatur autem
+                                                            blanditiis. Lorem ipsum dolor sit amet.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3 col-sm-6">
+                                                    <div class="serviceBox purple">
+                                                        <div class="service-icon">
+                                                            <i class="fa fa-mobile"></i>
+                                                        </div>
+                                                        <h3 class="title">Responsive Design</h3>
+                                                        <p class="description">
+                                                            Lorem ipsum dolor sit amet, consecte adipisicing elit. A alias aspernatur autem
+                                                            blanditiis. Lorem ipsum dolor sit amet.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                        &ndash;&gt;
+                        <section class="mt48 mb32">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="section-head text-center">
+                                        <h2 class="text-uppercase">exhale style</h2>
+                                        <div class="wt-separator-outer">
+                                            <div class="wt-separator bg-primary"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="section-content" data-toggle="tab-hover">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-4 m-b30 col-xs-12 hidden-xs">
+                                            <div class="wt-box block-shadow radius-md overflow-hide  case-large-outer">
+                                                <div class="wt-thum-bx wt-img-effect wt-img-overlay2 bg-no-repeat bg-cover case-large-img bg-bottom-right"
+                                                     style="background-image:url(https://demo.onthemes.net/Opencart/OTP02/OTP042_mega-cell/OTP01/image/cache/catalog/demo/banners/slider-01-1160x500.jpg);">
+                                                </div>
+                                                <div class="wt-info bg-white text-left p-a20">
+                                                    <h4 class="text-uppercase m-t0 m-b5">Social Media Marketting</h4>
+                                                    <p class="m-b15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                                                        laoreet odio id lectus tristique luctus ins. Morbi id sodales orci. Nunc et
+                                                        nunc sodales, convallis elit.Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit. Etiam
+                                                        laoreet odio id lectus tristique luctus ins.
+                                                    </p>
+                                                    <a href="#" class="btn-link btn-primary">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-8 col-xs-12">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="wt-box block-md clearfix  bg-white block-shadow mb32 radius-md overflow-hide">
+                                                        <div class="col-md-6 pad0 col-xs-6 wt-img-effect wt-img-overlay2">
+                                                            <img src="http://marcuszen.perfectusinc.com/includes/templates/marcus/images/banners/banner_image03_1510376871.jpg"
+                                                                 alt="" class="img img-responsive"/>
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-6 wt-info text-left p-a20 overflow-hide">
+                                                            <h4 class="text-uppercase m-t0 m-b5">Sensitivity Analysis</h4>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                                                                laoreet odio id lectus tristique luctus ins.
+                                                            </p>
+                                                            <a href="#" class="btn-link btn-primary">Read More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="wt-box block-md clearfix  bg-white  block-shadow m-b30 radius-md overflow-hide">
+                                                        <div class="col-md-6 col-xs-6 pad0 wt-img-effect wt-img-overlay2">
+                                                            <img src="http://marcuszen.perfectusinc.com/includes/templates/marcus/images/banners/banner_image02_1510376857.jpg"
+                                                                 alt="" class="img img-responsive"/>
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-6 wt-info text-left p-a20 overflow-hide">
+                                                            <h4 class="text-uppercase m-t0 m-b5">Project Governances</h4>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                                                                laoreet odio id lectus tristique luctus ins.
+                                                            </p>
+                                                            <a href="#" class="btn-link btn-primary">Read More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="otbanner1 otbanner col-xs-6 col-sm-6">
+                                        <div class="otsubbanner-img">
+                                            <a href="#">
+                                                <img src="https://demo.onthemes.net/Opencart/OTP02/OTP042_mega-cell/OTP01/image/catalog/demo/banners/banner-01.jpg"
+                                                     alt="banner-01.jpg"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="otbanner2 otbanner col-xs-6 col-sm-6">
+                                        <div class="otsubbanner-img">
+                                            <a href="#">
+                                                <img src="https://demo.onthemes.net/Opencart/OTP02/OTP042_mega-cell/OTP01/image/catalog/demo/banners/banner-02.jpg"
+                                                     alt="banner-02.jpg"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="hidden-xs">
+                            <div class="container-fluid equal-wraper mt64 mb32">
+
+                                <div class="row">
+
+                                    <div class="col-md-6  equal-col bg-cover equal-col-height"
+                                         style="background-image: url(&quot;https://demo.onthemes.net/Opencart/OTP02/OTP042_mega-cell/OTP01/image/cache/catalog/demo/banners/slider-01-1160x500.jpg&quot;); height: 600px;">
+                                        <div class="section-content">
+                                            <div class="wt-left-part">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 equal-col" style="height: 600px;">
+                                        <div class="section-content  clearfix">
+                                            <div class="wt-right-part-2  p-t87 p-b87">
+                                                <div class="row no-col-gap equal-wraper">
+                                                    <div class="col-md-6 col-sm-6 equal-col bg-gray-lighter hover-shadow"
+                                                         style="height: 198px;">
+                                                        <div class="wt-icon-box-wraper  p-a30">
+                                                            <div class="icon-md text-primary radius m-b15">
+                                                                <span class="icon-cell  text-primary">
+                                                                    <i class="fa fa-globe mb24"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class="icon-content">
+                                                                <h4 class="wt-tilte text-uppercase m-b5">Financial Planning</h4>
+                                                                <p>Vitae adipiscing turpis. Aenean ligula nibh, molestie id
+                                                                    viverra.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 equal-col bg-white hover-shadow"
+                                                         style="height: 198px;">
+                                                        <div class="wt-icon-box-wraper   p-a30">
+                                                            <div class="icon-md text-primary radius m-b15">
+                                                                <span class="icon-cell  text-primary">
+                                                                    <i class="fa fa-rocket  mb24"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class="icon-content">
+                                                                <h4 class="wt-tilte text-uppercase m-b5">Startup Investment</h4>
+                                                                <p>Vitae adipiscing turpis. Aenean ligula nibh, molestie id
+                                                                    viverra.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 equal-col bg-white hover-shadow"
+                                                         style="height: 198px;">
+                                                        <div class="wt-icon-box-wraper  p-a30">
+                                                            <div class="icon-md text-primary radius m-b15">
+                                                                <span class="icon-cell  text-primary">
+                                                                    <i class="fa fa-user  mb24"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class="icon-content">
+                                                                <h4 class="wt-tilte text-uppercase m-b5">Risk Analysis</h4>
+                                                                <p>Vitae adipiscing turpis. Aenean ligula nibh, molestie id
+                                                                    viverra.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 equal-col bg-gray-lighter hover-shadow"
+                                                         style="height: 198px;">
+                                                        <div class="wt-icon-box-wraper  p-a30">
+                                                            <div class="icon-md text-primary radius m-b15">
+                                                                <span class="icon-cell  text-primary">
+                                                                    <i class="fa fa-home mb24"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class="icon-content">
+                                                                <h4 class="wt-tilte text-uppercase m-b5">Market Monitoring</h4>
+                                                                <p>Vitae adipiscing turpis. Aenean ligula nibh, molestie id
+                                                                    viverra.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>-->
+            <!--
+                        <section class="mt48 mb48">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="section-head text-center">
+                                        <h2 class="text-uppercase">Our Team</h2>
+                                        <div class="wt-separator-outer">
+                                            <div class="wt-separator bg-primary"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="pricingTable">
+                                            <h3 class="title">Standard</h3>
+                                            <div class="price-value">
+                                                <span class="amount">$10</span>
+                                                <span class="month">/Month</span>
+                                            </div>
+                                            <ul class="pricing-content">
+                                                <li>50GB Disk Space</li>
+                                                <li>50 Email Accounts</li>
+                                                <li>50GB Monthly Bandwidth</li>
+                                                <li>10 Subdomains</li>
+                                                <li>15 Domains</li>
+                                            </ul>
+                                            <a href="#" class="pricingTable-signup">Sign up</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="pricingTable">
+                                            <h3 class="title">Business</h3>
+                                            <div class="price-value">
+                                                <span class="amount">$20</span>
+                                                <span class="month">/Month</span>
+                                            </div>
+                                            <ul class="pricing-content">
+                                                <li>60GB Disk Space</li>
+                                                <li>60 Email Accounts</li>
+                                                <li>60GB Monthly Bandwidth</li>
+                                                <li>15 Subdomains</li>
+                                                <li>20 Domains</li>
+                                            </ul>
+                                            <a href="#" class="pricingTable-signup">Sign up</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="pricingTable">
+                                            <h3 class="title">Premium</h3>
+                                            <div class="price-value">
+                                                <span class="amount">$30</span>
+                                                <span class="month">/Month</span>
+                                            </div>
+                                            <ul class="pricing-content">
+                                                <li>70GB Disk Space</li>
+                                                <li>70 Email Accounts</li>
+                                                <li>70GB Monthly Bandwidth</li>
+                                                <li>20 Subdomains</li>
+                                                <li>25 Domains</li>
+                                            </ul>
+                                            <a href="#" class="pricingTable-signup">Sign up</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="pricingTable">
+                                            <h3 class="title">Extra</h3>
+                                            <div class="price-value">
+                                                <span class="amount">$40</span>
+                                                <span class="month">/Month</span>
+                                            </div>
+                                            <ul class="pricing-content">
+                                                <li>80GB Disk Space</li>
+                                                <li>80 Email Accounts</li>
+                                                <li>80GB Monthly Bandwidth</li>
+                                                <li>25 Subdomains</li>
+                                                <li>30 Domains</li>
+                                            </ul>
+                                            <a href="#" class="pricingTable-signup">Sign up</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+            -->
+            <!--
+                        <section class="mt64 mb48">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="section-head text-center">
+                                        <h2 class="text-uppercase">Testimonial</h2>
+                                        <div class="wt-separator-outer">
+                                            <div class="wt-separator bg-primary"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="testimonial-slider" class="owl-carousel">
+                                            <div class="testimonial">
+                                                <div class="pic">
+                                                    <img src="http://bestjquery.com/tutorial/testimonial/demo64/images/img-1.jpg"/>
+                                                </div>
+                                                <div class="testimonial-profile">
+                                                    <h3 class="title">williamson</h3>
+                                                    <span class="post">Web Developer</span>
+                                                </div>
+                                                <p class="description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros
+                                                    consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar.
+                                                    Suspendisse hendrerit ultrices mauris.
+                                                </p>
+                                            </div>
+                                            <div class="testimonial">
+                                                <div class="pic">
+                                                    <img src="http://bestjquery.com/tutorial/testimonial/demo64/images/img-2.jpg"/>
+                                                </div>
+                                                <div class="testimonial-profile">
+                                                    <h3 class="title">Kristina</h3>
+                                                    <span class="post">Web Designer</span>
+                                                </div>
+                                                <p class="description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros
+                                                    consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar.
+                                                    Suspendisse hendrerit ultrices mauris.
+                                                </p>
+                                            </div>
+                                            <div class="testimonial">
+                                                <div class="pic">
+                                                    <img src="http://bestjquery.com/tutorial/testimonial/demo64/images/img-3.jpg"/>
+                                                </div>
+                                                <div class="testimonial-profile">
+                                                    <h3 class="title">Steve Thomas</h3>
+                                                    <span class="post">Web Developer</span>
+                                                </div>
+                                                <p class="description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros
+                                                    consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar.
+                                                    Suspendisse hendrerit ultrices mauris.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+            -->
+
+        </t>
+    </template>
+</odoo>

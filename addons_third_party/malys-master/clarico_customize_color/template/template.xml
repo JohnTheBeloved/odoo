@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="snippet_bg_color_snippet_options" inherit_id="website.snippet_options">
+    	<xpath expr="." position="inside">
+    		<div data-js='set_custom_color' data-selector="section, :not(.o_gallery > .container) > .carousel">
+		        <li class="divider"></li>
+		        <li class="dropdown-header o_main_header">Set Custom color</li>
+		        <li data-set_color="true" data-no-preview="true"><a href="#"><i class="fa fa-tachometer"/>Add color</a></li>
+		    </div>
+    	</xpath>
+    </template>
+    
+</odoo>

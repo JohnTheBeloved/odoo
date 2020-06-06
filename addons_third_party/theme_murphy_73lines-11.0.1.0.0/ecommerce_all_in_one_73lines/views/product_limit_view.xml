@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Product Limit Tree View -->
+    <record id="portfolio_category_tree_view" model="ir.ui.view">
+        <field name="name">product.view.limit.per.page.tree</field>
+        <field name="model">product.view.limit</field>
+        <field name="field_parent" eval="False" />
+        <field name="arch" type="xml">
+            <tree string="Product Veiw Limit per Page" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Product Limit Action -->
+    <record id="website_product_limit_action" model="ir.actions.act_window">
+        <field name="name">Website Products View Limit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.view.limit</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to define a new Product View Limit per Page in Shop.
+            </p>
+        </field>
+    </record>
+
+    <!-- Product Limit Menu -->
+    <menuitem action="website_product_limit_action" id="menu_view_limit"
+              name="Website Product View Limit" parent="website_sale.menu_ecommerce_settings"/>
+
+</odoo>

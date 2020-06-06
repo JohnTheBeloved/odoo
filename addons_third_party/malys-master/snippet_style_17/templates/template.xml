@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<template id="style_17_assets_front" inherit_id="clarico_snippets.clarico_menu_snippets">
+		<xpath
+			expr="//div[@id='clarico_menu_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="snippet_style_17.style_17_template" t-thumbnail="/snippet_style_17/static/src/img/menu.jpg" />
+		</xpath>
+	</template>
+
+	<template id="style_17_template" name="Service">
+		<div class="oe_structure" />
+		<section class="menu_snippet_main">
+			<div class="snippet_style17">
+				<div class="snippet_style17_top_cnt">
+					<div class="top_cnt_section">
+						<section>
+							<div class="top_cnt_section_img">
+								<span class="section_img_span">
+									<i class="fa fa-paint-brush"></i>
+								</span>
+							</div>
+							<div class="top_cnt_section_cnt">
+								<span class="top_cnt_section_heading_span">Chesterfield Sofa</span>
+								<span class="top_cnt_section_span">Lorem ipsum dolor sit amet.</span>
+							</div>
+						</section>
+					</div>
+					<div class="top_cnt_section">
+						<section>
+							<div class="top_cnt_section_img">
+								<span class="section_img_span">
+									<i class="fa fa-gear"></i>
+								</span>
+							</div>
+							<div class="top_cnt_section_cnt">
+								<span class="top_cnt_section_heading_span">6 Seater Dining Sets</span>
+								<span class="top_cnt_section_span">Lorem ipsum dolor sit amet.</span>
+							</div>
+						</section>
+					</div>
+					<div class="top_cnt_section">
+						<section>
+							<div class="top_cnt_section_img">
+								<span class="section_img_span">
+									<i class="fa fa-expand"></i>
+								</span>
+							</div>
+							<div class="top_cnt_section_cnt">
+								<span class="top_cnt_section_heading_span">Balcony Furniture</span>
+								<span class="top_cnt_section_span">Lorem ipsum dolor sit amet.</span>
+							</div>
+						</section>
+					</div>
+				</div>
+				<hr class="snippet_style17_hr"></hr>
+				<div class="snippet_style17_second_div">
+					<section>
+						<div class="snippet_style17_second_div_section">
+							<ul class="snippet_style17_second_ul">
+								<section>
+									<li>
+										<a>Chesterfield Sofa</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a>Balcony Furniture</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a>8 Seater Dining Sets</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a>Bar Stools Chair</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a>Arm Chairs</a>
+									</li>
+								</section>
+							</ul>
+							<ul class="snippet_style17_second_ul">
+								<section>
+									<li>
+										<a>Chesterfield Sofa</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a>Balcony Furniture</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a>8 Seater Dining Sets</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a>Bar Stools Chair</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a>Arm Chairs</a>
+									</li>
+								</section>
+							</ul>
+						</div>
+						<div class="snippet_style17_second_div_section">
+							<h3 class="content_title o_default_snippet_text snippet_right_div_cnt">Furniture Interior</h3>
+							<span class="snippet_right_border"></span>	
+							<p class="snippet_right_div_cnt_p">Shopping for chairs online can be stressful at best, without the touch and feel 
+							element of walking into a traditional furniture retailer.Through direct dealings with the designers and creators 
+							themselves.</p>		
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+	</template>
+</odoo>

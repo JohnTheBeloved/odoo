@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template id="clarico_style_7" inherit_id="clarico_snippets.clarico_other_snippets" name="clarico Snippet" priority="7">
+			<xpath expr="//div[@id='clarico_other_snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+				<t t-snippet="clarico_snippet_style_7.clarico_snippet_style_7_template" t-thumbnail="/clarico_snippet_style_7/static/src/img/snippet_7.jpg"  /> 
+			</xpath>
+		</template>
+		<template id="clarico_snippet_style_7_template" name="Full Width Content Image">
+				<div class="oe_structure" />
+				<section class="ts7_main_wrap ts7_bg common-div" style="background-image:url('/clarico_snippet_style_7/static/src/img/style_7_bg.png')">
+					<section class="ts7_sub_main">
+						<ul class="ts7_content_wrap" id="list_ul">
+							<li><h1 class="ts7_s-lvl_heading">
+								clarico
+							</h1></li>
+							<li><div class="common-div ts7_hr"><p class="ts7sep_span_hr"></p></div></li>
+							<li><p class="ts7_sub_title">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p></li>
+						 	<li><div class="ts7_btn_wrap common-div">
+						 	<a href="#" class="shop_now_button">
+							
+									Buy Theme
+								
+						</a>  
+						</div>
+							</li>
+						</ul>
+					</section> 
+				</section>	
+		</template>
+</odoo>

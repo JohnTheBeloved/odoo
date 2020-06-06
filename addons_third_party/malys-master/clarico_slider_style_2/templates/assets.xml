@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="style6_assets_frontend" inherit_id="web.assets_frontend" name="Style">
+		<xpath expr="." position="inside">
+			
+			<link rel="stylesheet" type="text/less"
+				href="/clarico_slider_style_2/static/src/less/slider_2.less" />
+		</xpath>
+	</template>
+	
+</odoo>

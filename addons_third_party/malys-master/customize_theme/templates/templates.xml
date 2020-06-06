@@ -1,0 +1,2053 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Theme Customize Template -->
+	<template id="customize_theme_model" inherit_id="website.theme_customize"
+		name="Model For Theme Customize ">
+		<xpath expr="//div[@id='theme_customize_modal']" position="replace">
+			<div id="theme_customize_modal" class="modal left fade" tabindex="-1"
+				role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&amp;times;</span>
+							</button>
+							<h4 class="modal-title">Customize Your Theme</h4>
+						</div>
+						<div class="modal-body">
+							<!-- Color Container -->
+							<div class="col-md-12 col-xs-12 mb8 b_btm">
+								<h5 class="">
+									Select Theme Color
+									<a class="more_custom_icon">
+										<i class="fa fa-minus-circle"></i>
+									</a>
+								</h5>
+								<hr />
+								<div class="mt16">
+									<div
+										class="btn-group common-div expand_main_div expand_main_div_first"
+										data-toggle="buttons">
+										<label class="btn btn-main checked">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" chacked="chacked" data-xmlid="customize_theme.main_color" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-success">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color1" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-primary">
+											<input type="radio" name="options" id="option1"
+												autocomplete="off" data-xmlid="customize_theme.main_color2" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-info">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color3" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-default">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color4" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-warning">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color5" />
+											<span class="fa fa-check"></span>
+										</label>
+
+										<label class="btn btn-new1">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color7" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-new2">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color8" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-new3">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color9" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-new4">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color10" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-new5">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color6" />
+											<span class="fa fa-check"></span>
+										</label>
+										<label class="btn btn-danger">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" data-xmlid="customize_theme.main_color11" />
+											<span class="fa fa-check"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- multi color -->
+							<div class="col-md-12 col-xs-12 mb8 b_btm">
+								<h5 class="">
+									Set your custom color
+									<a class="more_custom_icon">
+										<i class="fa fa-plus-circle" />
+									</a>
+								</h5>
+								<hr />
+								<div class="mt16">
+									<div class="btn-group common-div expand_main_div"
+										data-toggle="buttons">
+										<label class="btn checked" style="display:none !important">
+											<input type="radio" name="options" id="option2"
+												autocomplete="off" chacked="chacked" data-xmlid="" />
+										</label>
+										<div class="multi_color">
+											<section class="common-div">
+												<input id="input_color" type="text" placeholder="#2b2b2b"
+													class="col-md-8 color_box" />
+												<label class="btn select_theme_color">
+													Go
+													<input type="radio" name="options" id="option2"
+														autocomplete="off" data-xmlid="customize_theme.multi_color" />
+												</label>
+											</section>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Header Style -->
+
+							<div class="col-md-12 col-xs-12 mb8 b_btm">
+								<h5 class="">
+									Select Header Style
+									<a class="more_custom_icon">
+										<i class="fa fa-plus-circle"></i>
+									</a>
+								</h5>
+								<hr />
+
+								<div class="mt16">
+									<div class="btn-group  common-div expand_main_div"
+										data-toggle="buttons">
+										<label class="btn header_style_label">
+											<input type="radio" name="headeroptions" id="header_style_1"
+												autocomplete="off" checked="checked" data-xmlid="customize_theme.header_style_1"
+												data-tmp_xmlid="customize_theme.template_header_style_1">
+												<img src="/customize_theme/static/src/img/Header_1.jpg"
+													class="s_image_common"></img>
+											</input>
+
+										</label>
+										<label class="btn header_style_label">
+											<input type="radio" name="headeroptions"
+												id="customize_theme_layout_style_2" autocomplete="off"
+												checked="checked" data-xmlid="customize_theme.header_style_2"
+												data-tmp_xmlid="customize_theme.template_header_style_2">
+												<img src="/customize_theme/static/src/img/Header_2.jpg"
+													class="s_image_common"></img>
+											</input>
+										</label>
+										<label class="btn header_style_label">
+											<input type="radio" name="headeroptions"
+												id="customize_theme_layout_style_3" autocomplete="off"
+												checked="checked" data-xmlid="customize_theme.header_style_3"
+												data-tmp_xmlid="customize_theme.template_header_style_3">
+												<img src="/customize_theme/static/src/img/Header_3.jpg"
+													class="s_image_common"></img>
+											</input>
+										</label>
+										<label class="btn header_style_label">
+											<input type="radio" name="headeroptions"
+												id="customize_theme_layout_style_4" autocomplete="off"
+												checked="checked" data-xmlid="customize_theme.header_style_4"
+												data-tmp_xmlid="customize_theme.template_header_style_4">
+												<img src="/customize_theme/static/src/img/Header_4.jpg"
+													class="s_image_common"></img>
+											</input>
+										</label>
+										<label class="btn header_style_label">
+											<input type="radio" name="headeroptions"
+												id="customize_theme_layout_style_5" autocomplete="off"
+												checked="checked" data-xmlid="customize_theme.header_style_5"
+												data-tmp_xmlid="customize_theme.template_header_style_5">
+												<img src="/customize_theme/static/src/img/Header_5.jpg"
+													class="s_image_common"></img>
+											</input>
+										</label>
+										<label class="btn header_style_label">
+											<input type="radio" name="headeroptions"
+												id="customize_theme_layout_style_6" autocomplete="off"
+												checked="checked" data-xmlid="customize_theme.header_style_6"
+												data-tmp_xmlid="customize_theme.template_header_style_6">
+												<img src="/customize_theme/static/src/img/Header_6.jpg"
+													class="s_image_common"></img>
+											</input>
+										</label>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="col-md-12 col-xs-12 mb8 b_btm">
+								<h5 class="">
+									Select Footer Style
+									<a class="more_custom_icon">
+										<i class="fa fa-plus-circle"></i>
+									</a>
+								</h5>
+								<hr />
+
+								<div class="mt16">
+									<div class="btn-group common-div expand_main_div"
+										data-toggle="buttons">
+										<label class="btn footer_style_label">
+											<input type="radio" name="footeroptions" id="footer_style_1"
+												autocomplete="off" checked="checked" data-xmlid="customize_theme.footer_style_1"
+												data-tmp_xmlid="customize_theme.template_Footer_style_1">
+												<img src="/customize_theme/static/src/img/footer_1.jpg"
+													class="s_image_common"></img>
+											</input>
+
+										</label>
+										<label class="btn footer_style_label">
+											<input type="radio" name="footeroptions"
+												id="customize_theme_footer_style_2" autocomplete="off"
+												checked="checked" data-xmlid="customize_theme.footer_style_2"
+												data-tmp_xmlid="customize_theme.template_Footer_style_2">
+												<img src="/customize_theme/static/src/img/footer_2.jpg"
+													class="s_image_common"></img>
+											</input>
+
+										</label>
+										<label class="btn footer_style_label">
+											<input type="radio" name="footeroptions"
+												id="customize_theme_layout_style_3" autocomplete="off"
+												checked="checked" data-xmlid="customize_theme.footer_style_3"
+												data-tmp_xmlid="customize_theme.template_Footer_style_3">
+												<img src="/customize_theme/static/src/img/footer_3.jpg"
+													class="s_image_common"></img>
+											</input>
+
+										</label>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- Font Style -->
+
+							<!-- <div class="col-md-12 col-xs-12 mb8 b_btm"> <h5 class="">Select 
+								Font Style<a class="more_custom_icon"><i class="fa fa-plus-circle"></i></a></h5> 
+								<hr /> <div class="mt16"> <div class="expand_main_div"> <button type="button" 
+								id="font_box" class="btn-comman no_btn_style" data-toggle="modal" data-target="#font_box">Open 
+								Font Box</button> </div> </div> </div> -->
+
+
+							<!-- select button styles -->
+
+
+							<div class="col-md-12 col-xs-12 mb8 b_btm">
+								<h5 class="">
+									Select Button Style
+									<a class="more_custom_icon">
+										<i class="fa fa-plus-circle"></i>
+									</a>
+								</h5>
+								<hr />
+								<div class="mt16">
+									<div class="expand_main_div">
+										<div class="btn-group common-div" data-toggle="buttons">
+											<label class="shop_now_button1 cbtn btn">
+												<input type="radio" name="btn options" id="customize_theme_btn_style_1"
+													class="" autocomplete="off" data-xmlid="customize_theme.btn1"
+													checked="checked">
+													Button 1
+												</input>
+												<span class="fa fa-check"></span>
+											</label>
+											<label class="shop_now_button2 cbtn btn">
+												<input type="radio" name="btn options" id="customize_theme_btn_style_2"
+													autocomplete="off" data-xmlid="customize_theme.btn2">
+													Button 2
+												</input>
+												<span class="fa fa-check"></span>
+											</label>
+											<label class="shop_now_button3 cbtn btn">
+												<input type="radio" name="btn options" class="shop_now_button"
+													id="customize_theme_btn_style_3" autocomplete="off"
+													data-xmlid="customize_theme.btn3">
+													Button 3
+												</input>
+												<span class="fa fa-check"></span>
+											</label>
+											<label class="btn cbtn shop_now_button4">
+												<input type="radio" name="btn options" class="shop_now_button"
+													id="customize_theme_btn_style_4" autocomplete="off"
+													data-xmlid="customize_theme.btn4">
+													Button 4
+												</input>
+												<span class="fa fa-check"></span>
+											</label>
+											<label class="btn cbtn shop_now_button5 btn_common">
+												<input type="radio" name="btn options" class="shop_now_button"
+													id="customize_theme_btn_style_5" autocomplete="off"
+													data-xmlid="customize_theme.btn5">
+													Button 5
+												</input>
+												<span class="fa fa-check"></span>
+											</label>
+											<label class="btn cbtn shop_now_button6 btn_common">
+												<input type="radio" name="btn options" class="shop_now_button"
+													id="customize_theme_btn_style_6" autocomplete="off"
+													data-xmlid="customize_theme.btn6">
+													Button 6
+												</input>
+												<span class="fa fa-check"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript"
+				src="/customize_theme/static/src/js/customize_font.js"></script>
+		</xpath>
+	</template>
+
+	<!-- <template id="font_box_template" name="Font Box"> <div id="fontbox" 
+		class="modal fade in" tabindex="-1" role="dialog" style="display: block;"> 
+		<div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> 
+		<button type="button" class="close close-popup" data-dismiss="modal"><span 
+		aria-hidden="true">&amp;times;</span></button> <h4 class="modal-title">Font 
+		Box</h4> </div> <div class="modal-body"> <section class="text-center f_bg_light"><h4 
+		class="font_style_sub-heading">Font style 1</h4></section> <div class="font_input_grp"> 
+		<h5 class="light_font_h5">Light</h5> <input type="text" name="light_type" 
+		id="light_type" placeholder="https://fonts.gstatic.com/s/muli/v11/7Au_p_0qiz-adZnkOCX2zw.woff2" 
+		/> </div> <div class="font_input_grp"> <h5 class="regular_font_h5">Regular</h5> 
+		<input type="text" name="regular_type" id="regular_type" /> </div> <div class="font_input_grp"> 
+		<h5 class="semibold_font_h5">Semibold</h5> <input type="text" name="semibold_type" 
+		id="semibold_type" /> </div> <div class="font_input_grp"> <h5 class="bold_font_h5">Bold</h5> 
+		<input type="text" name="bold_type" id="bold_type" /> </div> </div> <div 
+		class="modal-body"> <section class="text-center f_bg_light"><h4 class="font_style_sub-heading">Font 
+		style 2</h4></section> <div class="font_input_grp"> <h5 class="light_font_h5">Light</h5> 
+		<input type="text" name="light_type" id="f2_light_type" /> </div> <div class="font_input_grp"> 
+		<h5 class="regular_font_h5">Regular</h5> <input type="text" name="regular_type" 
+		id="f2_regular_type" /> </div> <div class="font_input_grp"> <h5 class="semibold_font_h5">Semibold</h5> 
+		<input type="text" name="semibold_type" id="f2_semibold_type" /> </div> <div 
+		class="font_input_grp"> <h5 class="bold_font_h5">Bold</h5> <input type="text" 
+		name="bold_type" id="f2_bold_type" /> </div> </div> <div class="modal-footer"> 
+		<button type="button" id="apply_font" class="btn btn-default" data-dismiss="modal">Submit</button> 
+		<button type="button" id="apply_to_all" class="btn btn-default">Apply to 
+		all</button> <a class="font_reset_a">Reset</a> <button type="button" class="btn 
+		btn-default close-popup" data-dismiss="modal">Close</button> </div> </div> 
+		</div> </div> </template> -->
+
+
+	<!-- Header Option -->
+
+	<template id="header_style_1" inherit_id="web.assets_frontend"
+		name="Header Style 1">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/header_styles/header_style_1.less" />
+		</xpath>
+	</template>
+
+	<template id="header_style_2" inherit_id="web.assets_frontend"
+		name="Header Style 2" active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/header_styles/header_style_2.less" />
+		</xpath>
+	</template>
+
+	<template id="header_style_3" inherit_id="web.assets_frontend"
+		name="Header Style 3" active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/header_styles/header_style_3.less" />
+		</xpath>
+	</template>
+
+	<template id="header_style_4" inherit_id="web.assets_frontend"
+		name="Header Style 4" active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/header_styles/header_style_4.less" />
+		</xpath>
+	</template>
+
+	<template id="header_style_5" inherit_id="web.assets_frontend"
+		name="Header Style 5" active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/header_styles/header_style_5.less" />
+		</xpath>
+	</template>
+	<template id="header_style_6" inherit_id="web.assets_frontend"
+		name="Header Style 6" active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/header_styles/header_style_6.less" />
+		</xpath>
+	</template>
+
+
+	<!-- Footer Option -->
+
+	<template id="footer_style_1" inherit_id="web.assets_frontend"
+		name="Footer Style 1" active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/footer_styles/footer_style_1.less" />
+		</xpath>
+	</template>
+	<template id="footer_style_2" inherit_id="web.assets_frontend"
+		name="Footer Style 2" active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/footer_styles/footer_style_2.less" />
+		</xpath>
+	</template>
+	<template id="footer_style_3" inherit_id="web.assets_frontend"
+		name="Footer Style 3" active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/footer_styles/footer_style_3.less" />
+		</xpath>
+	</template>
+
+
+	<!-- Color Option -->
+
+	<template id="multi_color" inherit_id="web.assets_frontend"
+		name="Multi color">
+		<xpath expr="//link[last()]" position="after">
+			<t t-set="theme_color"
+				t-value="request.env['ir.config_parameter'].sudo().get_param('customize_theme.theme_color')" />
+			<t t-if="theme_color">
+			<style type='text/less'>
+				@theme-color: <t t-esc='"%s"%theme_color.replace("&apos;","")' />;
+			</style>
+			</t>
+		</xpath>
+	</template>
+	<template id="main_color" inherit_id="web.assets_frontend"
+		name="Main color">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color.less" />
+		</xpath>
+	</template>
+
+	<template id="main_color1" inherit_id="web.assets_frontend"
+		name="Main color 1">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color1.less" />
+		</xpath>
+	</template>
+
+	<template id="main_color2" inherit_id="web.assets_frontend"
+		name="Main color 2">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color2.less" />
+		</xpath>
+	</template>
+
+	<template id="main_color3" inherit_id="web.assets_frontend"
+		name="Main color 3">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color3.less" />
+		</xpath>
+	</template>
+
+	<template id="main_color4" inherit_id="web.assets_frontend"
+		name="Main color 4">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color4.less" />
+		</xpath>
+	</template>
+
+	<template id="main_color5" inherit_id="web.assets_frontend"
+		name="Main color 5">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color5.less" />
+		</xpath>
+	</template>
+
+	<template id="main_color6" inherit_id="web.assets_frontend"
+		name="Main color 6">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color6.less" />
+		</xpath>
+	</template>
+	<template id="main_color7" inherit_id="web.assets_frontend"
+		name="Main color 7">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color7.less" />
+		</xpath>
+	</template>
+	<template id="main_color8" inherit_id="web.assets_frontend"
+		name="Main color 8">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color8.less" />
+		</xpath>
+	</template>
+	<template id="main_color9" inherit_id="web.assets_frontend"
+		name="Main color 9">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color9.less" />
+		</xpath>
+	</template>
+	<template id="main_color10" inherit_id="web.assets_frontend"
+		name="Main color 10">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color10.less" />
+		</xpath>
+	</template>
+	<template id="main_color11" inherit_id="web.assets_frontend"
+		name="Main color 11">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/main_color11.less" />
+		</xpath>
+	</template>
+
+	<!-- Button options -->
+
+	<template id="btn1" inherit_id="web.assets_frontend" name="Main button"
+		active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/button_styles/button_style_1.less" />
+		</xpath>
+	</template>
+
+	<template id="btn2" inherit_id="web.assets_frontend" name="Main button2"
+		active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/button_styles/button_style_2.less" />
+		</xpath>
+	</template>
+
+	<template id="btn3" inherit_id="web.assets_frontend" name="Main button3"
+		active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/button_styles/button_style_3.less" />
+		</xpath>
+	</template>
+
+	<template id="btn4" inherit_id="web.assets_frontend" name="Main button4"
+		active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/button_styles/button_style_4.less" />
+		</xpath>
+	</template>
+
+	<template id="btn5" inherit_id="web.assets_frontend" name="Main button5"
+		active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/button_styles/button_style_5.less" />
+		</xpath>
+	</template>
+
+	<template id="btn6" inherit_id="web.assets_frontend" name="Main button6"
+		active="False">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/less"
+				href="/customize_theme/static/src/less/button_styles/button_style_6.less" />
+		</xpath>
+	</template>
+
+
+
+
+	<!-- header templates -->
+
+	<template id="template_header_style_1" inherit_id="clarico_layout.clarico_header_main"
+		customize_show="False" active="False" name="Header Style 1">
+		<xpath expr="//div[hasclass('main-header')]" position="replace">
+			<div class="main-header main_header_default"
+				t-if="website.clarico_header_style_one or website.clarico_header_style_two or website.clarico_header_style_three">
+				<div class="main-header-maxW">
+					<div class="offer-center">
+						<p class="offer-p">
+							<label t-field="website.clarico_header_style_one" class="header_pera_offer" />
+							<label t-field="website.clarico_header_style_two" class="header_pera_offer header_pera_offer_pipe" />
+							<label t-field="website.clarico_header_style_three" class="header_pera_offer header_pera_offer_pipe" />
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="main-header main_header_default"
+				t-if="not website.clarico_header_style_one or website.clarico_header_style_two or website.clarico_header_style_three">
+				<section class="main-header-maxW">
+					<section class="offer-center">
+						<p class="offer-p">
+							<label class="header_pera_offer">Special Offer on First Purchase</label>
+							<label class="header_pera_offer header_pera_offer_pipe">Code : #ASDA44</label>
+							<label class="header_pera_offer header_pera_offer_pipe">Get 50% Off</label>
+						</p>
+					</section>
+				</section>
+			</div>
+		</xpath>
+		<xpath expr="//div[hasclass('main-header-before')]" position="replace">
+			<div class="main-header-before">
+				<div class="main-header-before-maxW">
+					<div class="main-header-right">
+						<div class="company-phone-div">
+							<ul id="logout_ul" class="sign_in_and_administrtor_link header-main-signin">
+								<li id="user_sign_in"></li>
+								<li class="dropdown" id="login_user_name" t-ignore="true"
+									t-if="website.user_id != user_id">
+									<a href="#" class="dropdown-toggle header_admin_border"
+										data-toggle="dropdown">
+										<b>
+
+											<span>My Account</span>
+											<span class="caret" />
+										</b>
+									</a>
+									<ul class="dropdown-menu js_usermenu account-ul" role="menu">
+										<li>
+											<p class="ul_class_admin_name">
+												<i class="fa fa-user fa_common_style_header" style="padding-right: 9px;" />
+												<a href="/my/home">
+													<span class="span_logout"
+														t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name" />
+												</a>
+											</p>
+										</li>
+										<li id="o_logout">
+											<a t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+												class="btn">Logout
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<div id="header-social">
+								<li id="header-compare" class="mr-common compare-menu" />
+								<li id="header-wishlist" class="mr-common" />
+								<div class="header_cart_main header_cart_default mr-common" />
+							</div>
+
+						</div>
+						<div class="js_searchBox">
+							<a href="#" class="header_right_search_icon_link">
+								<i class="fa fa-search srch_icon" />
+								<i class="fa fa-times close_icon" />
+							</a>
+						</div>
+						<div class="anim-search">
+							<form action="/shop" method="get" t-att-class="search_class">
+								<div class="input-group">
+									<input type="text" name="search"
+										class="search-query form-control oe_search_box clarico_search_border"
+										placeholder="Search..." t-att-value="search" required="required" />
+									<button type="submit" class="btn-default oe_search_button">
+										<i class="fa fa-search" />
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="company_logo_main">
+						<a href="/" class="company_logo">
+							<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+								t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+						</a>
+					</div>
+					<div class="pricelist_contact_conatiner">
+						<div class="company_pricelist">
+							<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+							<div
+								t-attf-class="#{website_sale_pricelists and len(website_sale_pricelists)&gt;1 and 'main-header-left' or 'hidden'}">
+								<div class="company_pricelist_container">
+									<t t-call="website_sale.pricelist_list" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</xpath>
+	</template>
+	<template id="template_header_style_2" inherit_id="clarico_layout.clarico_header_main"
+		customize_show="False" active="False" name="Header Style 2">
+		<xpath expr="//div[hasclass('main-header')]" position="replace">
+			<div class="main-header header_style_2_div">
+				<div class="main-header-maxW">
+					<section class="offer-left_header"
+						t-if="website.clarico_header_style_one or website.clarico_header_style_two or website.clarico_header_style_three">
+						<p class="offer-p">
+							<label t-field="website.clarico_header_style_one" class="header_pera_offer" />
+							<label t-field="website.clarico_header_style_two" class="header_pera_offer header_pera_offer_pipe" />
+							<label t-field="website.clarico_header_style_three" class="header_pera_offer header_pera_offer_pipe" />
+						</p>
+					</section>
+					<section class="offer-left_header"
+						t-if="not website.clarico_header_style_one or website.clarico_header_style_two or website.clarico_header_style_three">
+						<p class="offer-p">
+							<label class="header_pera_offer">Special Offer on First Purchase</label>
+							<label class="header_pera_offer header_pera_offer_pipe">Code : #ASDA44</label>
+							<label class="header_pera_offer header_pera_offer_pipe">Get 50% Off</label>
+						</p>
+					</section>
+					<div class="pricelist_lang_conatiner">
+					</div>
+					<div class="main-header-right">
+						<div class="company-phone-div">
+							<div class="company_pricelist">
+								<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+								<div
+									t-attf-class="#{website_sale_pricelists and len(website_sale_pricelists)&gt;1 and 'main-header-left' or 'hidden'}">
+									<div class="company_pricelist_container">
+										<t t-call="website_sale.pricelist_list" />
+									</div>
+								</div>
+							</div>
+							<div class="company_language" t-if="len(languages) &gt; 1">
+								<ul class="list-inline js_language_selector ul_margin"
+									t-if="(request 
+														and request.is_frontend_multilang and len(languages) &gt; 1) or (website 
+														and (editable or translatable))">
+									<div
+										t-attf-class="#{request and request.is_frontend_multilang 
+														and len(languages) &gt; 1 and 'dropdown' or 'hidden'} btn-group">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<t t-set="c_lang" t-value="website.get_res_lang()" />
+											<span t-esc="c_lang.name" />
+											<span class="caret"></span>
+										</a>
+										<ul class="dropdown-menu" role="menu">
+											<li t-foreach="languages" t-as="lg">
+												<a
+													t-att-href="url_for(request.httprequest.path + '?' + keep_query(), 
+														lang=lg[0])"
+													t-att-data-default-lang="(editable or translatable) and 'true' 
+														if website and lg[0] == website.default_lang_code else None"
+													t-att-data-lang="lg[0]" class="js_change_lang">
+													<t t-esc="lg[1].split('/').pop()" />
+												</a>
+											</li>
+										</ul>
+									</div>
+								</ul>
+							</div>
+							<ul id="logout_ul" class="sign_in_and_administrtor_link header-main-signin">
+								<li id="user_sign_in"></li>
+								<li class="dropdown" id="login_user_name" t-ignore="true"
+									t-if="website.user_id != user_id">
+									<a href="#" class="dropdown-toggle header_admin_border"
+										data-toggle="dropdown">
+										<b>
+											<span>My Account</span>
+											<span class="caret" />
+										</b>
+									</a>
+									<ul class="dropdown-menu js_usermenu account-ul" role="menu">
+										<li>
+											<p class="ul_class_admin_name">
+												<i class="fa fa-user fa_common_style_header" style="padding-right: 9px;" />
+												<a href="/my/home">
+													<span class="span_logout"
+														t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name" />
+												</a>
+											</p>
+										</li>
+										<li id="o_logout">
+											<a t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+												class="btn">Logout
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</xpath>
+		<xpath expr="//div[hasclass('main-header-before')]" position="replace">
+			<div class="main-header-before">
+				<div class="main-header-before-maxW">
+					<div class="company_logo_main">
+						<a href="/" class="company_logo">
+							<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+								t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+						</a>
+					</div>
+					<div class="header-search">
+						<form action="/shop" method="get" t-att-class="search_class">
+							<div class="input-group search_group">
+
+								<span class="input-group-btn">
+									<button type="submit" class="btn-default oe_search_button">
+										<i class="fa fa-search" />
+									</button>
+								</span>
+								<div class="oe_search">
+									<input type="text" name="search"
+										class="search-query form-control oe_search_box" placeholder="Search our store..."
+										t-att-value="search" required="required" />
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="header_3_cart">
+
+						<div id="header-social">
+							<li id="header-compare" class="mr-common compare-menu" />
+							<li id="header-wishlist" class="mr-common" />
+						</div>
+						<div class="header_cart_main mr-common" />
+					</div>
+
+				</div>
+			</div>
+		</xpath>
+
+	</template>
+
+
+	<template id="template_header_style_3" inherit_id="clarico_layout.clarico_header_main"
+		customize_show="False" active="False" name="Header Style 3">
+		<xpath expr="//div[hasclass('main-header')]" position="replace">
+
+			<div class="main-header header_style_3_div">
+				<div class="main-header-maxW">
+					<div class="offer-left_header"
+						t-if="website.clarico_header_style_one or website.clarico_header_style_two or website.clarico_header_style_three">
+						<p class="offer-p">
+							<label t-field="website.clarico_header_style_one" class="header_pera_offer" />
+							<label t-field="website.clarico_header_style_two" class="header_pera_offer header_pera_offer_pipe" />
+							<label t-field="website.clarico_header_style_three" class="header_pera_offer header_pera_offer_pipe" />
+						</p>
+					</div>
+					<section class="offer-left_header"
+						t-if="not website.clarico_header_style_one or website.clarico_header_style_two or website.clarico_header_style_three">
+						<p class="offer-p">
+							<label class="header_pera_offer">Special Offer on First Purchase</label>
+							<label class="header_pera_offer header_pera_offer_pipe">Code : #ASDA44</label>
+							<label class="header_pera_offer header_pera_offer_pipe">Get 50% Off</label>
+						</p>
+					</section>
+
+					<div class="main-header-right">
+						<div class="company-phone-div">
+							<div class="company_pricelist">
+								<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+								<div
+									t-attf-class="#{website_sale_pricelists and len(website_sale_pricelists)&gt;1 and 'main-header-left' or 'hidden'}">
+									<div class="company_pricelist_container">
+										<t t-call="website_sale.pricelist_list" />
+									</div>
+								</div>
+							</div>
+							<div class="company_language" t-if="len(languages) &gt; 1">
+								<ul class="list-inline js_language_selector ul_margin"
+									t-if="(request 
+														and request.is_frontend_multilang and len(languages) &gt; 1) or (website 
+														and (editable or translatable))">
+									<div
+										t-attf-class="#{request and request.is_frontend_multilang 
+														and len(languages) &gt; 1 and 'dropdown' or 'hidden'} btn-group">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<t t-set="c_lang" t-value="website.get_res_lang()" />
+											<span t-esc="c_lang.name" />
+											<span class="caret"></span>
+										</a>
+										<ul class="dropdown-menu" role="menu">
+											<li t-foreach="languages" t-as="lg">
+												<a
+													t-att-href="url_for(request.httprequest.path + '?' + keep_query(), 
+														lang=lg[0])"
+													t-att-data-default-lang="(editable or translatable) and 'true' 
+														if website and lg[0] == website.default_lang_code else None"
+													t-att-data-lang="lg[0]" class="js_change_lang">
+													<t t-esc="lg[1].split('/').pop()" />
+												</a>
+											</li>
+										</ul>
+									</div>
+								</ul>
+							</div>
+							<ul id="logout_ul" class="sign_in_and_administrtor_link header-main-signin">
+								<li id="user_sign_in"></li>
+								<li class="dropdown" id="login_user_name" t-ignore="true"
+									t-if="website.user_id != user_id">
+									<a href="#" class="dropdown-toggle header_admin_border"
+										data-toggle="dropdown">
+										<b>
+
+											<span>My Account</span>
+											<span class="caret" />
+										</b>
+									</a>
+									<ul class="dropdown-menu js_usermenu account-ul" role="menu">
+										<li>
+											<p class="ul_class_admin_name">
+												<i class="fa fa-user fa_common_style_header" style="padding-right: 9px;" />
+												<a href="/my/home">
+													<span class="span_logout"
+														t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name" />
+												</a>
+											</p>
+										</li>
+										<li id="o_logout">
+											<a t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+												class="btn">Logout
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<div id="header-social">
+								<li id="header-compare" class="mr-common compare-menu" />
+								<li id="header-wishlist" class="mr-common" />
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</xpath>
+		<xpath expr="//div[hasclass('main-header-before')]" position="replace">
+			<div class="main-header-before">
+				<div class="main-header-before-maxW">
+					<div class="header-search">
+						<form action="/shop" method="get" t-att-class="search_class">
+							<div class="input-group search_group">
+
+								<span class="input-group-btn">
+									<button type="submit" class="btn-default oe_search_button">
+										<i class="fa fa-search" />
+									</button>
+								</span>
+								<div class="oe_search">
+									<input type="text" name="search"
+										class="search-query form-control oe_search_box" placeholder="Search our store..."
+										t-att-value="search" required="required" />
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="company_logo_main">
+						<a href="/" class="company_logo">
+							<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+								t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+						</a>
+					</div>
+					<div class="header_3_cart">
+						<div class="header_cart_main mr-common" />
+					</div>
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+
+
+	<template id="template_header_style_4" inherit_id="clarico_layout.clarico_header_main"
+		customize_show="False" active="False" name="Header Style 4">
+		<xpath expr="//div[hasclass('main-header')]" position="replace">
+
+			<div class="main-header header_style_4_div">
+				<div class="main-header-maxW">
+					<div class="offer-left_header"
+						t-if="website.clarico_header_style_one or website.clarico_header_style_two or website.clarico_header_style_three">
+						<p class="offer-p">
+							<label t-field="website.clarico_header_style_one" class="header_pera_offer" />
+							<label t-field="website.clarico_header_style_two" class="header_pera_offer header_pera_offer_pipe" />
+							<label t-field="website.clarico_header_style_three" class="header_pera_offer header_pera_offer_pipe" />
+						</p>
+					</div>
+					<section class="offer-left_header"
+						t-if="not website.clarico_header_style_one or website.clarico_header_style_two or website.clarico_header_style_three">
+						<p class="offer-p">
+							<label class="header_pera_offer">Special Offer on First Purchase</label>
+							<label class="header_pera_offer header_pera_offer_pipe">Code : #ASDA44</label>
+							<label class="header_pera_offer header_pera_offer_pipe">Get 50% Off</label>
+						</p>
+					</section>
+					<div class="header-search">
+						<form action="/shop" method="get" t-att-class="search_class">
+							<div class="input-group search_group">
+
+
+								<div class="oe_search">
+									<input type="text" name="search"
+										class="search-query form-control oe_search_box" placeholder="Search our store..."
+										t-att-value="search" required="required" />
+								</div>
+								<span class="input-group-btn">
+									<button type="submit" class="btn-default oe_search_button">
+										<i class="fa fa-search" />
+									</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</xpath>
+		<xpath expr="//div[hasclass('main-header-before')]" position="replace">
+			<div class="main-header-before">
+				<div class="main-header-before-maxW">
+
+					<div class="company_logo_main">
+						<a href="/" class="company_logo">
+							<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+								t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+						</a>
+					</div>
+
+					<div class="header_all_info_right">
+						<div class="main-header-right">
+							<div class="company-phone-div">
+								<div class="company_pricelist">
+									<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+									<div
+										t-attf-class="#{website_sale_pricelists and len(website_sale_pricelists)&gt;1 and 'main-header-left' or 'hidden'}">
+										<div class="company_pricelist_container">
+											<t t-call="website_sale.pricelist_list" />
+										</div>
+									</div>
+								</div>
+								<div class="company_language" t-if="len(languages) &gt; 1">
+									<ul class="list-inline js_language_selector ul_margin"
+										t-if="(request 
+														and request.is_frontend_multilang and len(languages) &gt; 1) or (website 
+														and (editable or translatable))">
+										<div
+											t-attf-class="#{request and request.is_frontend_multilang 
+														and len(languages) &gt; 1 and 'dropdown' or 'hidden'} btn-group">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+												<t t-set="c_lang" t-value="website.get_res_lang()" />
+												<span t-esc="c_lang.name" />
+												<span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu" role="menu">
+												<li t-foreach="languages" t-as="lg">
+													<a
+														t-att-href="url_for(request.httprequest.path + '?' + keep_query(), 
+														lang=lg[0])"
+														t-att-data-default-lang="(editable or translatable) and 'true' 
+														if website and lg[0] == website.default_lang_code else None"
+														t-att-data-lang="lg[0]" class="js_change_lang">
+														<t t-esc="lg[1].split('/').pop()" />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</ul>
+								</div>
+								<ul id="logout_ul" class="sign_in_and_administrtor_link header-main-signin">
+									<li id="user_sign_in"></li>
+									<li class="dropdown" id="login_user_name" t-ignore="true"
+										t-if="website.user_id != user_id">
+										<a href="#" class="dropdown-toggle header_admin_border"
+											data-toggle="dropdown">
+											<b>
+
+												<span>My Account</span>
+												<span class="caret" />
+											</b>
+										</a>
+										<ul class="dropdown-menu js_usermenu account-ul" role="menu">
+											<li>
+												<p class="ul_class_admin_name">
+													<i class="fa fa-user fa_common_style_header" style="padding-right: 9px;" />
+													<a href="/my/home">
+														<span class="span_logout"
+															t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name" />
+													</a>
+												</p>
+											</li>
+											<li id="o_logout">
+												<a t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+													class="btn">Logout
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<div id="header-social">
+									<li id="header-compare" class="mr-common compare-menu" />
+									<li id="header-wishlist" class="mr-common" />
+								</div>
+								<div class="header_cart_main cart_style_4 mr-common" />
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</xpath>
+
+	</template>
+
+
+
+
+
+
+
+
+
+
+	<template id="template_header_style_5" inherit_id="clarico_layout.clarico_header_main"
+		customize_show="False" active="False" name="Header Style 5">
+		<xpath expr="//div[hasclass('main-header')]" position="replace">
+
+		</xpath>
+		<xpath expr="//div[hasclass('main-header-before')]" position="replace">
+
+			<div class="main-header-before header_style_two_main header_style_5_div">
+				<div class="main-header-before-maxW">
+					<div class="main-header-right">
+
+						<section class="header_style_share"
+							t-if="website.social_facebook or website.social_twitter or website.social_youtube or website.social_googleplus or website.social_github">
+							<section t-if="website.social_facebook">
+								<a target="_Blank" class="header_facebook" t-att-href="website.social_facebook">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</section>
+							<section t-if="website.social_twitter">
+								<a target="_Blank" class="header_twitter" t-att-href="website.social_twitter">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</section>
+							<section t-if="website.social_youtube">
+								<a target="_Blank" class="header_linkedin" t-att-href="website.social_youtube">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</section>
+							<section t-if="website.social_googleplus">
+								<a target="_Blank" class="header_google" t-att-href="website.social_googleplus"
+									rel="publisher">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</section>
+							<section t-if="website.social_github">
+								<a t-att-href="website.social_github" class="header_mail">
+									<i class="fa fa-github" />
+								</a>
+							</section>
+						</section>
+						<!-- <section class="header_style_share" t-if="not website.social_facebook 
+							or website.social_twitter or website.social_youtube or website.social_googleplus 
+							or website.social_github"> <section> <a class="header_facebook" href="#"> 
+							<i class="fa fa-facebook"></i> </a> </section> <section> <a class="header_twitter" 
+							href="#"> <i class="fa fa-twitter"></i> </a> </section> <section> <a class="header_linkedin" 
+							href="#"> <i class="fa fa-linkedin"></i> </a> </section> <section> <a class="header_google" 
+							href="#"> <i class="fa fa-google-plus"></i> </a> </section> <section> <a 
+							class="header_mail" href="#"> <i class="fa fa-github" /> </a> </section> 
+							</section> -->
+						<div class="company_call_us" t-if="res_company.phone">
+							<span class="header_call_icon">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</span>
+							<div class="call_us_text">
+								Call us :
+								<t t-esc="res_company.phone"></t>
+							</div>
+						</div>
+						<div class="company_pricelist">
+							<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+							<div
+								t-attf-class="#{website_sale_pricelists and len(website_sale_pricelists)&gt;1 and 'main-header-left' or 'hidden'}">
+								<div class="company_pricelist_container">
+									<t t-call="website_sale.pricelist_list" />
+								</div>
+							</div>
+						</div>
+						<div class="company_language" t-if="len(languages) &gt; 1">
+							<ul class="list-inline js_language_selector ul_margin"
+								t-if="(request 
+														and request.is_frontend_multilang and len(languages) &gt; 1) or (website 
+														and (editable or translatable))">
+								<div
+									t-attf-class="#{request and request.is_frontend_multilang 
+														and len(languages) &gt; 1 and 'dropdown' or 'hidden'} btn-group">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<t t-set="c_lang" t-value="website.get_res_lang()" />
+										<span t-esc="c_lang.name" />
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li t-foreach="languages" t-as="lg">
+											<a
+												t-att-href="url_for(request.httprequest.path + '?' + keep_query(), 
+														lang=lg[0])"
+												t-att-data-default-lang="(editable or translatable) and 'true' 
+														if website and lg[0] == website.default_lang_code else None"
+												t-att-data-lang="lg[0]" class="js_change_lang">
+												<t t-esc="lg[1].split('/').pop()" />
+											</a>
+										</li>
+									</ul>
+								</div>
+							</ul>
+						</div>
+						<div class="company-phone-div">
+							<ul id="logout_ul" class="sign_in_and_administrtor_link header-main-signin">
+								<li id="user_sign_in"></li>
+								<li class="dropdown" id="login_user_name" t-ignore="true"
+									t-if="website.user_id != user_id">
+									<a href="#" class="dropdown-toggle header_admin_border"
+										data-toggle="dropdown">
+										<b>
+											<span>My Account</span>
+											<span class="caret" />
+										</b>
+									</a>
+									<ul class="dropdown-menu js_usermenu account-ul" role="menu">
+										<li>
+											<p class="ul_class_admin_name">
+												<i class="fa fa-user fa_common_style_header" style="padding-right: 9px;" />
+												<a href="/my/home">
+													<span class="span_logout"
+														t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name" />
+												</a>
+											</p>
+										</li>
+										<li id="o_logout">
+											<a t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+												class="btn">Logout
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<div id="header-social">
+								<li id="header-compare" class="mr-common compare-menu" />
+								<li id="header-wishlist" class="mr-common" />
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="header_main_left">
+						<div class="header_cart_main cart_style_5 mr-common" />
+						<div class="header_two_search_left">
+							<div class="header-search">
+								<form action="/shop" method="get" t-att-class="search_class">
+									<div class="input-group search_group">
+
+										<span class="input-group-btn">
+											<button type="submit" class="btn-default oe_search_button">
+												<i class="fa fa-search" />
+											</button>
+										</span>
+										<div class="oe_search">
+											<input type="text" name="search"
+												class="search-query form-control oe_search_box" placeholder="Search our store..."
+												t-att-value="search" required="required" />
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</xpath>
+
+	</template>
+
+	<template id="template_header_style_6" inherit_id="clarico_layout.clarico_header_main"
+		customize_show="False" active="False" name="Header Style 6">
+		<!-- <xpath expr="//div[hasclass('main-header')]" position="replace"> </xpath> -->
+		<xpath expr="//div[hasclass('main-header-before')]" position="replace">
+			<div class="main-header-before header_style_two_main header_style_5_div">
+
+				<div class="main-header-before-maxW">
+					<div class="main-header-right">
+						<section class="header_style_share"
+							t-if="website.social_facebook or website.social_twitter or website.social_youtube or website.social_googleplus or website.social_github">
+							<section t-if="website.social_facebook">
+								<a target="_Blank" class="header_facebook" t-att-href="website.social_facebook">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</section>
+							<section t-if="website.social_twitter">
+								<a target="_Blank" class="header_twitter" t-att-href="website.social_twitter">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</section>
+							<section t-if="website.social_youtube">
+								<a target="_Blank" class="header_linkedin" t-att-href="website.social_youtube">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</section>
+							<section t-if="website.social_googleplus">
+								<a target="_Blank" class="header_google" t-att-href="website.social_googleplus"
+									rel="publisher">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</section>
+							<section t-if="website.social_github">
+								<a t-att-href="website.social_github" class="header_mail">
+									<i class="fa fa-github" />
+								</a>
+							</section>
+						</section>
+
+						<!-- <section class="header_style_share" t-if="not website.social_facebook 
+							or website.social_twitter or website.social_youtube or website.social_googleplus 
+							or website.social_github"> <section> <a class="header_facebook" href="#"> 
+							<i class="fa fa-facebook"></i> </a> </section> <section> <a class="header_twitter" 
+							href="#"> <i class="fa fa-twitter"></i> </a> </section> <section> <a class="header_linkedin" 
+							href="#"> <i class="fa fa-linkedin"></i> </a> </section> <section> <a class="header_google" 
+							href="#"> <i class="fa fa-google-plus"></i> </a> </section> <section> <a 
+							class="header_mail" href="#"> <i class="fa fa-github" /> </a> </section> 
+							</section> -->
+
+						<div class="company_call_us" t-if="res_company.phone">
+							<span class="header_call_icon">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</span>
+							<div class="call_us_text">
+								Call us :
+								<t t-esc="res_company.phone"></t>
+							</div>
+						</div>
+
+						<div class="company_pricelist">
+							<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+							<div
+								t-attf-class="#{website_sale_pricelists and len(website_sale_pricelists)&gt;1 and 'main-header-left' or 'hidden'}">
+								<div class="company_pricelist_container">
+									<t t-call="website_sale.pricelist_list" />
+								</div>
+							</div>
+						</div>
+						<div class="company_language" t-if="len(languages) &gt; 1">
+							<ul class="list-inline js_language_selector ul_margin"
+								t-if="(request 
+														and request.is_frontend_multilang and len(languages) &gt; 1) or (website 
+														and (editable or translatable))">
+								<div
+									t-attf-class="#{request and request.is_frontend_multilang 
+														and len(languages) &gt; 1 and 'dropdown' or 'hidden'} btn-group">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<t t-set="c_lang" t-value="website.get_res_lang()" />
+										<span t-esc="c_lang.name" />
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li t-foreach="languages" t-as="lg">
+											<a
+												t-att-href="url_for(request.httprequest.path + '?' + keep_query(), 
+														lang=lg[0])"
+												t-att-data-default-lang="(editable or translatable) and 'true' 
+														if website and lg[0] == website.default_lang_code else None"
+												t-att-data-lang="lg[0]" class="js_change_lang">
+												<t t-esc="lg[1].split('/').pop()" />
+											</a>
+										</li>
+									</ul>
+								</div>
+							</ul>
+						</div>
+					</div>
+
+					<div class="clarico_hs6_toggle">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".header_main_center">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="hs_6_search_res">
+						<div class="js_searchBox">
+							<a href="#" class="header_right_search_icon_link">
+								<i class="fa fa-search srch_icon" />
+								<i class="fa fa-times close_icon" />
+							</a>
+						</div>
+						<div class="anim-search">
+							<form action="/shop" method="get" t-att-class="search_class">
+								<div class="input-group">
+									<input type="text" name="search"
+										class="search-query form-control oe_search_box clarico_search_border"
+										placeholder="Search..." t-att-value="search" required="required" />
+									<button type="submit" class="btn-default oe_search_button">
+										<i class="fa fa-search" />
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="header_main_center">
+						<div class="static_menus_main">
+							<section class="static_menu_ind">
+								<a href="#">Custom Menu</a>
+							</section>
+							<section class="static_menu_ind">
+								<a href="#">Information</a>
+							</section>
+							<section class="static_menu_ind">
+								<a href="#">About Us</a>
+							</section>
+							<section class="static_menu_ind">
+								<a href="#">Our Story</a>
+							</section>
+						</div>
+						<section class="header_top_menu_li search_menu">
+							<a>
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</section>
+						<div class="company-phone-div">
+							<ul id="logout_ul" class="sign_in_and_administrtor_link header-main-signin">
+								<li id="user_sign_in"></li>
+								<li class="dropdown" id="login_user_name" t-ignore="true"
+									t-if="website.user_id != user_id">
+									<a href="#" class="dropdown-toggle header_admin_border"
+										data-toggle="dropdown">
+										<b>
+											<span>My Account</span>
+											<span class="caret" />
+										</b>
+									</a>
+									<ul class="dropdown-menu js_usermenu account-ul" role="menu">
+										<li>
+											<p class="ul_class_admin_name">
+												<i class="fa fa-user fa_common_style_header" style="padding-right: 9px;" />
+												<a href="/my/home">
+													<span class="span_logout"
+														t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name" />
+												</a>
+											</p>
+										</li>
+										<li id="o_logout">
+											<a t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+												class="btn">Logout
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<div id="header-social">
+								<li id="header-compare" class="mr-common compare-menu" />
+								<li id="header-wishlist" class="mr-common" />
+							</div>
+
+						</div>
+
+						<div class="header_cart_main cart_style_6 mr-common" />
+					</div>
+					<div class="search_menu_div">
+						<form action="/shop" method="get" t-att-class="search_class">
+							<div class="input-group search_menu_sub_div">
+								<span class="search_close">x</span>
+								<input type="text" name="search"
+									class="search-query form-control oe_search_box hs6_srch_input"
+									placeholder="Search..." t-att-value="search" required="required" />
+								<button type="submit" class="search_icon">
+									<i class="fa fa-search" />
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+
+
+	<template id="template_Footer_style_1" inherit_id="clarico_layout.clarico_layout_footer_default"
+		customize_show="False" active="False">
+		<xpath expr="//div[@id='footer']" position="replace">
+			<div id="footer" class="container hidden-print">
+				<div class="row">
+					<div class="theme_icon_and_social_container">
+						<div class="clarico_logo_footer">
+							<div class="logo_name_container">
+								<span t-field="res_company.logo" class="ftr_logo_span"
+									itemprop="name" t-options="{'widget': 'image','class':'s_image_common'}">Company logo							</span>
+							</div>
+						</div>
+						<div class="search_bar_footer">
+							<div class="lbl_div_container">
+								<p class="newsltr_lbl">sign up for our newsletter!</p>
+							</div>
+						</div>
+					</div>
+					<div class="common_footer_content_details_div">
+						<div class="company_details_footer">
+							<ul class="customer-contact-ul">
+								<li>
+									<div class="contact_detail_para">
+										<p class="span_lbl">Add</p>
+										:
+										<p class="field_padding" t-field="res_company.street" />
+									</div>
+								</li>
+								<li>
+									<div class="contact_detail_para">
+										<p class="span_lbl">Tel</p>
+										:
+										<p class="field_padding" t-field="res_company.phone" />
+									</div>
+								</li>
+								<li>
+									<div class="contact_detail_para">
+										<p class="span_lbl">Email</p>
+										:
+										<p class="field_padding" t-field="res_company.email" />
+									</div>
+								</li>
+							</ul>
+
+							<div class="social_icons_footer">
+								<div class="footer-social-icon">
+									<a class="o_facebook" t-att-href="website.social_facebook"
+										t-if="website.social_facebook">
+										<i class="fa fa-facebook" />
+									</a>
+									<a class="o_twitter" t-att-href="website.social_twitter"
+										t-if="website.social_twitter">
+										<i class="fa fa-twitter" />
+									</a>
+									<a class="o_linkedin" t-att-href="website.social_linkedin"
+										t-if="website.social_linkedin">
+										<i class="fa fa-linkedin" />
+									</a>
+									<a class="o_youtube" t-att-href="website.social_youtube"
+										t-if="website.social_youtube">
+										<i class="fa fa-youtube-play" />
+									</a>
+									<a class="o_googleplus" t-att-href="website.social_googleplus"
+										t-if="website.social_googleplus" rel="publisher">
+										<i class="fa fa-google-plus-square" />
+									</a>
+									<a class="o_github" t-att-href="website.social_github" t-if="website.social_github">
+										<i class="fa fa-github" />
+									</a>
+								</div>
+							</div>
+							<ul class="list-unstyled" id="products">
+							</ul>
+						</div>
+						<div class="oe_structure">
+							<section class="col-md-4  col-lg-2">
+								<div class="footer-heading">
+									<ul class="customer-service-ul">
+										<li>
+											<section>
+												<a href="#">help</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">gift cards</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">order status</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">free shipping</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">returns &amp; exchanges</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">international</a>
+											</section>
+										</li>
+									</ul>
+								</div>
+							</section>
+						</div>
+						<div class="oe_structure">
+							<section class="col-md-4  col-lg-2">
+								<div class="footer-heading">
+									<ul class="help-ul">
+										<li>
+											<section>
+												<a href="#">about us</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">jobs</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">Affiliates</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">meet the maker</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">contact</a>
+											</section>
+										</li>
+									</ul>
+								</div>
+							</section>
+						</div>
+						<div class="oe_structure">
+							<section class="col-md-4  col-lg-2">
+								<div class="footer-heading">
+									<ul class="security-ul">
+										<li>
+											<section>
+												<a href="#">security</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">privacy</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">text messaging</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">legal</a>
+											</section>
+										</li>
+										<li>
+											<section>
+												<a href="#">supply chain</a>
+											</section>
+										</li>
+									</ul>
+								</div>
+							</section>
+						</div>
+						<div class="col-md-4  col-lg-3">
+							<div class="oe_stucture" />
+							<section>
+								<h3 class="footer_payment_heading">payment methods</h3>
+							</section>
+							<div class="payment_img_footer">
+
+								<section>
+									<img src="/clarico_layout/static/src/img/payment.png"></img>
+								</section>
+							</div>
+							<div class="" id="info">
+								<ul class="payment_method_list list-inline">
+									<t t-foreach="request.website.payment_icons()" t-as="icon">
+										<li>
+											<span t-field="icon.image" t-options='{"widget": "image", "alt-field": "name"}' />
+										</li>
+									</t>
+								</ul>
+							</div>
+							<t t-call="website.language_selector" />
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="scrollup-div">
+				<a href="#" class="scrollup-a">
+					<i class="fa fa-angle-up scrollup-i"></i>
+				</a>
+			</div>
+		</xpath>
+	</template>
+
+	<template id="template_Footer_style_2" inherit_id="clarico_layout.clarico_layout_footer_default"
+		customize_show="False" active="False">
+		<xpath expr="//div[@id='footer']" position="replace">
+			<div class="ftr_main">
+				<div id="footer" class="container hidden-print">
+					<section class="company_info_section_main">
+						<div class="ftr_company_detail" t-if="res_company.street">
+							<span>
+								<i class="fa fa-map-marker"></i>
+							</span>
+							<p class="field_padding" t-field="res_company.street" />
+						</div>
+						<div class="ftr_company_detail" t-if="res_company.phone">
+							<span>
+								<i class="fa fa-phone"></i>
+							</span>
+							<p class="field_padding" t-field="res_company.phone" />
+						</div>
+						<div class="ftr_company_detail" t-if="res_company.email">
+							<span>
+								<i class="fa fa-envelope"></i>
+							</span>
+							<p class="field_padding" t-field="res_company.email" />
+						</div>
+					</section>
+
+					<section class="ftr_menu_section">
+						<div class="ftr_language">
+							<t t-call="website.language_selector" />
+							<ul class="list-unstyled" id="products">
+							</ul>
+						</div>
+						<section class="sign_up_newsletter">
+							<div class="lbl_div_container">
+								<p class="newsltr_lbl">Sign up for our newsletter!</p>
+							</div>
+						</section>
+					</section>
+					<div class="scrollup-div">
+						<a href="#" class="scrollup-a">
+							<i class="fa fa-angle-up scrollup-i"></i>
+						</a>
+					</div>
+					<section class="common-div text-center">
+						<ul class="list-unstyled" id="products">
+						</ul>
+
+					</section>
+
+					<section class="ftr_logo_social_section">
+						<div class="clarico_logo_footer">
+							<span t-field="res_company.logo" class="ftr_logo_span"
+								itemprop="name" t-options="{'widget': 'image','class':'s_image_common'}">Company logo							</span>
+						</div>
+						<div class="oe_structure">
+							<section class="ftr_inline-menu">
+								<ul>
+									<li>
+										<section>
+											<a href="#">about us</a>
+										</section>
+									</li>
+									<li>
+										<section>
+											<a href="#">contact us</a>
+										</section>
+									</li>
+									<li>
+										<section>
+											<a href="#">customer service</a>
+										</section>
+									</li>
+									<li>
+										<section>
+											<a href="#">privacy policy</a>
+										</section>
+									</li>
+									<li>
+										<section>
+											<a href="#">accessibility</a>
+										</section>
+									</li>
+									<li>
+										<section>
+											<a href="#">store directory</a>
+										</section>
+									</li>
+								</ul>
+							</section>
+						</div>
+						<div class="ftr_social_icons_main">
+							<div class="footer-social-icon">
+								<a class="o_facebook" t-att-href="website.social_facebook"
+									t-if="website.social_facebook">
+									<i class="fa fa-facebook" style="color:#3B5998;" />
+								</a>
+								<a class="o_twitter" t-att-href="website.social_twitter" t-if="website.social_twitter">
+									<i class="fa fa-twitter" style="color:#36B9FF" />
+								</a>
+								<a class="o_linkedin" t-att-href="website.social_linkedin"
+									t-if="website.social_linkedin">
+									<i class="fa fa-linkedin" style="color:#0077B5;" />
+								</a>
+								<a class="o_youtube" t-att-href="website.social_youtube" t-if="website.social_youtube">
+									<i class="fa fa-youtube-play" style="color:#FF0000;" />
+								</a>
+								<a class="o_googleplus" t-att-href="website.social_googleplus"
+									t-if="website.social_googleplus" rel="publisher">
+									<i class="fa fa-google-plus-square" style="color:#DC4A38;" />
+								</a>
+								<a class="o_github" t-att-href="website.social_github" t-if="website.social_github">
+									<i class="fa fa-github" style="color:#24292E;" />
+								</a>
+							</div>
+						</div>
+
+					</section>
+				</div>
+			</div>
+			<section class="copyright_payment_section">
+				<div class="block ef_sub_div">
+					<div class="text-muted ef_copyright_left" itemscope="itemscope"
+						itemtype="http://schema.org/Organization">
+						Copyright
+						<a href="http://www.emiprotechnologies.com/" target="_blank">&amp;copy;
+						</a>
+						<span t-field="res_company.name" itemprop="name">Company name</span>
+					</div>
+					<div class="ef_payment_right">
+						<div class="oe_structure">
+							<section>
+								<img class="s_image_common" src="/clarico_layout/static/src/img/payment2.png"></img>
+							</section>
+						</div>
+						<div id="info">
+							<ul class="payment_method_list list-inline">
+								<t t-foreach="request.website.payment_icons()" t-as="icon">
+									<li>
+										<span t-field="icon.image" t-options='{"widget": "image", "alt-field": "name"}' />
+									</li>
+								</t>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</xpath>
+	</template>
+	<template id="template_Footer_style_3" inherit_id="clarico_layout.clarico_layout_footer_default"
+		customize_show="False" active="False">
+		<xpath expr="//div[@id='footer']" position="replace">
+
+			<section class="ftr_main">
+				<div id="footer" class="container hidden-print">
+					<section class="footer_company_logo_left">
+						<div class="clarico_logo_footer">
+							<span t-field="res_company.logo" class="ftr_logo_span"
+								itemprop="name" t-options="{'widget': 'image','class':'s_image_common'}">Company logo							</span>
+						</div>
+
+						<div class="lbl_div_container">
+							<h4 class="ftr_list_title">Sign up for our newsletter!</h4>
+							<p class="news_ltr"></p>
+						</div>
+						<div class="ftr_language_main">
+							<t t-call="website.language_selector" />
+						</div>
+						<div class="ftr_social_icons_main">
+							<div class="footer-social-icon">
+								<a class="o_facebook" t-att-href="website.social_facebook"
+									t-if="website.social_facebook">
+									<i class="fa fa-facebook" />
+								</a>
+								<a class="o_twitter" t-att-href="website.social_twitter" t-if="website.social_twitter">
+									<i class="fa fa-twitter" />
+								</a>
+								<a class="o_linkedin" t-att-href="website.social_linkedin"
+									t-if="website.social_linkedin">
+									<i class="fa fa-linkedin" />
+								</a>
+								<a class="o_youtube" t-att-href="website.social_youtube" t-if="website.social_youtube">
+									<i class="fa fa-youtube-play" />
+								</a>
+								<a class="o_googleplus" t-att-href="website.social_googleplus"
+									t-if="website.social_googleplus" rel="publisher">
+									<i class="fa fa-google-plus-square" />
+								</a>
+								<a class="o_github" t-att-href="website.social_github" t-if="website.social_github">
+									<i class="fa fa-github" />
+								</a>
+							</div>
+						</div>
+					</section>
+					<div class="footer_menu_and_contact_right">
+
+						<div class="ftr_menu_list">
+							<h4 class="ftr_list_title">Informations</h4>
+							<div class="oe_structure">
+								<section class="col-md-4  col-lg-6">
+									<div class="footer-heading">
+										<ul class="customer-service-ul">
+											<li>
+												<section>
+													<a href="#">help</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">gift cards</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">order status</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">free shipping</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">returns &amp; exchanges</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">international</a>
+												</section>
+											</li>
+
+										</ul>
+									</div>
+								</section>
+							</div>
+							<div class="oe_structure">
+								<section class="col-md-4  col-lg-6">
+									<div class="footer-heading">
+										<ul class="security-ul">
+											<li>
+												<section>
+													<a href="#">security</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">privacy</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">text messaging</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">legal</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">supply chain</a>
+												</section>
+											</li>
+											<li>
+												<section>
+													<a href="#">contact</a>
+												</section>
+											</li>
+										</ul>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="ftr_contact_company">
+							<h4 class="ftr_list_title">Contact Info</h4>
+							<ul class="customer-contact-ul">
+								<li t-if="res_company.street">
+									<div class="contact_detail_para">
+										<span>
+											<i class="fa fa-map-marker"></i>
+										</span>
+										<p class="field_padding" t-field="res_company.street" />
+									</div>
+								</li>
+								<li t-if="res_company.phone">
+									<div class="contact_detail_para">
+										<span>
+											<i class="fa fa-phone"></i>
+										</span>
+										<p class="field_padding" t-field="res_company.phone" />
+									</div>
+								</li>
+								<li t-if="res_company.email">
+									<div class="contact_detail_para">
+										<span>
+											<i class="fa fa-envelope"></i>
+										</span>
+										<p class="field_padding" t-field="res_company.email" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="scrollup-div">
+					<a href="#" class="scrollup-a">
+						<i class="fa fa-angle-up scrollup-i"></i>
+					</a>
+				</div>
+			</section>
+			<section class="copyright_payment_section">
+				<div class="block ef_sub_div">
+					<div class="text-muted ef_copyright_left" itemscope="itemscope"
+						itemtype="http://schema.org/Organization">
+						Copyright
+						<a href="http://www.emiprotechnologies.com/" target="_blank">&amp;copy;
+						</a>
+						<span t-field="res_company.name" itemprop="name">Company name</span>
+					</div>
+					<div class="ef_payment_right">
+						<div class="oe_structure">
+							<section>
+								<img class="s_image_common" src="/clarico_layout/static/src/img/payment2.png"></img>
+							</section>
+						</div>
+						<div id="info">
+							<ul class="payment_method_list list-inline">
+								<t t-foreach="request.website.payment_icons()" t-as="icon">
+									<li>
+										<span t-field="icon.image" t-options='{"widget": "image", "alt-field": "name"}' />
+									</li>
+								</t>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</xpath>
+	</template>
+</odoo>

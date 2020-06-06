@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="snippet_style_sixteen" inherit_id="clarico_snippets.clarico_image_snippets"
+		name="clarico snippet" priority="12">
+		<xpath
+			expr="//div[@id='clarico_image_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="clarico_snippet_style_12.snippet_style_16_template"
+			t-thumbnail="/clarico_snippet_style_12/static/src/img/snippet_12.jpg" />
+		</xpath>
+	</template>
+	
+	<template id="snippet_style_16_template" name="Full Width">
+	<div class="oe_structure" />
+		<section class="img_banner_snippet">
+				<div class="img_banner_snippet_img_div">
+					<a href="#"><section><img class="s_image_common" src="/clarico_snippet_style_12/static/src/img/style_16_img_1.jpeg"></img></section></a>
+				</div>
+			</section>
+	</template>
+</odoo>

@@ -1,0 +1,62 @@
+<odoo>
+
+     <!-- === Services Page === -->
+     <record id="services_page" model="website.page">
+         <field name="name">Services page</field>
+         <field name="website_published">True</field>
+         <field name="url">/services</field>
+         <field name="type">qweb</field>
+         <field name="key">theme_eiser.services_page</field>
+         <field name="arch" type="xml">
+             <t t-name="theme_eiser.services_page_template">
+                <t t-call="website.layout">
+                <div id="wrap">
+                  <div id="container">
+                  <h1>Our Services</h1>
+                  <ul class="services">
+                      <li>Cloud Hosting</li>
+                      <li>Support</li>
+                      <li>Unlimited space</li>
+                  </ul>
+                  <!-- === Snippets' area === -->
+                  <div class="oe_structure" />
+                  </div>
+                </div>
+                </t>
+             </t>
+         </field>
+     </record>
+
+      <!-- === Services Page === -->
+    <template id="services_page_template">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <h1>Our Services</h1>
+                    <ul class="services">
+                        <li>Cloud Hosting</li>
+                        <li>Support</li>
+                        <li>Unlimited space</li>
+                    </ul>
+
+                    <!-- === Snippets' area === -->
+                    <div class="oe_structure" />
+                </div>
+            </div>
+        </t>
+    </template>
+    <record id="services_page2" model="website.page">
+        <field name="name">Services page</field>
+        <field name="website_published">True</field>
+        <field name="url">/services2</field>
+        <field name="view_id" ref="services_page_template"/>
+    </record>
+
+    <record id="services_page_link" model="website.menu">
+      <field name="name">Services</field>
+      <field name="page_id" ref="services_page2"/>
+      <field name="parent_id" ref="website.main_menu" />
+      <field name="sequence" type="int">99</field>
+    </record>
+
+ </odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="clarico_style_17" inherit_id="clarico_snippets.clarico_other_snippets"
+		name="clarico_ Snippet" priority="8">
+		<xpath
+			expr="//div[@id='clarico_other_snippet_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="clarico_snippet_style_17.clarico_snippet_style_17_template" t-thumbnail="/clarico_snippet_style_17/static/src/img/snippet_17.jpg"/>
+		</xpath>
+	</template>
+	<template id="clarico_snippet_style_17_template" name="Expertise">
+		<div class="oe_structure" />
+		<section class="common-div mt64">
+		<div class="block">
+			<section class="about_us_image_div">
+				<div class="block">
+					<section class="about_content_sub">
+						<h3 class="ch_h1_class">Specialization</h3>
+						<p class="sep_span_hr" />
+						<p class="chs_para">Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+						<a href="#" class="shop_now_button">
+
+							Buy Theme
+
+						</a>
+					</section>
+				</div>
+			</section>
+			<section class="div_whole_about_us">
+				<div class="about_us_div_class_main_snapshot_div block">
+					<section class="left_side_snapshot_div">
+						<ul class='skills'>
+							<t t-foreach="res_company.expertise_ids" t-as="expertise_data">
+								<li class='progressbar2 lato-regular font-black'
+									t-att-data-width='expertise_data.expertise'>
+									<t t-esc="expertise_data.name"></t>
+								</li>
+							</t>
+						</ul>
+					</section>
+					<div id="jquery-script-menu">
+
+					</div>
+				</div>
+
+				<div class="oe_structure" />
+				<section>
+
+				</section>
+			</section>
+			</div>
+		</section>
+
+
+	</template>
+</odoo>

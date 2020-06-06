@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- For Frontend Script -->
+    <template id="assets_frontend_blog_js"
+              name="Blog carousel snippets JS frontend assets"
+              inherit_id="website.assets_frontend">
+        <xpath expr="//script[last()]" position="after">
+            <link rel="stylesheet" href="/clarico_latest_blogs/static/src/less/blog.less"></link>
+            <script type="text/javascript" src="/clarico_latest_blogs/static/src/js/blog_snippet_frontend.js"></script>
+            <script type="text/javascript" src="/clarico_latest_blogs/static/src/js/slider_custom.js"></script>
+        </xpath>
+    </template>
+
+    <!-- For Backend Script -->
+    <template id="assets_blog_editor"
+              name="Blog carousel snippets JS editor assets"
+              inherit_id="website.assets_editor">
+        <xpath expr="." position="inside">
+            <script type="text/javascript"
+                    src="/clarico_latest_blogs/static/src/js/blog_snippet_editor.js"></script>
+        </xpath>
+    </template>
+</odoo>

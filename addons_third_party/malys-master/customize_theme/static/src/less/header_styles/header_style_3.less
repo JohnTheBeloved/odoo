@@ -1,0 +1,312 @@
+.offer-left_header
+{
+	display:inline-block;
+	width:50%;
+}
+.block-none
+{
+	top: 100%;
+}
+header
+{
+	//display:grid !important;
+}
+.btn-group.open .dropdown-toggle{
+	color:#464646 !important;
+}
+.btn .caret{
+margin-left: 2px;
+}
+.header-stick #top_menu {
+	max-width:1400px;
+}
+#header-wishlist
+{
+	display:none !important;
+}
+.company_language
+{
+	float:left;
+	padding: 0 7px;
+	
+	.ul_margin
+	{
+		.mb(0);
+		.ml(0);
+		vertical-align: super;
+		
+		span
+		{
+			.oswald-regular();
+			color:#5a5a5a;
+		}
+	}
+}
+.company_pricelist .company_pricelist_container {
+    padding: 0px 7px;
+}
+.company_pricelist
+{
+	padding: 0px 7px !important;
+}
+.header-stick #top_menu ul.dropdown-menu {
+   // top: 92% !important;
+}
+.header-stick .custom-menu-inside-div {
+   // top: 92% !important;
+}
+.company_pricelist
+{
+	padding: 1px 7px;
+	float: left;
+}
+.main-header .main-header-maxW .main-header-left
+{
+	.pt(0);
+}
+.main-header-right .company-phone-div .header-main-signin #login_user_name {
+    padding-right: 5px;
+}
+.navbar-static-top
+{
+	.bg(@theme-color);
+	vertical-align:top;
+}
+.header-search
+{
+	display:inline-block;
+	width:35%;
+	padding: 10px 0;
+	//margin: 0 3%;
+	
+	.search_group
+	{
+		width:70%;
+		
+		.form-control:focus 
+		{
+	    border-color: #ccc;
+	    box-shadow: none;
+	    }
+	    .oe_search_button
+	    {
+	    	padding: 9px 14px;
+	    	position: relative;
+			border: none;
+			color:#fff;
+			.size(14px);
+			.bg(@theme-color);
+	    }
+	    
+	    .oe_search_box
+	    {
+	    	border-color:#e1e1e1;
+	    	height: 40px;
+	    }
+	}
+}
+.company_logo_main
+{
+	display: inline-block;
+	width: 29%;
+	float:none;
+}
+.header_3_cart
+{
+	display: inline-block;
+	width: 35%;
+	padding: 10px 0;
+	
+	.header_cart_main
+	{
+		float:right;
+	}
+	.cart_style_2 a{
+		color:@theme-color;
+	}
+}
+.navbar-default .navbar-nav > li > a span
+{
+	.oswald-semibold();
+	color:#fff;
+}
+.navbar-default .header-stick .navbar-nav > li > a span{
+	color:#000;
+}
+#top_menu li.active a
+{
+	.bg(transparent);
+	
+	span
+	{
+	opacity: 0.8;
+	}
+}
+.main-header-right
+{
+	padding:0;
+	display:inline-block;
+	float:none;
+	vertical-align: middle;
+	width:49%;
+}
+#header-social
+{
+	float:right;
+}
+.navbar-static-top .container
+{
+	.mt(5px);
+}
+.main-header-before
+{
+	margin: 10px 0;
+}
+.main-header
+{
+	.mb(0);
+	padding:0;
+}
+.main-header .main-header-maxW
+{
+	padding: 5px 0;
+}
+.navbar.navbar-static-top
+{
+	.mt(0);
+}
+#header-social li
+{
+	margin: 0px 3px 0 3px;
+}
+.offer-p
+{
+	text-align: left;
+}
+.main-header-right .company-phone-div .header-main-signin
+{
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+.main-header-left
+{
+	display:inline-block;
+	width:auto;
+}
+#header-social li
+{
+	display: inline-block;
+	vertical-align: sub;
+	float:none;
+}
+.main-header-right .company-phone-div .header-main-signin
+{
+	.pr(8px);
+}
+
+
+/*---========  Media Query  =======---*/
+
+@media (max-width:1200px)
+{
+	.navbar-static-top{
+		.bg(#fff);
+	}
+	.navbar-default .navbar-toggle
+	{
+	    border-color: #dddddd;
+    
+	    .icon-bar 
+	    {
+	   		.bg(#fff);
+		}
+	}
+	
+	.navbar-default .navbar-toggle .icon-bar {
+    	.bg(#888);
+	}
+	.navbar-default .navbar-nav > li > a span{
+		color:#000;
+	}
+
+}
+@media (max-width:800px)
+{
+	.company_logo_main
+	{
+		float:left;
+	}
+	.header_3_cart
+	{
+	
+		width: 10%;
+		padding: 20px 0;
+		float: right;
+		text-align: center;
+		
+		.header_cart_main {
+			float:none;
+		}
+	
+		.cart-update
+		{
+			display:none;
+		}
+		.cart_style_2
+		{
+			display:inline-block;
+		}
+	}
+	.header-search
+	{
+		width: 50%;
+		float:right;
+		
+		.search_group 
+		{
+		    width: 100%;
+		}
+	}
+	.offer-left_header
+	{
+		display:none;
+	}
+	.main-header .main-header-maxW .main-header-right
+	{
+		width: auto !important;
+		float: right;
+	}
+	.header-search .search_group .oe_search_box {
+   		.size(13px);
+	}
+	.main-header-before {
+    margin: 5px 0;
+	}
+}
+@media (max-width:500px)
+{
+	.company_logo_main {
+    	display: none;
+	}
+	.header-search
+	{
+		width:88%;
+		float:left;
+	}
+	.navbar-default .navbar-toggle {
+    border-color: #ddd;
+	}
+	
+	.navbar.navbar-static-top
+	{
+		.bg(transparent);
+	}
+	.navbar-default .navbar-nav > li > a span
+	{
+		color:#444;
+	}
+	.company_pricelist{
+		padding:1px 7px;
+	}
+}
+

@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <template id="index"> -->
+          <t t-call="website.layout">
+                <t t-set="title">Products</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="products" t-as="product">
+                            <p><t t-esc="product.id"/> <t t-esc="product.name"/></p>
+                            <p><a t-attf-href="/eiser/{{ slug(product) }}">
+                              <t t-esc="product.name"/></a>
+                            </p>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="details">
+            <t t-call="website.layout">
+                <t t-set="title">Product</t>
+                <div class="oe_structure"/>
+                <div class="oe_structure">
+                    <div class="container">
+                        <h3 t-field="product.name"/>
+                        <p>Last modified: <i t-field="product.write_date" t-options='{"format": "long"}'/></p>
+                        <p>Last modified: <i t-field="product.write_date" t-options='{"widget": "relative"}'/></p>
+                        <div t-field="product.description_sale"/>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </t>
+        </template>
+        <!-- <template id="object"> -->
+        <!--  <h1><t t-esc="object.display_name"/></h1> -->
+        <!--   <dl> -->
+        <!--     <t t-foreach="object._fields" t-as="field"> -->
+        <!--       <dt><t t-esc="field"/></dt> -->
+        <!--       <dd><t t-esc="object[field]"/></dd> -->
+        <!--     </t> -->
+        <!--   </dl> -->
+        <!-- </template> -->
+    </data>
+</odoo>

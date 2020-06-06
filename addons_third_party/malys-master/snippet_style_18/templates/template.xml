@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<template id="style_18_assets_front" inherit_id="clarico_snippets.clarico_menu_snippets">
+		<xpath
+			expr="//div[@id='clarico_menu_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="snippet_style_18.style_18_template" t-thumbnail="/snippet_style_18/static/src/img/style18.jpeg" />
+		</xpath>
+	</template>
+
+	<template id="style_18_template" name="Offer">
+		<div class="oe_structure" />
+		<section class="common-div">
+			<div class="block">
+				<section class="menu_left_img_div">
+					<img src="/snippet_style_18/static/src/img/1.png" class="s_image_common"></img>
+				</section>
+				<section class="menu_center_text_div">
+					<div class="offer_detail_div">
+						<h1 class="offer_snippet_second_div_detail_heading">
+							hot categories
+						</h1>
+						<p class="second_div_detail_para">
+							Duis euismod eu nibh at pharetra. Vivamus placerat ac metus et
+							placerat. Nulla molestie massa id est posuere, maximus hendrerit
+							est rhoncus.
+						</p>
+						<a href="#" class="shop_now_button">
+							view all categories
+						</a>
+					</div>
+				</section>
+				<section class="menu_right_img_div">
+					<img src="/snippet_style_18/static/src/img/2.jpg" class="s_image_common"></img>
+				</section>
+
+			</div>
+		</section>
+	</template>
+</odoo>

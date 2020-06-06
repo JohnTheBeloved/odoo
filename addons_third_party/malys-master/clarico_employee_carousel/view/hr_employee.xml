@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_form_view_social_accounts" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit_accounts</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Social Information">
+                     <group>
+                         <group string='Account Information' name="active_group">
+                             <field name="emp_facebook" string="Facebook Account" />
+                             <field name="emp_twitter" string="Twitter Account"/>
+                             <field name="emp_linkedin" string="Linked in Account" />
+                             <field name="emp_google" string="Google Account"/>
+                         </group>
+                     </group>
+                 </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

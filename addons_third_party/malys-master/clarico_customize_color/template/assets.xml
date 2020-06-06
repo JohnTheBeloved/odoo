@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="snippet_bg_color_assets_frontend" inherit_id="web.assets_frontend" name="Style">
+		<xpath expr="." position="inside">
+			<link rel="stylesheet" type="text/less" href="/clarico_customize_color/static/src/less/snippet_bg_color.less" />
+		</xpath>
+	</template>
+	
+	<template id="snippet_bg_color_options_editor" inherit_id="website.assets_editor" name="Custom add background color">
+		<xpath expr="//link[last()]" position="after">
+			<script type="text/javascript" src="/clarico_customize_color/static/src/js/snippet_bg_color_js.js"/>
+		</xpath>
+	</template> 
+	
+</odoo>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="website.homepage" name="Clarico Home">
+        <t t-call="website.layout">
+        
+        	 <div id="wrap" class="oe_structure oe_empty">
+      <div class="oe_structure"/>
+      <section>
+        <div class="slider_section">
+          <div id="slider_wrapper_wo" class="slider_wrapper_wo">
+            <div id="style_1_myCarousel1518010340955" class="carousel slide clarico_slider_style_4_carousel" data-interval="4000" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#style_1_myCarousel1518010340955" data-slide-to="0"/>
+                <li data-target="#style_1_myCarousel1518010340955" data-slide-to="1" class="active"/>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item">
+                  <section class="block">
+                    <img class="img-responsive" src="/clarico_slider_style_4/static/src/img/slider_4_img_1.png" alt="Slide_1"/>
+                    <div>
+                      <section class="wo_carousel_caption">
+                        <section>
+                          <h2 class="o_default_snippet_text">SUMMER &amp;amp; SPRING 2018</h2>
+                        </section>
+                        <section class="lc_caption_para">
+                          <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </section>
+                        <section class="caption_btn_wrapper">
+                          <a href="#" class="shop_now_button o_default_snippet_text">Learn More</a>
+                        </section>
+                      </section>
+                    </div>
+                  </section>
+                </div>
+                <div class="item active">
+                  <section class="block">
+                    <img class="img-responsive" src="/clarico_slider_style_4/static/src/img/slider_4_img_1.png" alt="Slide_1" data-original-title="" title=""/>
+                    <div>
+                      <section class="wo_carousel_caption">
+                        <section>
+                          <h2 class="o_default_snippet_text">SUMMER &amp;amp; SPRING 2018</h2>
+                        </section>
+                        <section class="lc_caption_para">
+                          <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </section>
+                        <section class="caption_btn_wrapper">
+                          <a href="#" class="shop_now_button o_default_snippet_text">Learn More</a>
+                        </section>
+                      </section>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="carousel-control left" data-slide="prev" role="button" data-target="#style_1_myCarousel1518010340955" href="#myCarousel" style="width: 10%" data-cke-saved-href="#style_1_myCarousel1518010340955">
+                <i class="fa fa-angle-left"/>
+              </div>
+              <div class="carousel-control right" data-slide="next" role="button" data-target="#style_1_myCarousel1518010340955" href="#myCarousel" style="width: 10%" data-cke-saved-href="#style_1_myCarousel1518010340955">
+                <i class="fa fa-angle-right"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="bs_margin" style="display:inline-block;width:100%;margin-top:60px;"> </div>
+      </section>
+      <div class="oe_structure"/>
+      <section class="s_clarico_heading">
+        <div class="container">
+          <div class="row">
+            <h1 class="ch_h1_class" align="center">wooden collection<br/></h1>
+          </div>
+        </div>
+      </section>
+      <div class="oe_structure">
+        <div class="oe_structure"/>
+        <section class="clarico_fashion_snippet_wrap">
+          <div class="clarico_fasion_snippet_container">
+            <div class="b_fashion_part_one">
+              <div class="b_fashion_part_img_div part_one_bg">
+                <section>
+                  <a href="#">
+                    <img class="s_image_common" src="/clarico_snippet_style_15/static/src/img/style_20_img_1.png"/>
+                  </a>
+                </section>
+              </div>
+              <div class="b_fashion_catg_info">
+                <div class="bf_text-row">
+                  <p class="b_s20_heading o_default_snippet_text">new collection</p>
+                </div>
+                <div class="bf_text-row">
+                  <span class="b_fashion_para o_default_snippet_text"> Lorem Ipsum is simply dummy<br/>text of the printing and typesetting industry. <br/>Lorem Ipsum has</span>
+                </div>
+                <div class="bf_text-row mt16 mb16">
+                  <a href="#" class="shop_now_button o_default_snippet_text">shop now</a>
+                </div>
+              </div>
+            </div>
+            <div class="b_fashion_part_two">
+              <div class="b_fashion_part_img_div part_two_bg">
+                <section>
+                  <a href="#">
+                    <img class="s_image_common" src="/clarico_snippet_style_15/static/src/img/style_20_img_2.png"/>
+                  </a>
+                </section>
+              </div>
+              <div class="b_fashion_catg_info">
+                <div class="bf_text-row">
+                  <p class="b_s20_heading o_default_snippet_text">exclusive product</p>
+                </div>
+                <div class="bf_text-row">
+                  <span class="b_fashion_para o_default_snippet_text"> Lorem Ipsum is simply dummy<br/>text of the printing and typesetting industry. <br/>Lorem Ipsum has</span>
+                </div>
+                <div class="bf_text-row mt16 mb16">
+                  <a href="#" class="shop_now_button o_default_snippet_text"> shop now </a>
+                </div>
+              </div>
+            </div>
+            <div class="b_fashion_part_three">
+              <div class="b_fashion_part_img_div part_three_bg">
+                <section>
+                  <a href="#">
+                    <img class="s_image_common" src="/clarico_snippet_style_15/static/src/img/style_20_img_3.png"/>
+                  </a>
+                </section>
+              </div>
+              <div class="b_fashion_catg_info">
+                <div class="bf_text-row">
+                  <p class="b_s20_heading o_default_snippet_text">new collection</p>
+                </div>
+                <div class="bf_text-row">
+                  <span class="b_fashion_para o_default_snippet_text"> Lorem Ipsum is simply dummy<br/>text of the printing and typesetting industry. <br/>Lorem Ipsum has</span>
+                </div>
+                <div class="bf_text-row mt16 mb16">
+                  <a href="#" class="shop_now_button o_default_snippet_text">shop now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="bs_margin" style="display:inline-block;width:100%;margin-top:60px;"> </div>
+        </section>
+        <div class="oe_structure">
+          <div class="oe_structure"/>
+          <section class="s_product_carousel common-div">
+            <div class="s_product_carousel_maxw block">
+              <div class="js_get_objects" data-loading="true" data-objects_in_slide="4" data-isemipro="true" data-objects_limit="10" data-template="clarico_product_carousel.product_carousel_snippet_heading" data-object_name="product.template" data-c_type="1" data-sale_label="1" data-custom_controller="1" data-get_rating="1" id="pcarousel1515823095483" data-filter_by_filter_id="3"/>
+            </div>
+          </section>
+        </div>
+        <section>
+          <div class="bs_margin" style="display:inline-block;width:100%;margin-top:60px;"> </div>
+        </section>
+        <section>
+          <div class="bs_margin" style="display:inline-block;width:100%;margin-top:60px;"> </div>
+        </section>
+      </div>
+      <div class="oe_structure"/>
+      <section class="clarico_big_catg_snippet_wrap">
+        <div class="clarico_big_catg_container">
+          <div class="big_catg_top">
+            <div class="center_big_price">
+              <p class="big_price o_default_snippet_text">$615</p>
+            </div>
+            <div class="big_img_one_container">
+              <div class="big_catg_img_one">
+                <section>
+                  <a href="#">
+                    <img class="s_image_common" src="/clarico_snippet_style_16/static/src/img/style_15_img_1.png"/>
+                  </a>
+                </section>
+              </div>
+            </div>
+            <div> </div>
+            <div class="product_info">
+              <a href="#" class="product_title o_default_snippet_text">chair</a>
+              <p class="product_sub-title o_default_snippet_text">lethear desert boots Kimstad black</p>
+              <a class="shop_now_button left_content_btn_extra o_default_snippet_text" href="#">Shop Now</a>
+            </div>
+          </div>
+          <div class="big_catg_bottom">
+            <div class="big_catg_bottom_left">
+              <div class="big_price_left">
+                <p class="big_price o_default_snippet_text">$68</p>
+              </div>
+              <div class="big_catg_img_two">
+                <section>
+                  <a href="#">
+                    <img class="s_image_common" src="/clarico_snippet_style_16/static/src/img/style_15_img_2.png"/>
+                  </a>
+                </section>
+              </div>
+              <div class="product_info">
+                <a href="#" class="product_title o_default_snippet_text">Lorem</a>
+                <p class="product_sub-title o_default_snippet_text">lethear desert boots Kimstad black</p>
+                <a class="shop_now_button left_content_btn_extra o_default_snippet_text" href="#">Shop Now</a>
+              </div>
+            </div>
+            <div class="big_catg_bottom_right">
+              <div class="big_price_right">
+                <p class="big_price o_default_snippet_text">$28</p>
+              </div>
+              <div class="big_catg_img_three">
+                <section>
+                  <a href="#">
+                    <img class="s_image_common" src="/clarico_snippet_style_16/static/src/img/style_15_img_3.png"/>
+                  </a>
+                </section>
+              </div>
+              <div class="product_info">
+                <a href="#" class="product_title o_default_snippet_text">Duis euismod</a>
+                <p class="product_sub-title o_default_snippet_text">lethear desert boots Kimstad black</p>
+                <a class="shop_now_button left_content_btn_extra o_default_snippet_text" href="#">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="bs_margin" style="display:inline-block;width:100%;margin-top:60px;"> </div>
+      </section>
+      <div class="oe_structure"/>
+      <section class="b_ic_slider_design">
+        <div class="clarico_comman_class">
+          <div class="clarico_sub_comman_class">
+            <section class="b_comman_wrapper_class" style="background-image:url('/clarico_snippet_style_10/static/src/img/style_14_bg.jpg');">
+              <div class="b_slider_wrapper_div_left">
+                <div class="b_wrapper_full_class">
+                  <section class="style6_left_bottom_content_container">
+                    <div class="s6_left_bottom_left_img">
+                      <a href="#">
+                        <section>
+                          <img class="s_image_common" src="/clarico_snippet_style_10/static/src/img/style_14_img_2.png"/>
+                        </section>
+                      </a>
+                    </div>
+                    <div class="s6_left_botton_right_content">
+                      <div class="b_text-block">
+                        <p class="chs_heading o_default_snippet_text">clarico - Your Online Furniture Store</p>
+                        <p class="b_fashion_subheading o_default_snippet_text">Duis euismod eu nibh at pharetra. Vivamus placerat ac metus et placerat.</p>
+                        <p class="style_6_btn_div">
+                          <a href="#" class="shop_now_button o_default_snippet_text">shop now</a>
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="b_slider_wrapper_div_right">
+                <div class="b_wrapper_full_class">
+                  <div class="clarico_style_6_img_div">
+                    <a href="#">
+                      <section>
+                        <img class="s_image_common" src="/clarico_snippet_style_10/static/src/img/style_14_img_1.png"/>
+                      </section>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="bs_margin" style="display:inline-block;width:100%;margin-top:60px;">			</div>
+      </section>
+      <div class="oe_structure"/>
+      <section>
+        <div class="style_1_comman_class common-div">
+          <div class="block">
+            <section class="slider_wrapper_div_left">
+              <div class="wrapper_full_class">
+                <section class="slider_left_bg_content">
+                  <span class="left_content">
+                    <h1 class="chs_heading o_default_snippet_text">Modern Collection</h1>
+                    <p class="left_content_pera_new o_default_snippet_text">Clarico owns beautiful homepage with modern design. Each page has different style and layout. So, you can feel free to turn up your personality and build an awesome website. Enjoy it now!</p>
+                    <p class="clarico_new_btn">
+                      <a class="shop_now_button o_default_snippet_text" href="#">Shop Now</a>
+                    </p>
+                  </span>
+                </section>
+              </div>
+            </section>
+            <div id="style_1_myCarousel1518010458923" class="carousel slide style_1_carousel" data-interval="2000">
+              <ol class="carousel-indicators hidden">
+                <li data-target="#style_1_myCarousel1518010458923" data-slide-to="0" class="active"/>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item active">
+                  <div class="slider_wrapper_div_right_new">
+                    <section class="div_img_new">
+                      <a href="#">
+                        <img class="product_image_new" src="/snippet_style_14/static/src/img/slider_1.png" data-original-title="" title=""/>
+                      </a>
+                    </section>
+                  </div>
+                  <div class="slider_wrapper_div_right_new">
+                    <section class="div_img_new">
+                      <a href="#">
+                        <img class="product_image_new" src="/snippet_style_14/static/src/img/slider_2.png" data-original-title="" title=""/>
+                      </a>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-control left hidden" data-slide="prev" data-target="#style_1_myCarousel1518010458923" href="#style_1_myCarousel0" style="width: 10%" data-cke-saved-href="#style_1_myCarousel1518010458923">
+                <i class="fa fa-chevron-left"/>
+              </div>
+              <div class="carousel-control right hidden" data-slide="next" data-target="#style_1_myCarousel1518010458923" href="#style_1_myCarousel0" style="width: 10%" data-cke-saved-href="#style_1_myCarousel1518010458923">
+                <i class="fa fa-chevron-right"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <div class="oe_structure"/>
+    
+      <section>
+        <div class="bs_margin" style="display:inline-block;width:100%;margin-top:60px;"> </div>
+      </section>
+     
+    </div>
+         </t>
+    </template>
+</odoo>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>   	
+    <template id="style_15_assets_front" inherit_id="clarico_snippets.clarico_menu_snippets">
+         <xpath expr="//div[@id='clarico_menu_structure']/div[hasclass('o_panel_body')]"
+               position="inside">
+             <t t-snippet="snippet_style_15.style_15_template" t-thumbnail="/snippet_style_15/static/src/img/style_15.jpg"/>
+        </xpath>
+    </template>
+	     
+    <template id="style_15_template" name="Image with Heading">
+       <section class="custom-menu-inside-maxW">
+	<div class="column-main">
+		<div class="cat-column">
+			<section class="block-cate">
+				<div style="height:40px;"></div>
+				<section class="thumb">
+					<figure>
+						<img class="menu-cate-image" src="/clarico_layout/static/src/img/1.jpg" />
+					</figure>
+				</section>
+				<section>
+				<a href="/shop" class="content-cat">
+					<h3 class="title_cat">Chair</h3>
+					<span class="count_cat">
+						( 5 items )            
+					</span>
+				</a>
+				</section>
+				<section>
+				<a href="/shop" class="button button_cat">
+					shop category    
+				</a>
+				</section>
+			</section>
+		</div>
+		<section class="cat-column">
+			<div class="block-cate-down">
+				<section>
+				<a href="/shop" class="content-cat">
+					<h3 class="title_cat">Chair</h3>
+					<span class="count_cat">
+						( 9 items )            
+					</span>
+				</a>
+				</section>
+				<section class="thumb">
+					<figure>
+						<img class="menu-cate-image" src="/clarico_layout/static/src/img/2.jpg" />
+					</figure>
+				</section>
+				<section>
+				<a href="/shop" class="button button_cat">
+					shop category    
+				</a>
+				</section>
+			</div>
+		</section>
+		<section class="cat-column">
+			<div class="block-cate">
+				<div style="height:40px;"></div>
+				<section class="thumb">
+					<figure>
+						<img class="menu-cate-image" src="/clarico_layout/static/src/img/3.jpg" />
+					</figure>
+				</section>				
+				<section>
+				<a href="/shop" class="content-cat">
+					<h3 class="title_cat">Sofas</h3>
+					<span class="count_cat">
+						( 7 items )            
+					</span>
+				</a>
+				</section>
+				<section>
+				<a href="/shop" class="button button_cat">
+					shop category   
+				</a>
+				</section>
+			</div>
+		</section>
+		<section class="cat-column">
+			<div class="block-cate-down">
+				<section>
+				<a href="/shop" class="content-cat">
+					<h3 class="title_cat">Bed</h3>
+					<span class="count_cat">
+						( 6 items )            
+					</span>
+				</a>
+				</section>
+				<section class="thumb">
+					<figure>
+						<img class="menu-cate-image" src="/clarico_layout/static/src/img/4.jpg" />
+					</figure>
+				</section>
+				<section>
+				<a href="/shop" class="button button_cat">
+					shop category    
+				</a>
+				</section>
+			</div>
+		</section>
+	</div>
+</section>
+    </template>
+</odoo>

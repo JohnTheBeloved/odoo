@@ -1,0 +1,374 @@
+.navbar.navbar-static-top
+{
+	.bg(@theme-color);
+	vertical-align:top;
+}
+.navbar-default .navbar-nav > li > a span
+{
+	.oswald-semibold();
+	color:#fff;
+}
+
+.navbar-default .header-stick .navbar-nav > li > a span{
+	color:#000;
+}
+#top_menu li.active a
+{
+	.bg(transparent);
+	
+	span
+	{
+	opacity: 0.8;
+	}
+}
+header
+{
+	//display:grid !important;
+}
+.navbar-static-top .container
+{
+	.mt(5px);
+}
+.company_logo_main {
+    display: inline-block;
+    float: none;
+    width: 30%;
+   
+    >a
+	{
+		display:inline-block;
+		width:auto;
+	}
+    img
+    {
+    	float:left;
+    }
+}
+.header_all_info_right
+{
+	 display: inline-block;
+    width: 69%;	
+    vertical-align: top;
+    
+    .main-header-right
+    {
+    	width: 100%;
+		float: none;
+		display: inline-block;
+    }	
+}
+.offer-left_header
+{
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+	
+	.offer-p
+	{
+		text-align:left;
+	}
+}
+.header-search
+{
+	width: 49%;
+	display: inline-block;
+	
+	.search_group
+	{
+		width:60%;
+		float:right;
+		
+		.search-query.form-control.oe_search_box
+		{
+			border-radius: 25px;
+			height: 40px;
+		}
+		.input-group-btn
+		{
+			position: absolute;
+			right: 35px;
+			display: inline-block;
+			top:2px;
+			
+			.oe_search_button
+			{
+				.bg(transparent);
+				color:#777;
+				.size(14px);
+				position: relative;
+				padding: 8px;
+				border: none;
+				z-index: 10;
+			}
+		}
+		.form-control:focus 
+		{
+	    border-color: #ccc;
+	    box-shadow: none;
+	    }
+		
+	}
+}
+.company_language
+{
+	float:left;
+	padding: 0 7px;
+	
+	.ul_margin
+	{
+		.mb(0);
+		.ml(0);
+		vertical-align: super;
+		
+		span
+		{
+			.oswald-regular();
+			color:#5a5a5a;
+		}
+	}
+}
+.cart_style_4
+{
+
+	
+	.cart-update
+	{
+		display:none;
+	}
+	.cart_style_2
+	{
+		display:block;	
+	}
+}
+.main-header-right .company-phone-div
+{
+	float: none;
+	text-align: right;
+}
+.company_language {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+.main-header-right .company-phone-div .header-main-signin
+{
+	display: inline-block;
+	float: none;
+	.pt(0) !important;
+	vertical-align: top;
+	.mt(0) !important;
+	.pr(7px);
+}
+#header-social {
+    float: none;
+    display: inline-block;
+    
+    li
+    {
+    	margin: 0 7px 0 7px;
+    }
+}
+.cart_style_4
+{
+	display: inline-block;
+		vertical-align:top;
+	a{
+		color:#464646;
+		vertical-align:top;
+	}
+}
+.header-stick #top_menu {
+	max-width:1400px;
+}
+.company_pricelist {
+     padding: 0 7px;
+}
+.company_logo img{
+
+	max-height:65px !important;
+}
+.header_curency_selector
+{
+	float:none;
+	display: inline-block;
+	vertical-align: inherit;
+}
+
+.header-stick #top_menu ul.dropdown-menu {
+  //  top: 92% !important;
+}
+.header-stick .custom-menu-inside-div {
+   // top: 92% !important;
+}
+.company_pricelist
+{
+	padding: 0px !important;
+}
+
+
+
+@media (max-width:1200px)
+{
+	.navbar-default .navbar-toggle 
+	{
+	    border-color: #fff;
+    
+	    .icon-bar 
+	    {
+	   		.bg(#fff);
+		}
+	}
+	#top_menu .dropdown ul.dropdown-menu > li > a span
+	{
+		color:#fff;
+	}
+	.navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: #fff;
+    border: 0;
+    box-shadow: none;
+	}
+	.navbar-default .navbar-nav > .open > a{
+
+  	  background: #e7e7e7;
+	
+	  span
+	  {
+	  	color:#444;
+	  }
+	
+	  &:hover
+	  {
+	  	 background: #e7e7e7;
+	  	 
+	    span
+	  	{
+	  	color:#444;
+	  	}
+	  }
+	}
+	#top_menu .dropdown ul.dropdown-menu > li > a span {
+    color: #777;
+	}
+	.navbar .navbar-top-collapse ul.navbar-right .custom-menu-inside-div .custom-menu-inside-left-div
+	{
+		.bg(#fff);
+		.pb(2%) !important;
+	}
+}
+@media (max-width:800px)
+{
+	.offer-left_header
+	{
+		display:none;
+	}
+	.navbar.navbar-static-top {
+		.mt(10px);
+	}
+	.header_all_info_right .main-header-right
+	{
+		width:100% !important;
+	}
+	.header-search
+	{
+		width: 70%;
+		float: right;
+	}
+	.main-header
+	{
+		.mb(0);
+	}
+	.header-search .search_group .oe_search_box {
+   		.size(13px);
+	}
+	.company_logo img {
+    max-height: 60px !important;
+	}
+	#top_menu li.active a span
+	{
+		//color:#fff !important;
+	}
+	.cart_style_4 a
+	{
+		vertical-align:top;
+		
+		i{
+			
+			vertical-align:top;
+		}
+	}
+}
+
+@media(max-width:600px)
+{
+	.header-search .search_group {
+    width: 100%;
+    }
+    .header-search {
+    width: 60%;
+    }
+    .header_all_info_right
+    {
+    	width:100%;
+    	float:right;
+    }	
+    .company_logo img {
+    max-height: 50px !important;
+	}
+
+	.company_logo_main
+	{	
+	    position: absolute;
+	    top: 10px;
+	}
+	.navbar-header .navbar-brand.logo {
+    	display: none;
+		}
+	
+
+
+}
+@media(max-width:350px)
+{
+	.navbar.navbar-static-top {
+   		.mt(5px);
+	}
+	.main-header-right {
+    padding: 0px 0;
+	}
+	#header-social
+	{
+		width: 80%;
+		text-align: right;
+		margin-top: 10px;
+		
+		li
+		{
+			float:right;	
+		}
+	}
+	.cart_style_4
+	{
+	
+		margin:0;
+		width: auto;
+		margin-top: 10px;
+		
+	}
+	.main-header-right .company-phone-div .header-main-signin
+	{
+		.pr(0) !important;
+	}
+	.header_curency_selector {
+  	  vertical-align: text-bottom;
+	}
+}
+
+
+
+

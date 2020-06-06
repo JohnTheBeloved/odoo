@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<template id="style_1_assets_frontend" inherit_id="web.assets_frontend" name="Style">
+		<xpath expr="." position="inside">
+			<link rel="stylesheet" type="text/less"
+				href="/snippet_style_14/static/src/less/style_1.less" />
+		</xpath>
+	</template>
+	
+	 <template id="style_1_snippet_options_editor" inherit_id="web_editor.assets_editor" name="Custom snippet slider option">
+		<xpath expr="//link[last()]" position="after">
+			<script type="text/javascript" src="/snippet_style_14/static/src/js/style_1.js"/>
+		</xpath>
+	</template> 
+	
+</odoo>

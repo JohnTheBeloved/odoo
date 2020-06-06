@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="style_8" inherit_id="clarico_snippets.clarico_other_snippets"
+		name="Heading Snippet" priority="5">
+		<xpath
+			expr="//div[@id='clarico_other_snippet_structure']/div[hasclass('o_panel_body')]"
+			position="inside">
+			<t t-snippet="snippet_style_8.snippet_style_8_template" t-thumbnail="/snippet_style_8/static/src/img/style_8.jpg" />
+		</xpath>
+	</template>
+	<template id="snippet_style_8_template" name="Content Image">
+		<section>
+			<div class="oe_structure">
+				<div class="second_layout_img_text_fade_wrap">
+    		<div class="second_layout_img_text_fade_container">
+    			<section class="text_area_div">
+    				<h1 class="img_text_fade_text_heading">big sale</h1>
+    				<h3 class="img_text_fade_text_heading_small">simple wooden armless chair</h3>
+    				<h1 class="discount_title">50% off</h1>
+    				<a class="fade_shop_now_button shop_now_button" href="#">shop now</a>
+    			</section>
+    			<section class="fade_img_container">
+    				<div class="slide1_img1_div">
+    				<a href="#">
+    				<img class="img_all" src="/snippet_style_8/static/src/img/style_8_img_1.png"></img>
+    				</a>
+    				</div>
+    			</section>
+    		</div>
+    	</div>
+			</div>
+
+		</section>
+	</template>
+
+</odoo>

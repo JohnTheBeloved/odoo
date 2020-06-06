@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template id="clarico_style_18" inherit_id="clarico_snippets.clarico_pricing_snippets" name="clarico Snippet" priority="31">
+			<xpath expr="//div[@id='clarico_pricing_structure']/div[hasclass('o_panel_body')]" position="inside">
+				<t t-snippet="clarico_snippet_style_18.clarico_snippet_style_18_template" t-thumbnail="/clarico_snippet_style_18/static/src/img/snippet.jpg"  /> 
+							</xpath>
+		</template>
+		<template id="clarico_snippet_style_18_template" name="4 Column">
+		<div class="oe_structure" />
+				<section>
+		<div class="pricing_whole_div_calss">
+			<div class="div_sub_main_pricing2">
+					<div class="div_main_pricing_content">
+						<div class="div_sub_main_pricing_content">
+							<section class="div_pricing_content col-md-3">
+								<div class="div_pricing_content_row border-IrisBlue-hover border-grey ">
+									<section class="div_pricing_content_row_text">
+										<h1 class="pricing2_content_title lato-bold font-IrisBlue">Beginner Plan</h1>
+										
+										<div class="div_price">
+										<h1 class="heading_h1_price lato-bold font-black"><span class="dollar">$</span>35</h1>
+										<span class="pricing_per_month_text common-div">tariff/m</span>
+										</div>
+										<!-- <hr class="hr_line"/> -->
+										<ul class="ul_pricing_text">
+											<li class="li_pricing_text lato-regular font-black">500GB Storage</li>
+											<li class="li_pricing_text lato-regular font-black">Access to Tutorials</li>
+											<li class="li_pricing_text lato-regular font-black">Auto Backup</li>
+											<li class="li_pricing_text lato-regular font-black">Extended Security</li>				
+										</ul>
+									</section>
+								<!-- 	<hr class="hr_line"/> -->
+									
+									<div class="div_pricing_btn">
+											<a href="#" class="shop_now_button">
+										
+												sign up
+										
+									</a>
+									</div>
+								</div>
+							</section>
+							<section class="div_pricing_content mt_0 col-md-3">
+								<div class="div_pricing_content_row">
+									<section class="div_pricing_content_row_text">
+										<h1 class="pricing2_content_title">Professional Plan</h1>
+										<section class="div_price2_premium">
+											<h1 class="heading_h1_price"><span class="dollar_premium">$</span>55</h1>
+											<span class="pricing_per_month_text common-div">tariff/m</span>
+										</section>
+										<ul class="ul_pricing_text">
+											<li class="li_pricing_text">1TB Storage</li>
+											<li class="li_pricing_text">Access to Tutorials</li>
+											<li class="li_pricing_text">Auto Backup</li>
+											<li class="li_pricing_text">Extended Security</li>				
+										</ul>
+									</section>
+									<section class="div_pricing_btn">
+											<a href="#" class="shop_now_button">
+										
+												sign up
+											
+									</a>
+									</section>
+									
+								</div>
+							</section>
+							<section class="div_pricing_content col-md-3">
+								<div class="div_pricing_content_row border-IrisBlue-hover border-grey">
+									<section class="div_pricing_content_row_text">
+										<h1 class="pricing2_content_title lato-bold font-IrisBlue">Expert Plan</h1>
+										<section class="div_price">
+										<h1 class="heading_h1_price lato-bold"><span class="dollar">$</span>85</h1>
+										<span class="pricing_per_month_text common-div">tariff/m</span>
+									</section>
+										<!-- <hr class="hr_line"/> -->
+										<ul class="ul_pricing_text">
+											<li class="li_pricing_text lato-regular font-black">Unlimited Storage</li>
+											<li class="li_pricing_text lato-regular font-black">Access to Tutorials</li>
+											<li class="li_pricing_text lato-regular font-black">Auto Backup</li>
+											<li class="li_pricing_text lato-regular font-black">Extended Security</li>				
+										</ul>
+									</section>
+									<!-- <hr class="hr_line"/> -->
+										
+									<section class="div_pricing_btn">
+											<a href="#" class="shop_now_button">
+										
+												sign up
+											
+									</a>
+									</section>
+								</div>
+							</section>
+							
+							<section class="div_pricing_content col-md-3">
+								<div class="div_pricing_content_row border-IrisBlue-hover border-grey">
+									<section class="div_pricing_content_row_text">
+										<h1 class="pricing2_content_title lato-bold font-IrisBlue">Ultimate Plan</h1>
+										<section class="div_price">
+										<h1 class="heading_h1_price lato-bold"><span class="dollar">$</span>99</h1>
+										<span class="pricing_per_month_text common-div">tariff/m</span>
+									</section>
+										<!-- <hr class="hr_line"/> -->
+										<ul class="ul_pricing_text">
+											<li class="li_pricing_text lato-regular font-black">Full Statistics</li>
+											<li class="li_pricing_text lato-regular font-black">Mobile-Optimized</li>
+											<li class="li_pricing_text lato-regular font-black">Auto Backup</li>
+											<li class="li_pricing_text lato-regular font-black">Extended Security</li>				
+										</ul>
+									</section>
+									<!-- <hr class="hr_line"/> -->
+										
+									<section class="div_pricing_btn">
+											<a href="#" class="shop_now_button">
+										
+												sign up
+											
+									</a>
+									</section>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+		</div>
+		</section>
+		</template>
+</odoo>

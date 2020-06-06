@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="product_video" model="ir.ui.view">
+		<field name="name">product.template.product.website.form</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_only_form_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//notebook[last()]" position="inside">
+				<page string="Video">
+					<div>
+						<field name="pif_video" class="oe_inline"></field>
+						<label for="pif_video" />
+					</div>
+					<group
+						attrs="{'invisible': [('pif_video', '=', False)], 'required': [('pif_video', '=', True)]}"
+						domain="['|',('active','=',0),('active','=',1)]">
+						<field name="p_video_url" />
+					</group>
+					<div class="text-muted mt8">
+						<h6 class="text-muted">STEPS:</h6>
+						<p class="text-muted">1) Go to Youtube and open the video of your product.
+						</p>
+						<p class="text-muted">
+							2) Click on
+							<b>Share</b>
+							and select
+							<b>embed</b>
+							from the popup.
+						</p>
+						<p class="text-muted">
+							3) Copy source of iframe tag and paste here in
+							<b>Youtube Url</b>
+						</p>
+						<p class="text-muted mt8" style="font-size:13px;">Demo URL:
+							https://www.youtube.com/embed/Lx9GlGnHM7g
+						</p>
+					</div>
+				</page>
+			</xpath>
+		</field>
+	</record>
+</odoo>

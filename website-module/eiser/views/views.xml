@@ -1,0 +1,118 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="eiser.list">
+      <field name="name">eiser list</field>
+      <field name="model">eiser.eiser</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <record id="eiser_product_form" model="ir.ui.view">
+    <field name="name">Eiser products: form</field>
+    <field name="model">product.product</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <label for="name"/> <field name="name"/>
+          <label for="description"/>
+          <field name="description"/>
+        </sheet>
+      </form>
+    </field>
+  </record>
+   <record id="action_eiser_sellers" model="ir.actions.act_window">
+    <field name="name">Eiser sellers</field>
+    <field name="res_model">res.partner</field>
+  </record>
+  <record id="eiser_seller_search" model="ir.ui.view">
+    <field name="name">Eiser sellers: search</field>
+    <field name="model">res.partner</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name"/>
+      </search>
+    </field>
+  </record>
+  <record id="eiser_seller_list" model="ir.ui.view">
+    <field name="name">Eiser sellers: list</field>
+    <field name="model">res.partner</field>
+    <field name="arch" type="xml">
+      <tree string="Sellers">
+        <field name="name"/>
+      </tree>
+    </field>
+  </record>
+  <record id="eiser_seller_form" model="ir.ui.view">
+    <field name="name">Eiser sellers: form</field>
+    <field name="model">res.partner</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <label for="name"/>
+          <field name="name"/>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="action_eiser_products">
+      <field name="name">eiser window</field>
+      <field name="res_model">product.product</field>
+      <!-- <field name="view_mode">tree,form</field> -->
+    </record>
+   
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="eiser.action_server">
+      <field name="name">eiser server</field>
+      <field name="model_id" ref="model_eiser_eiser"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <!--
+    <menuitem name="eiser" id="eiser.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="eiser.menu_1" parent="eiser.menu_root"/>
+    <menuitem name="Menu 2" id="eiser.menu_2" parent="eiser.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="eiser.menu_1_list" parent="eiser.menu_1"
+              action="eiser.action_window"/>
+    <menuitem name="Server to list" id="eiser" parent="eiser.menu_2"
+              action="eiser.action_server"/>
+    -->
+    <menuitem sequence="0" id="menu_eiser" name="Eiser"/>
+    <menuitem id="menu_eiser_content" parent="menu_eiser"
+              name="Eiser Contents"/>
+    <menuitem id="menu_eiser_content_sellers"
+            parent="menu_eiser_content"
+            action="action_eiser_sellers"/>
+    <menuitem id="menu_eiser_content_products"
+              parent="menu_eiser_content"
+              action="action_eiser_products"/>
+  </data>
+</odoo>

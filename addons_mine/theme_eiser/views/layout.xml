@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="custom_header" inherit_id="website.layout" name="Custom Header">
+    <!-- Assign an id  -->
+    <xpath expr="//div[@id='wrapwrap']/header" position="attributes">
+      <attribute name="id">my_header</attribute>
+    </xpath>
+
+     <!-- Add an element after the top menu  -->
+    <xpath expr="//*[@id='wrapwrap']/header[1]" position="before">
+    <div class="top_menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="float-left">
+              <p>Phone: +01 256 25 235</p>
+              <p>email: info@eiser.com</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="float-right">
+              <ul class="right_side">
+                <li>
+                  <a href="cart.html">
+                    gift card
+                  </a>
+                </li>
+                <li>
+                  <a href="tracking.html">
+                    track order
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </xpath>
+
+  
+  </template>
+
+</odoo>

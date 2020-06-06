@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<template id="clarico_slider_style_5_left_bar_slider_position" inherit_id="clarico_snippets.clarico_slider_snippets" priority="5">
+	    <xpath expr="//div[@id='clarico_slider_structure']//div[@class='o_panel_body']" position="inside">
+     	  
+	  	  			<t t-snippet="clarico_slider_style_5.clarico_slider_style_5_template" t-thumbnail="/clarico_slider_style_5/static/src/img/slider_5.jpg"/>
+	  	  		
+		</xpath>
+	</template>
+	
+	<template id="clarico_slider_style_5_template" name="Style 5">
+		<div class="oe_structure" />
+		<section class="slider_section">
+
+			<div id="slider_wrapper_mtb" class="slider_wrapper_mtb">
+						      
+		        <div id="myCarousel" class="carousel slide clarico_slider_style_5_carousel" data-interval="4000" data-ride="carousel">
+		          
+		          <!-- Indicators -->
+					<ol class="carousel-indicators hidden">
+					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					</ol>
+		          
+		          <!-- Wrapper for slides -->
+		          <div class="carousel-inner" role="listbox">
+		            <div class="item active" style="background-image:url('/clarico_slider_style_5/static/src/img/banner-1.jpg')">
+		              <!-- <img class="img-responsive"  src="/clarico_slider_style_5/static/src/img/banner-1.jpg" alt="Slide_1"/> -->
+		              <div class="">
+			              <section class="mtb_carousel_caption">
+			                <section><h2>Leadership Training</h2></section>
+			                <section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  incididunt ut labore et dolore magna aliqua.</p></section>
+			                <section class="caption_btn_wrapper">
+			                	<section class="double_btns"><a href="#" class="shop_now_button">Learn More</a></section>
+			                	<section class="double_btns"><a href="#" class="shop_now_button">Buy Now</a></section>
+			                </section>
+			              </section>
+						</div>
+		            </div>
+		
+		          </div>
+		          <!-- Controls -->
+					<div class="carousel-control left hidden" data-slide="prev" role="button" data-target="#myCarousel" href="#myCarousel" style="width: 10%">
+					  <i class="fa fa-angle-left"/>
+					</div>
+					<div class="carousel-control right hidden" data-slide="next" role="button" data-target="#myCarousel" href="#myCarousel" style="width: 10%">
+					  <i class="fa fa-angle-right"/>
+					</div>
+		        </div>
+		        
+			</div>
+		</section>
+	</template>
+</odoo>

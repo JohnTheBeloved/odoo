@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<template id="shop_by_brand" name="Shop By Brand">
+		<t t-call="website.layout">
+			<div id="wrap">
+				<div class="oe_structure" />
+				<section class="s_title bg-primary">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 mt16 mb16">
+								<h1 class="text-center o_default_snippet_text">Shop By Brand</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="oe_structure">
+					<div class="col-md-12 ">
+						<div class="container brands_pager">
+							<div class="row">
+								<form t-attf-action="/brand" method="get" class="pagination ">
+									<t t-call="website.website_search_box">
+									</t>
+								</form>
+									<t t-call="website.pager"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="oe_structure">
+					<div class="col-md-12">
+						<div class="container">
+							<div class="row">
+								<t t-foreach="brand_boxes" t-as="brand">
+									<div class="col-md-2">
+										<div class="mt16 mb16 brand-box">
+											<a itemprop="url"
+												t-att-href="'/shop/?brands=%s-%s' % (brand.name, brand.id)"
+												data-toggle="tooltip" t-att-title="brand.name">
+												<span itemprop="image" t-field="brand.brand_image"
+													t-options='{"widget": "image", "resize": None if brand_image else "300x300"}'
+													t-att-alt="brand.name" />
+											</a>
+											<div class="mt16 mb16">
+												<a itemprop="url"
+													t-att-href="'/shop/?brands=%s-%s' % (brand.name, brand.id)"
+													data-toggle="tooltip" t-att-title="brand.name">
+													<p class="text-center" itemprop="image" t-field="brand.name" />
+												</a>
+											</div>
+										</div>
+									</div>
+								</t>
+							</div>
+						</div>
+					</div>
+					<t t-if="not brand_boxes">
+						<div class="text-center text-muted">
+							<h3 class="css_editable_display">
+								No
+								<i>'Brand' </i>
+								defined.
+							</h3>
+						</div>
+					</t>
+				</div>
+				<div class="oe_structure">
+					<div class="col-md-12 text-center">
+						<div class="container">
+							<div class="row">
+									<t t-call="website.pager"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</t>
+	</template>
+
+</odoo>

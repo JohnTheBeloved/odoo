@@ -1,0 +1,17 @@
+
+    <odoo>
+      <templates id="selector" >
+          <t t-name="select-widget">
+              <select class="select_category" data-trigger="" name="category">
+                          <option placeholder="">Category</option>
+                          <option>New Arrivals</option>
+                          <option>Sale</option>
+                          <option>Ladies</option>
+                          <option>Men</option>
+                          <option>Clothing</option>
+                          <option>Footwear</option>
+                          <option>Accessories</option>
+              </select>
+          </t>
+      </templates>
+    </odoo>

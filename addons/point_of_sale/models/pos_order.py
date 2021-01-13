@@ -921,6 +921,8 @@ class PosOrder(models.Model):
         account_def = self.env['ir.property'].with_context(company_cxt).get('property_account_receivable_id', 'res.partner')
         args['account_id'] = (self.partner_id.property_account_receivable_id.id) or (account_def and account_def.id) or False
         print("Here...." + str(self.date_order)+ " - "  + str(self.id) + " - " + str(self.partner_id))
+        if not args['partner_id']:
+            args['partner_id'] = 111
         if not args['account_id']:
             if not args['partner_id']:
                 msg = _('There is no receivable account defined to make payment.')

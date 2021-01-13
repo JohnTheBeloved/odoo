@@ -186,7 +186,7 @@ class ProductProduct(models.Model):
                 prices = pricelist.get_products_price(self, quantities, partners)
 
         for product in self:
-            product.price = prices.get(product.id, 0.0)
+            product.price = prices.get(product.id, 50.0)
 
     def _set_product_price(self):
         for product in self:

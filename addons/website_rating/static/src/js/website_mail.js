@@ -15,18 +15,18 @@ odoo.define('website_rating.thread', function(require) {
      */
     PortalChatter.include({
         events: _.extend({}, PortalChatter.prototype.events, {
-            "mousemove .stars i" : "_onMoveStar",
-            "mouseleave .stars i" : "_onMoveOutStar",
-            "click .stars" : "_onClickStar",
-            "mouseleave .stars" : "_onMouseleaveStar",
+            "mousemove .stars i": "_onMoveStar",
+            "mouseleave .stars i": "_onMoveOutStar",
+            "click .stars": "_onClickStar",
+            "mouseleave .stars": "_onMouseleaveStar",
             "click .o_website_rating_select": "_onClickStarDomain",
             "click .o_website_rating_select_text": "_onClickStarDomainReset",
         }),
 
-        init: function(parent, options){
+        init: function(parent, options) {
             this._super.apply(this, arguments);
             // options
-            if(!_.contains(this.options, 'display_rating')){
+            if (!_.contains(this.options, 'display_rating')) {
                 this.options = _.defaults(this.options, {
                     'display_rating': false,
                     'rating_default_value': 0.0,
@@ -49,17 +49,17 @@ odoo.define('website_rating.thread', function(require) {
             this.set("star_value", this.options.rating_default_value);
             this.on("change:star_value", this, this._onChangeStarValue);
         },
-        willStart: function(){
+        willStart: function() {
             var self = this;
-            return this._super.apply(this, arguments).then(function(result){
+            return this._super.apply(this, arguments).then(function(result) {
                 // rating card
-                if(result['rating_stats']){
+                if (result['rating_stats']) {
                     var rating_data = {
                         'avg': self.round_to_half(result['rating_stats']['avg']),
                         'percent': [],
                     };
-                    _.each(_.keys(result['rating_stats']['percent']), function(rating){
-                        if(0 < rating && rating <= 5){
+                    _.each(_.keys(result['rating_stats']['percent']), function(rating) {
+                        if (0 < rating && rating <= 5) {
                             rating_data['percent'].push({
                                 'num': rating,
                                 'percent': result['rating_stats']['percent'][rating],
@@ -70,9 +70,9 @@ odoo.define('website_rating.thread', function(require) {
                 }
             });
         },
-        start: function(){
+        start: function() {
             var self = this;
-            return this._super.apply(this, arguments).then(function(){
+            return this._super.apply(this, arguments).then(function() {
                 // rating stars
                 self.$input = self.$('input[name="rating_value"]');
                 self.$star_list = self.$('.stars').find('i');
@@ -90,11 +90,11 @@ odoo.define('website_rating.thread', function(require) {
          * @param {Array<Object>} messages
          * @returns {Array}
          */
-        preprocessMessages: function(messages){
+        preprocessMessages: function(messages) {
             var self = this;
             var messages = this._super.apply(this, arguments);
-            if(this.options['display_rating']){
-                _.each(messages, function(m){
+            if (this.options['display_rating']) {
+                _.each(messages, function(m) {
                     m['rating_value'] = self.round_to_half(m['rating_value']);
                 });
             }
@@ -115,13 +115,13 @@ odoo.define('website_rating.thread', function(require) {
             var converted = parseFloat(value); // Make sure we have a number
             var decimal = (converted - parseInt(converted, 10));
             decimal = Math.round(decimal * 10);
-            if(decimal === 5){
-                return (parseInt(converted, 10)+0.5);
+            if (decimal === 5) {
+                return (parseInt(converted, 10) + 0.5);
             }
-            if((decimal < 3) || (decimal > 7)){
+            if ((decimal < 3) || (decimal > 7)) {
                 return Math.round(converted);
-            }else{
-                return (parseInt(converted, 10)+0.5);
+            } else {
+                return (parseInt(converted, 10) + 0.5);
             }
         },
 
@@ -129,12 +129,12 @@ odoo.define('website_rating.thread', function(require) {
         // Private
         //--------------------------------------------------------------------------
 
-        _loadTemplates: function(){
+        _loadTemplates: function() {
             return $.when(this._super(), ajax.loadXML('/website_rating/static/src/xml/website_mail.xml', qweb));
         },
-        _messageFetchPrepareParams: function(){
+        _messageFetchPrepareParams: function() {
             var params = this._super.apply(this, arguments);
-            if(this.options['display_rating']){
+            if (this.options['display_rating']) {
                 params['rating_include'] = true;
             }
             return params;
@@ -148,7 +148,7 @@ odoo.define('website_rating.thread', function(require) {
          * @private
          * @param {MouseEvent} event
          */
-        _onClickStar: function(e){
+        _onClickStar: function(e) {
             this.user_click = true;
             this.$input.val(this.get("star_value"));
         },
@@ -156,19 +156,20 @@ odoo.define('website_rating.thread', function(require) {
          * @private
          * @param {MouseEvent} event
          */
-        _onClickStarDomain: function(e){
+        _onClickStarDomain: function(e) {
             var $tr = this.$(e.currentTarget);
             var num = $tr.data('star');
-            if($tr.css('opacity') == 1){
+            if ($tr.css('opacity') == 1) {
+                console.log(num, 540)
                 this.set('rating_value', num);
                 this.$('.o_website_rating_select').css({
                     'opacity': 0.5,
                 });
-                this.$('.o_website_rating_select_text[data-star="'+num+'"]').css({
+                this.$('.o_website_rating_select_text[data-star="' + num + '"]').css({
                     'visibility': 'visible',
                     'opacity': 1,
                 });
-                this.$('.o_website_rating_select[data-star="'+num+'"]').css({
+                this.$('.o_website_rating_select[data-star="' + num + '"]').css({
                     'opacity': 1,
                 });
             }
@@ -177,7 +178,7 @@ odoo.define('website_rating.thread', function(require) {
          * @private
          * @param {MouseEvent} event
          */
-        _onClickStarDomainReset: function(e){
+        _onClickStarDomainReset: function(e) {
             e.stopPropagation();
             this.set('rating_value', false);
             this.$('.o_website_rating_select_text').css('visibility', 'hidden');
@@ -188,47 +189,49 @@ odoo.define('website_rating.thread', function(require) {
         /**
          * @private
          */
-        _onChangeRatingDomain: function(){
+        _onChangeRatingDomain: function() {
             var domain = [];
-            if(this.get('rating_value')){
-                domain = [['rating_value', '=', this.get('rating_value')]];
+            if (this.get('rating_value')) {
+                domain = [
+                    ['rating_value', '=', this.get('rating_value')]
+                ];
             }
             this._changeCurrentPage(1, domain);
         },
         /**
          * @private
          */
-        _onChangeStarValue: function(){
+        _onChangeStarValue: function() {
             var val = this.get("star_value");
             var index = Math.floor(val);
             var decimal = val - index;
             // reset the stars
             this.$star_list.removeClass('fa-star fa-star-half-o').addClass('fa-star-o');
 
-            this.$('.stars').find("i:lt("+index+")").removeClass('fa-star-o fa-star-half-o').addClass('fa-star');
-            if(decimal){
-                this.$('.stars').find("i:eq("+(index)+")").removeClass('fa-star-o fa-star fa-star-half-o').addClass('fa-star-half-o');
+            this.$('.stars').find("i:lt(" + index + ")").removeClass('fa-star-o fa-star-half-o').addClass('fa-star');
+            if (decimal) {
+                this.$('.stars').find("i:eq(" + (index) + ")").removeClass('fa-star-o fa-star fa-star-half-o').addClass('fa-star-half-o');
             }
 
             this.$('.rate_text .label').text(this.labels[index]);
         },
-        _onMouseleaveStar: function(e){
+        _onMouseleaveStar: function(e) {
             this.$('.rate_text').hide();
         },
         /**
          * @private
          * @param {MouseEvent} event
          */
-        _onMoveStar: function(e){
+        _onMoveStar: function(e) {
             var index = this.$('.stars i').index(e.currentTarget);
             this.$('.rate_text').show();
-            this.set("star_value", index+1);
+            this.set("star_value", index + 1);
         },
         /**
          * @private
          */
-        _onMoveOutStar: function(){
-            if(!this.user_click){
+        _onMoveOutStar: function() {
+            if (!this.user_click) {
                 this.set("star_value", parseInt(this.$input.val()));
             }
             this.user_click = false;

@@ -42,7 +42,7 @@ var BodyManager = rootWidget.RootWidget.extend(ServiceProviderMixin, {
     _call_service: function (event) {
         if (event.data.service === 'ajax' && event.data.method === 'rpc') {
             var route = event.data.args[0];
-            if (_.str.startsWith(route, '/web/dataset/call_kw/')) {
+            if ((_.str || window._s).startsWith(route, '/web/dataset/call_kw/')) {
                 var params = event.data.args[1];
                 var options = event.data.args[2];
                 params.kwargs.context = _.extend({}, weContext.get(), params.kwargs.context || {});

@@ -138,6 +138,19 @@ class WebsiteSale(ProductConfiguratorController):
         compute_currency = self._get_compute_currency(pricelist, product)
         return compute_currency, pricelist_context, pricelist
 
+    def _get_products_price_range(self, products):
+        max = 0.0
+        min = products[0].list_price if len(products) > 0 else 0.0
+        for product in products:
+            if(min > product.list_price):
+                min = product.list_price
+            if(max < product.list_price):
+                max = product.list_price
+        return {
+            'min': int(min),
+            'max': int(max),
+        }
+
     def _get_pricelist_context(self):
         pricelist_context = dict(request.env.context)
         pricelist = False
@@ -263,7 +276,9 @@ class WebsiteSale(ProductConfiguratorController):
             attributes = ProductAttribute.browse(attributes_ids)
 
         compute_currency = self._get_compute_currency(pricelist, products[:1])
-
+        price_range = self._get_products_price_range(products)
+        print('pricerange')
+        print(price_range)
         values = {
             'search': search,
             'category': category,
@@ -282,6 +297,7 @@ class WebsiteSale(ProductConfiguratorController):
             'keep': keep,
             'parent_category_ids': parent_category_ids,
             'search_categories_ids': search_categories and search_categories.ids,
+            'price_range': price_range,
         }
         if category:
             values['main_object'] = category
@@ -363,6 +379,7 @@ class WebsiteSale(ProductConfiguratorController):
         access_token: Abandoned cart SO access token
         revive: Revival method when abandoned cart. Can be 'merge' or 'squash'
         """
+        print('----shopcart')
         order = request.website.sale_get_order()
         if order and order.state != 'draft':
             request.session['sale_order_id'] = None
@@ -450,12 +467,19 @@ class WebsiteSale(ProductConfiguratorController):
             return value
 
         order = request.website.sale_get_order()
-        value['cart_quantity'] = order.cart_quantity
         from_currency = order.company_id.currency_id
         to_currency = order.pricelist_id.currency_id
 
         if not display:
             return value
+        #Move to module
+        order_line = order.order_line.filtered(lambda  x: x.id == line_id)
+        value['cart_quantity'] = order.cart_quantity
+        value['cart_total'] = "{:.2f}".format(from_currency._convert(order.amount_total, to_currency, order.company_id, fields.Date.today()))
+        value['line_total'] = order_line.price_total
+        print('ooooo')
+        print(order_line.price_total)
+        
 
         value['website_sale.cart_lines'] = request.env['ir.ui.view'].render_template("website_sale.cart_lines", {
             'website_sale_order': order,

@@ -489,7 +489,7 @@ var Colorpicker = Dialog.extend({
         var red = r < 16 ? '0' + r.toString(16) : r.toString(16);
         var green = g < 16 ? '0' + g.toString(16) : g.toString(16);
         var blue = b < 16 ? '0' + b.toString(16) : b.toString(16);
-        return {hex: _.str.sprintf('#%s%s%s', red, green, blue)};
+        return {hex: (_.str || window._s).sprintf('#%s%s%s', red, green, blue)};
     },
 });
 
